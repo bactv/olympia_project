@@ -1,0 +1,13 @@
+section.content-header {
+    /*border-bottom: 3px solid black;*/
+    /*padding: 20px;*/
+}
+
+.content-header .breadcrumb {
+    font-size: 1.2em;
+    padding: 15px;
+}
+
+.main-content {
+    padding: 30px;
+}
