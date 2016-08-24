@@ -47,7 +47,19 @@ return [
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
             ]
         ],
+        'view' => [
+            'theme' => [
+                'class'=>'common\components\Theme',
+                'active' => 'default',
+                'pathMap' => [
+                    '@app/views' => [
+                        '@web/views'
+                    ]
+                ]
+            ]
+        ],
         
     ],
     'params' => $params,
+    'defaultRoute' => 'home'
 ];
