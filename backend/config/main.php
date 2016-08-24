@@ -17,9 +17,8 @@ return [
             'csrfParam' => '_csrf-backend',
         ],
         'user' => [
-            'identityClass' => 'common\models\User',
+            'identityClass' => 'backend\models\Admin',
             'enableAutoLogin' => true,
-            'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
         ],
         'session' => [
             // this is the name of the session cookie used for login on the backend
@@ -35,7 +34,7 @@ return [
             ],
         ],
         'errorHandler' => [
-            'errorAction' => 'site/error',
+//            'errorAction' => 'site/error',
         ],
         
         'urlManager' => [
@@ -49,7 +48,17 @@ return [
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
             ]
         ],
-        
+//        'authClientCollection' => [
+//            'class' => 'yii\authclient\Collection',
+//            'clients' => [
+//                'google' => [
+//                    'class' => 'yii\authclient\clients\Google',
+//                    'clientId' => '441368620449-s3g8836t2nr882erc17f99ajbcu0pdu5.apps.googleusercontent.com',
+//                    'clientSecret' => 'P_spkfgTGlr48UZfFhnurVM-',
+//                ],
+//            ],
+//        ]
     ],
     'params' => $params,
+    'defaultRoute' => 'default'
 ];
