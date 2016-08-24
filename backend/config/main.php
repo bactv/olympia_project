@@ -57,7 +57,18 @@ return [
 //                    'clientSecret' => 'P_spkfgTGlr48UZfFhnurVM-',
 //                ],
 //            ],
-//        ]
+//        ],
+        'view' => [
+            'theme' => [
+                'class'=>'common\components\Theme',
+                'active' => 'default',
+                'pathMap' => [
+                    '@app/views' => [
+                        '@cms/views'
+                    ]
+                ]
+            ]
+        ],
     ],
     'params' => $params,
     'defaultRoute' => 'default'
