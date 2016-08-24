@@ -9,6 +9,7 @@
 use yii\helpers\Url;
 use yii\helpers\Html;
 use backend\assets\AppAsset;
+use common\components\AssetApp;
 
 AppAsset::register($this);
 ?>
@@ -18,6 +19,8 @@ AppAsset::register($this);
     <head>
         <meta charset="<?php echo Yii::$app->charset; ?>"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <?php echo AssetApp::regCssFile('login.css'); ?>
 
         <script type="text/javascript">
             var BACKEND_HOST_PATH = "<?php print Url::base() . '/'; ?>";
