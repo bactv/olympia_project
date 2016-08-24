@@ -9,18 +9,24 @@ use yii\web\AssetBundle;
  */
 class AppAsset extends AssetBundle
 {
-    public $basePath = '@webroot';
-    public $baseUrl = '@web';
+    public $sourcePath = '@bower/bootstrap/dist';
     public $css = [
-        'css/site.css',
-        'css/style.css',
-        'css/login.css'
     ];
     public $js = [
+        'js/bootstrap.min.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
         'backend\assets\FontAwesomeAsset',
     ];
+
+    public function init()
+    {
+        parent::init();
+
+        $this->publishOptions['beforeCopy'] = function ($from, $to) {
+            return preg_match('%(/|\\\\)(fonts|css)%', $from);
+        };
+    }
 }
