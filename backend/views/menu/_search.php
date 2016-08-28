@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\MenuSearch */
+/* @var $model common\models\search\MenuSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -17,13 +17,15 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'category_id') ?>
-
     <?= $form->field($model, 'name') ?>
 
-    <?= $form->field($model, 'action_link') ?>
+    <?= $form->field($model, 'parent_id') ?>
 
-    <?= $form->field($model, 'created_time') ?>
+    <?= $form->field($model, 'module_id') ?>
+
+    <?= $form->field($model, 'router') ?>
+
+    <?php // echo $form->field($model, 'created_time') ?>
 
     <?php // echo $form->field($model, 'updated_time') ?>
 
