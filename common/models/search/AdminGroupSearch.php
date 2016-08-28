@@ -1,16 +1,16 @@
 <?php
 
-namespace common\models;
+namespace common\models\search;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\CategoryMenu;
+use backend\models\AdminGroup;
 
 /**
- * CategoryMenuSearch represents the model behind the search form about `backend\models\CategoryMenu`.
+ * AdminGroupSearch represents the model behind the search form about `backend\models\AdminGroup`.
  */
-class CategoryMenuSearch extends CategoryMenu
+class AdminGroupSearch extends AdminGroup
 {
     /**
      * @inheritdoc
@@ -18,8 +18,8 @@ class CategoryMenuSearch extends CategoryMenu
     public function rules()
     {
         return [
-            [['id', 'module_id'], 'integer'],
-            [['name', 'created_time', 'updated_time'], 'safe'],
+            [['id', 'status'], 'integer'],
+            [['name', 'description', 'permissions', 'created_time', 'updated_time'], 'safe'],
         ];
     }
 
@@ -41,31 +41,26 @@ class CategoryMenuSearch extends CategoryMenu
      */
     public function search($params)
     {
-        $query = CategoryMenu::find();
-
-        // add conditions that should always apply here
+        $query = AdminGroup::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
 
-        $this->load($params);
-
-        if (!$this->validate()) {
-            // uncomment the following line if you do not want to return any records when validation fails
-            // $query->where('0=1');
+        if ($this->load($params) && !$this->validate()) {
             return $dataProvider;
         }
 
-        // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'module_id' => $this->module_id,
             'created_time' => $this->created_time,
             'updated_time' => $this->updated_time,
+            'status' => $this->status,
         ]);
 
-        $query->andFilterWhere(['like', 'name', $this->name]);
+        $query->andFilterWhere(['like', 'name', $this->name])
+            ->andFilterWhere(['like', 'description', $this->description])
+            ->andFilterWhere(['like', 'permissions', $this->permissions]);
 
         return $dataProvider;
     }

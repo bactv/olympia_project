@@ -1,6 +1,6 @@
 <?php
 
-namespace common\models;
+namespace common\models\search;
 
 use Yii;
 use yii\base\Model;
@@ -18,8 +18,8 @@ class MenuSearch extends Menu
     public function rules()
     {
         return [
-            [['id', 'category_id'], 'integer'],
-            [['name', 'action_link', 'created_time', 'updated_time'], 'safe'],
+            [['id', 'parent_id', 'module_id'], 'integer'],
+            [['name', 'router', 'created_time', 'updated_time'], 'safe'],
         ];
     }
 
@@ -43,30 +43,24 @@ class MenuSearch extends Menu
     {
         $query = Menu::find();
 
-        // add conditions that should always apply here
-
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
 
-        $this->load($params);
-
-        if (!$this->validate()) {
-            // uncomment the following line if you do not want to return any records when validation fails
-            // $query->where('0=1');
+        if ($this->load($params) && !$this->validate()) {
             return $dataProvider;
         }
 
-        // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'category_id' => $this->category_id,
+            'parent_id' => $this->parent_id,
+            'module_id' => $this->module_id,
             'created_time' => $this->created_time,
             'updated_time' => $this->updated_time,
         ]);
 
         $query->andFilterWhere(['like', 'name', $this->name])
-            ->andFilterWhere(['like', 'action_link', $this->action_link]);
+            ->andFilterWhere(['like', 'router', $this->router]);
 
         return $dataProvider;
     }

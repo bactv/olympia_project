@@ -1,6 +1,6 @@
 <?php
 
-namespace common\models;
+namespace common\models\search;
 
 use Yii;
 use yii\base\Model;
@@ -18,8 +18,8 @@ class AdminSearch extends Admin
     public function rules()
     {
         return [
-            [['id', 'status', 'deleted', 'created_by', 'updated_by'], 'integer'],
-            [['username', 'password', 'email', 'fullname', 'created_time', 'updated_time', 'last_login_time'], 'safe'],
+            [['id', 'status', 'deleted', 'thumb_version', 'created_by', 'updated_by'], 'integer'],
+            [['username', 'password', 'email', 'fullname', 'birthday', 'profession', 'created_time', 'updated_time', 'last_active_time', 'admin_group_ids'], 'safe'],
         ];
     }
 
@@ -43,36 +43,33 @@ class AdminSearch extends Admin
     {
         $query = Admin::find();
 
-        // add conditions that should always apply here
-
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
 
-        $this->load($params);
-
-        if (!$this->validate()) {
-            // uncomment the following line if you do not want to return any records when validation fails
-            // $query->where('0=1');
+        if ($this->load($params) && !$this->validate()) {
             return $dataProvider;
         }
 
-        // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
+            'birthday' => $this->birthday,
             'status' => $this->status,
             'deleted' => $this->deleted,
+            'thumb_version' => $this->thumb_version,
             'created_time' => $this->created_time,
             'updated_time' => $this->updated_time,
             'created_by' => $this->created_by,
             'updated_by' => $this->updated_by,
-            'last_login_time' => $this->last_login_time,
+            'last_active_time' => $this->last_active_time,
         ]);
 
         $query->andFilterWhere(['like', 'username', $this->username])
             ->andFilterWhere(['like', 'password', $this->password])
             ->andFilterWhere(['like', 'email', $this->email])
-            ->andFilterWhere(['like', 'fullname', $this->fullname]);
+            ->andFilterWhere(['like', 'fullname', $this->fullname])
+            ->andFilterWhere(['like', 'profession', $this->profession])
+            ->andFilterWhere(['like', 'admin_group_ids', $this->admin_group_ids]);
 
         return $dataProvider;
     }

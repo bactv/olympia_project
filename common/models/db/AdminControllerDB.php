@@ -5,24 +5,21 @@ namespace common\models\db;
 use Yii;
 
 /**
- * This is the model class for table "module".
+ * This is the model class for table "admin_controller".
  *
  * @property integer $id
- * @property string $name
- * @property string $description
+ * @property string $controller
  * @property string $created_time
  * @property string $updated_time
- * @property integer $status
- * @property integer $deleted
  */
-class ModuleDB extends \yii\db\ActiveRecord
+class AdminControllerDB extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'module';
+        return 'admin_controller';
     }
 
     /**
@@ -31,10 +28,9 @@ class ModuleDB extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name'], 'required'],
+            [['controller'], 'required'],
             [['created_time', 'updated_time'], 'safe'],
-            [['status', 'deleted'], 'integer'],
-            [['name', 'description'], 'string', 'max' => 255]
+            [['controller'], 'string', 'max' => 255]
         ];
     }
 
@@ -45,12 +41,9 @@ class ModuleDB extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-            'description' => 'Description',
+            'controller' => 'Controller',
             'created_time' => 'Created Time',
             'updated_time' => 'Updated Time',
-            'status' => 'Status',
-            'deleted' => 'Deleted',
         ];
     }
 }

@@ -5,22 +5,22 @@ namespace common\models\db;
 use Yii;
 
 /**
- * This is the model class for table "category_menu".
+ * This is the model class for table "admin_action".
  *
  * @property integer $id
- * @property string $name
- * @property integer $module_id
+ * @property integer $controller_id
+ * @property string $action
  * @property string $created_time
  * @property string $updated_time
  */
-class CategoryMenuDB extends \yii\db\ActiveRecord
+class AdminActionDB extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'category_menu';
+        return 'admin_action';
     }
 
     /**
@@ -29,10 +29,10 @@ class CategoryMenuDB extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'module_id'], 'required'],
-            [['module_id'], 'integer'],
+            [['controller_id', 'action'], 'required'],
+            [['controller_id'], 'integer'],
             [['created_time', 'updated_time'], 'safe'],
-            [['name'], 'string', 'max' => 255],
+            [['action'], 'string', 'max' => 255]
         ];
     }
 
@@ -43,8 +43,8 @@ class CategoryMenuDB extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-            'module_id' => 'Module ID',
+            'controller_id' => 'Controller ID',
+            'action' => 'Action',
             'created_time' => 'Created Time',
             'updated_time' => 'Updated Time',
         ];
