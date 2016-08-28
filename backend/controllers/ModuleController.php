@@ -8,22 +8,21 @@ use common\models\search\ModuleSearch;
 use backend\components\BackendController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\helpers\ArrayHelper;
+use yii\helpers\Json;
 
 /**
  * ModuleController implements the CRUD actions for Module model.
  */
 class ModuleController extends BackendController
 {
-    /**
-     * @inheritdoc
-     */
     public function behaviors()
     {
         return [
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'delete' => ['POST'],
+                    'delete' => ['post'],
                 ],
             ],
         ];
@@ -101,9 +100,41 @@ class ModuleController extends BackendController
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
-
+        //$this->findModel($id)->delete();
+        $model = $this->findModel($id);
+        $model->deleted = 1;
+        $model->save();
         return $this->redirect(['index']);
+    }
+
+    /**
+     * Change status
+     * @throws NotFoundHttpException
+     * @throws \yii\base\ExitException
+     */
+    public function actionChangeStatus()
+    {
+        if (!Yii::$app->getRequest()->isAjax)
+            Yii::$app->end();
+
+        $id = (int)ArrayHelper::getValue($_REQUEST, 'id', 0);
+        $status = (int)ArrayHelper::getValue($_REQUEST, 'status', 0);
+        $statusChange = ($status == 1) ? 0 : 1;
+
+        $model = $this->findModel($id);
+        if ($model instanceof Module) {
+            $updateStatus = $model->updateAttributes(['id' => $id, 'status' => $statusChange]);
+            if ($updateStatus) {
+                echo Json::encode(['status' => true]);
+                Yii::$app->end();
+            } else {
+                echo Json::encode(['status' => false]);
+                Yii::$app->end();
+            }
+        } else {
+            echo Json::encode(['status' => false]);
+            Yii::$app->end();
+        }
     }
 
     /**

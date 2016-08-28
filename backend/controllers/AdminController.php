@@ -14,16 +14,13 @@ use yii\filters\VerbFilter;
  */
 class AdminController extends BackendController
 {
-    /**
-     * @inheritdoc
-     */
     public function behaviors()
     {
         return [
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'delete' => ['POST'],
+                    'delete' => ['post'],
                 ],
             ],
         ];
@@ -47,13 +44,12 @@ class AdminController extends BackendController
     /**
      * Displays a single Admin model.
      * @param integer $id
-     * @param string $username
      * @return mixed
      */
-    public function actionView($id, $username)
+    public function actionView($id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($id, $username),
+            'model' => $this->findModel($id),
         ]);
     }
 
@@ -67,7 +63,7 @@ class AdminController extends BackendController
         $model = new Admin();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id, 'username' => $model->username]);
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -79,15 +75,14 @@ class AdminController extends BackendController
      * Updates an existing Admin model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
-     * @param string $username
      * @return mixed
      */
-    public function actionUpdate($id, $username)
+    public function actionUpdate($id)
     {
-        $model = $this->findModel($id, $username);
+        $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id, 'username' => $model->username]);
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -99,13 +94,14 @@ class AdminController extends BackendController
      * Deletes an existing Admin model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
-     * @param string $username
      * @return mixed
      */
-    public function actionDelete($id, $username)
+    public function actionDelete($id)
     {
-        $this->findModel($id, $username)->delete();
-
+        //$this->findModel($id)->delete();
+        $model = $this->findModel($id);
+        $model->deleted = 1;
+        $model->save();
         return $this->redirect(['index']);
     }
 
@@ -113,13 +109,12 @@ class AdminController extends BackendController
      * Finds the Admin model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @param string $username
      * @return Admin the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id, $username)
+    protected function findModel($id)
     {
-        if (($model = Admin::findOne(['id' => $id, 'username' => $username])) !== null) {
+        if (($model = Admin::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

@@ -4,26 +4,25 @@ namespace backend\controllers;
 
 use Yii;
 use backend\models\Menu;
-use common\models\MenuSearch;
+use common\models\search\MenuSearch;
 use backend\components\BackendController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\helpers\ArrayHelper;
+use yii\helpers\Json;
 
 /**
  * MenuController implements the CRUD actions for Menu model.
  */
 class MenuController extends BackendController
 {
-    /**
-     * @inheritdoc
-     */
     public function behaviors()
     {
         return [
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'delete' => ['POST'],
+                    'delete' => ['post'],
                 ],
             ],
         ];
@@ -65,8 +64,13 @@ class MenuController extends BackendController
     {
         $model = new Menu();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->parent_id == '') {
+                $model->parent_id = 0;
+            }
+            if ($model->save()) {
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -84,8 +88,13 @@ class MenuController extends BackendController
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->parent_id == '') {
+                $model->parent_id = 0;
+            }
+            if ($model->save()) {
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -101,9 +110,41 @@ class MenuController extends BackendController
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
-
+        //$this->findModel($id)->delete();
+        $model = $this->findModel($id);
+        $model->deleted = 1;
+        $model->save();
         return $this->redirect(['index']);
+    }
+
+    /**
+     * Change status
+     * @throws NotFoundHttpException
+     * @throws \yii\base\ExitException
+     */
+    public function actionChangeStatus()
+    {
+        if (!Yii::$app->getRequest()->isAjax)
+            Yii::$app->end();
+
+        $id = (int)ArrayHelper::getValue($_REQUEST, 'id', 0);
+        $status = (int)ArrayHelper::getValue($_REQUEST, 'status', 0);
+        $statusChange = ($status == 1) ? 0 : 1;
+
+        $model = $this->findModel($id);
+        if ($model instanceof Menu) {
+            $updateStatus = $model->updateAttributes(['id' => $id, 'status' => $statusChange]);
+            if ($updateStatus) {
+                echo Json::encode(['status' => true]);
+                Yii::$app->end();
+            } else {
+                echo Json::encode(['status' => false]);
+                Yii::$app->end();
+            }
+        } else {
+            echo Json::encode(['status' => false]);
+            Yii::$app->end();
+        }
     }
 
     /**
