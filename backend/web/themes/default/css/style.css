@@ -1,3 +1,12 @@
+body {
+
+}
+.btn {
+    border-radius: 0;
+}
+a {
+    /*color: #ffffff;*/
+}
 section.content-header {
     /*border-bottom: 3px solid black;*/
     /*padding: 20px;*/
@@ -10,4 +19,14 @@ section.content-header {
 
 .main-content {
     padding: 30px;
+}
+.content-wrapper {
+    background-color: #FFFFFF;
+}
+.grid-view table {
+
+}
+
+.grid-view table > thead > th {
+
 }
