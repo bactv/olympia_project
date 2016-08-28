@@ -1,8 +1,5 @@
 <?php
-Yii::setAlias('@common', dirname(__DIR__));
-Yii::setAlias('@cms', dirname(dirname(__DIR__)) . '/backend');
-Yii::setAlias('@web', dirname(dirname(__DIR__)) . '/frontend');
-
+require(__DIR__ . '/predefine.php');
 return [
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
