@@ -1,18 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: bac_b
- * Date: 24/08/2016
- * Time: 7:24 SA
- */
+
 namespace backend\models;
 
-use common\models\AdminBase;
 use Yii;
 use yii\web\IdentityInterface;
 
-class Admin extends AdminBase implements IdentityInterface
-{
+
+class Admin extends \common\models\AdminBase implements IdentityInterface{
+
 
     /**
      * Finds an identity by the given ID.
@@ -24,19 +19,22 @@ class Admin extends AdminBase implements IdentityInterface
     public static function findIdentity($id)
     {
         // TODO: Implement findIdentity() method.
-        $admin = static::find()->where(['id' => $id, 'status' => AdminBase::ADMIN_ACTIVE])->one();
-        return (!empty($admin)) ? $admin : null;
+        $admin = static::find()->where(['id' => $id, 'status' => ADMIN_ACTIVE])->one();
+        return (!empty($admin) ? $admin : null);
     }
 
     /**
-     * Find an identity by the given username
-     * @param $username
-     * @return null|\yii\db\ActiveRecord
+     * Finds an identity by the given username.
+     * @param string $username
+     * @return IdentityInterface the identity object that matches the given ID.
+     * Null should be returned if such an identity cannot be found
+     * or the identity is not in an active state (disabled, deleted, etc.)
      */
     public static function findByUsername($username)
     {
-        $admin = static::find()->where(['username' => $username, 'status' => AdminBase::ADMIN_ACTIVE])->one();
-        return (!empty($admin)) ? $admin : null;
+        // TODO: Implement findIdentity() method.
+        $admin = static::find()->where(['username' => $username, 'status' => ADMIN_ACTIVE])->one();
+        return (!empty($admin) ? $admin : null);
     }
 
     /**
@@ -94,23 +92,22 @@ class Admin extends AdminBase implements IdentityInterface
     }
 
     /**
-     * Validate Password
-     * @param $password
-     * @return bool
-     * @throws \yii\base\Exception
-     */
-    public function validatePassword($password)
-    {
-        return Yii::$app->security->validatePassword($password, $this->password);
-    }
-
-    /**
-     * Set password
+     * Encrypt password
      * @param $password
      * @throws \yii\base\Exception
      */
     public function setPassword($password)
     {
         $this->password = Yii::$app->security->generatePasswordHash($password);
+    }
+
+    /**
+     * Validate password
+     * @param $password
+     * @return bool
+     */
+    public function validatePassword($password)
+    {
+        return Yii::$app->security->validatePassword($password, $this->password);
     }
 }
