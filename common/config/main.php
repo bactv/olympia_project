@@ -6,6 +6,7 @@ return [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+        'db' => require(__DIR__ . '/db.php'),
         'i18n' => [
             'translations' => [
                 'app' => [
