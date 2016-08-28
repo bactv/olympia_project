@@ -9,5 +9,6 @@ return [
             'width' => '',
             'height' => ''
         ]
-    ]
+    ],
+    'controller_except' => ['Default']
 ];

@@ -1,9 +1,7 @@
 <?php
 $params = array_merge(
     require(__DIR__ . '/../../common/config/params.php'),
-    require(__DIR__ . '/../../common/config/params-local.php'),
-    require(__DIR__ . '/params.php'),
-    require(__DIR__ . '/params-local.php')
+    require(__DIR__ . '/params.php')
 );
 
 return [
@@ -11,10 +9,10 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'modules' => [],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',
+            'cookieValidationKey' => '6VehvOH_JIkJ7JymtY0Oel-dSUzzLRT7',
         ],
         'user' => [
             'identityClass' => 'backend\models\Admin',
@@ -34,7 +32,6 @@ return [
             ],
         ],
         'errorHandler' => [
-//            'errorAction' => 'site/error',
         ],
         
         'urlManager' => [
@@ -48,28 +45,38 @@ return [
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
             ]
         ],
-//        'authClientCollection' => [
-//            'class' => 'yii\authclient\Collection',
-//            'clients' => [
-//                'google' => [
-//                    'class' => 'yii\authclient\clients\Google',
-//                    'clientId' => '441368620449-s3g8836t2nr882erc17f99ajbcu0pdu5.apps.googleusercontent.com',
-//                    'clientSecret' => 'P_spkfgTGlr48UZfFhnurVM-',
-//                ],
-//            ],
-//        ],
         'view' => [
             'theme' => [
                 'class'=>'common\components\Theme',
                 'active' => 'default',
                 'pathMap' => [
                     '@app/views' => [
-                        '@cms/views'
+                        '@backend/views'
                     ]
                 ]
             ]
         ],
     ],
     'params' => $params,
-    'defaultRoute' => 'default'
+    'defaultRoute' => 'default',
+    'modules' => [
+        'gii' => [
+            'class' => 'yii\gii\Module',
+            'allowedIPs' => ['127.0.0.1', '::1', '118.70.124.143', '113.190.252.218', '183.81.9.171', '123.25.21.138'],
+
+            'generators' => [
+                'crud'   => [
+                    'class'     => 'backend\templates\gii\crud\Generator',
+                ],
+                'model'   => [
+                    'class'     => 'backend\templates\gii\model\Generator'
+                ],
+            ]
+        ],
+        'debug' => [
+            'class' => 'yii\debug\Module',
+            'allowedIPs' => ['127.0.0.1', '::1', '118.70.124.143', '113.190.252.218', '183.81.9.171', '123.25.21.138'],
+
+        ]
+    ],
 ];
