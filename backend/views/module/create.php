@@ -9,13 +9,14 @@ use yii\helpers\Html;
 $this->title = 'Create Module';
 $this->params['breadcrumbs'][] = ['label' => 'Modules', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
+$this->params['title'] = 'Update';
+$this->params['menu'] = [
+    ['label'=>'Back', 'url' => ['index'], 'options' => ['class' => 'btn btn-primary']],
+];
 ?>
-<div class="module-create">
-
-    <h1><?= Html::encode($this->title) ?></h1>
-
+<div class="module-update">
     <?= $this->render('_form', [
-        'model' => $model,
+    'model' => $model,
     ]) ?>
-
 </div>
+
