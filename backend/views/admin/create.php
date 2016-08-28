@@ -9,13 +9,14 @@ use yii\helpers\Html;
 $this->title = 'Create Admin';
 $this->params['breadcrumbs'][] = ['label' => 'Admins', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
+$this->params['title'] = 'Update';
+$this->params['menu'] = [
+    ['label'=>'Back', 'url' => ['index'], 'options' => ['class' => 'btn btn-primary']],
+];
 ?>
-<div class="admin-create">
-
-    <h1><?= Html::encode($this->title) ?></h1>
-
+<div class="admin-update">
     <?= $this->render('_form', [
-        'model' => $model,
+    'model' => $model,
     ]) ?>
-
 </div>
+

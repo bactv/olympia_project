@@ -1,39 +1,45 @@
 <?php
 
 use yii\helpers\Html;
-use yii\grid\GridView;
 use yii\widgets\Pjax;
-/* @var $this yii\web\View */
-/* @var $searchModel common\models\AdminSearch */
-/* @var $dataProvider yii\data\ActiveDataProvider */
+use yii\grid\GridView;
 
-$this->title = 'Admins';
+/* @var $this yii\web\View */
+/* @var $searchModel common\models\search\AdminSearch */
+/* @var $dataProvider yii\data\ActiveDataProvider */
+$this->title = $this->params['title'] = 'Admins';
 $this->params['breadcrumbs'][] = $this->title;
+$this->params['menu'] = [
+    ['label'=>'Create', 'url' => ['create'], 'options' => ['class' => 'btn btn-primary']],
+    ['label'=>'Delete', 'url' => 'javascript:void(0)', 'options' => ['class' => 'btn btn-danger', 'onclick' => 'deleteAllItems()']]
+];
 ?>
-<div class="admin-index">
-    <p>
-        <?= Html::a('Create Admin', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-<?php Pjax::begin(); ?>    <?= GridView::widget([
+
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+
+<?php Pjax::begin(['id' => 'admin-grid-view']);?> 
+    <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
+            ['class' => 'yii\grid\CheckboxColumn'],
             'username',
-            'password',
-            'email:email',
+            'email',
             'fullname',
-            // 'status',
-            // 'deleted',
+            // 'birthday',
+            // 'profession',
+             'status',
+             'deleted',
+            // 'thumb_version',
             // 'created_time',
             // 'updated_time',
             // 'created_by',
             // 'updated_by',
-            // 'last_login_time',
-
-            ['class' => 'yii\grid\ActionColumn'],
+//             'last_active_time',
+//             'admin_group_ids',
+            [
+                'class' => 'backend\components\CActionColumn',
+            ],
         ],
     ]); ?>
-<?php Pjax::end(); ?></div>
+<?php Pjax::end();?> 

@@ -12,19 +12,23 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'id')->textInput() ?>
+    <?= $form->field($model, 'username')->textInput(['maxlength' => 255]) ?>
 
-    <?= $form->field($model, 'username')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'password')->passwordInput(['maxlength' => 255]) ?>
 
-    <?= $form->field($model, 'password')->passwordInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'email')->textInput(['maxlength' => 255]) ?>
 
-    <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'fullname')->textInput(['maxlength' => 255]) ?>
 
-    <?= $form->field($model, 'fullname')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'birthday')->textInput() ?>
+
+    <?= $form->field($model, 'profession')->textInput(['maxlength' => 255]) ?>
 
     <?= $form->field($model, 'status')->textInput() ?>
 
     <?= $form->field($model, 'deleted')->textInput() ?>
+
+    <?= $form->field($model, 'thumb_version')->textInput() ?>
 
     <?= $form->field($model, 'created_time')->textInput() ?>
 
@@ -34,10 +38,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'updated_by')->textInput() ?>
 
-    <?= $form->field($model, 'last_login_time')->textInput() ?>
+    <?= $form->field($model, 'last_active_time')->textInput() ?>
+
+    <?= $form->field($model, 'admin_group_ids')->textInput(['maxlength' => 255]) ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => 'btn btn-primary']) ?>
+        <?= Html::resetButton('Reset', ['class' => 'btn btn-default']); ?>
     </div>
 
     <?php ActiveForm::end(); ?>
