@@ -20,7 +20,9 @@
         "yiisoft/yii2-swiftmailer": "*",
         "yiisoft/yii2-authclient": "^2.1",
         "FortAwesome/Font-Awesome": "*",
-        "kartik-v/yii2-widget-activeform": "@dev"
+        "kartik-v/yii2-widget-activeform": "@dev",
+        "kartik-v/yii2-widget-select2": "@dev",
+        "leandrogehlen/yii2-treegrid": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
