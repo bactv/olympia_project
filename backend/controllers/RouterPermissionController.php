@@ -85,7 +85,7 @@ class RouterPermissionController extends BackendController
                     $listActionDB = AdminAction::find()->where(['controller_id' => $controller->id])->all();
                     if (!empty($listActionDB)) {
                         foreach ($listActionDB as $at) {
-                            $arrActionDB[] = $at;
+                            $arrActionDB[] = $at->action;
                         }
                     }
 
