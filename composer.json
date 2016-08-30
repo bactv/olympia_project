@@ -22,7 +22,10 @@
         "FortAwesome/Font-Awesome": "*",
         "kartik-v/yii2-widget-activeform": "@dev",
         "kartik-v/yii2-widget-select2": "@dev",
-        "leandrogehlen/yii2-treegrid": "*"
+        "leandrogehlen/yii2-treegrid": "*",
+        "kartik-v/yii2-widget-fileinput": "@dev",
+        "2amigos/yii2-ckeditor-widget": "~1.0",
+        "kartik-v/yii2-widget-datepicker": "@dev"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
