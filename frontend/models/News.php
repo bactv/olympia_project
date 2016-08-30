@@ -5,7 +5,7 @@ namespace frontend\models;
 use Yii;
 
 
-class Menu extends \common\models\MenuBase{
+class News extends \common\models\NewsBase{
 
 
 }
