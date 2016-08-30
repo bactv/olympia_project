@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\Pjax;
 use yii\grid\GridView;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\search\AdminGroupSearch */
@@ -15,46 +16,65 @@ $this->params['menu'] = [
 ];
 ?>
 
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+<?php
+$headerOptions = ['style'=>'text-align: center; vertical-align: middle;'];
+$contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
+?>
 
 <?php Pjax::begin(['id' => 'admin-grid-view']);?> 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+//        'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\CheckboxColumn'],
-
-            'id',
-            'name',
-            'description:ntext',
-            'permissions',
-            'created_time',
-            // 'updated_time',
-            // 'status',
             [
-                'class' => 'yii\grid\ActionColumn',
-                'template' => '{update}{delete}',
-                'header' => Yii::t('cms', 'action'),
-                'headerOptions' => ['style'=>'text-align: center;'],
-                'contentOptions'=>['style'=>'text-align: center;'],
-                'buttons' => [
-                    'update' => function ($url) {
-                        return Html::a('<span class="glyphicon glyphicon-pencil"></span>', $url, [
-                            'title' => 'Update',
-                            'class'=>'btn btn-primary btn-xs btn-app',
-                            'data-pjax' => '0',
-                        ]);
-                    },
-                    'delete' => function ($url) {
-                        return Html::a('<span class="glyphicon glyphicon-trash"></span>', $url, [
-                            'title' => 'Delete',
-                            'class'=>'btn btn-primary btn-xs btn-app',
-                            'data-confirm' => Yii::t('yii', 'Are you sure you want to delete this item?'),
-                            'data-method' => 'post',
-                            'data-pjax' => 'w0'
-                        ]);
-                    },
-                ]
+                'attribute' => 'id',
+                'headerOptions' => $headerOptions,
+                'contentOptions' => $contentOptions,
+            ],
+            [
+                'attribute' => 'name',
+                'label' => Yii::t('cms', 'Name'),
+                'headerOptions' => $headerOptions,
+                'contentOptions' => $contentOptions,
+            ],
+            [
+                'attribute' => 'description',
+                'label' => Yii::t('cms', 'Description'),
+                'headerOptions' => $headerOptions,
+                'contentOptions' => $contentOptions,
+            ],
+            [
+                'attribute' => 'status',
+                'label' => Yii::t('cms', 'Status'),
+                'format' => 'raw',
+                'options' => ['width' => '90px'],
+                'value' => function ($data) {
+                    if ($data['status'] == 1) {
+                        return '<div id="item-status-'.$data['id'].'"><a href="javascript:void(0);" class="f-s-18" onclick = "changeStatusItems('.$data['id'].', 1, \''.Url::toRoute(['admin-group/change-status']).'\')"><i class="fa fa-check" style="color: green;"></i></a></div>';
+                    } else {
+                        return '<div id="item-status-'.$data['id'].'"><a href="javascript:void(0);" class="f-s-18" onclick = "changeStatusItems('.$data['id'].', 0, \''.Url::toRoute(['admin-group/change-status']).'\')"><i class="fa fa-dot-circle-o" style="color: red"></i></a></div>';
+                    }
+                },
+                'headerOptions' => $headerOptions,
+                'contentOptions'=> $contentOptions,
+            ],
+            [
+                'attribute' => 'created_time',
+                'label' => Yii::t('cms', 'Created Time'),
+                'headerOptions' => $headerOptions,
+                'contentOptions' => $contentOptions,
+            ],
+            [
+                'attribute' => 'updated_time',
+                'label' => Yii::t('cms', 'Updated Time'),
+                'headerOptions' => $headerOptions,
+                'contentOptions' => $contentOptions,
+            ],
+            [
+                'class' => 'backend\components\CActionColumn',
+                'headerOptions' => $headerOptions,
+                'contentOptions'=> $contentOptions,
             ],
         ],
     ]); ?>

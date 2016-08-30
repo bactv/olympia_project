@@ -16,6 +16,7 @@ $this->params['menu'] = [
 <div class="admin-group-update">
     <?= $this->render('_form', [
         'model' => $model,
+        'action_ids' => $action_ids
     ]) ?>
 
 </div>
