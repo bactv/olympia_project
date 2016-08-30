@@ -5,12 +5,12 @@ namespace common\models\search;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\AdminGroup;
+use backend\models\TypeQuestion;
 
 /**
- * AdminGroupSearch represents the model behind the search form about `backend\models\AdminGroup`.
+ * TypeQuestionSearch represents the model behind the search form about `backend\models\TypeQuestion`.
  */
-class AdminGroupSearch extends AdminGroup
+class TypeQuestionSearch extends TypeQuestion
 {
     /**
      * @inheritdoc
@@ -19,7 +19,7 @@ class AdminGroupSearch extends AdminGroup
     {
         return [
             [['id', 'status'], 'integer'],
-            [['name', 'description', 'permissions', 'created_time', 'updated_time'], 'safe'],
+            [['name', 'description', 'created_time', 'updated_time'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class AdminGroupSearch extends AdminGroup
      */
     public function search($params)
     {
-        $query = AdminGroup::find();
+        $query = TypeQuestion::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -59,8 +59,7 @@ class AdminGroupSearch extends AdminGroup
         ]);
 
         $query->andFilterWhere(['like', 'name', $this->name])
-            ->andFilterWhere(['like', 'description', $this->description])
-            ->andFilterWhere(['like', 'permissions', $this->permissions]);
+            ->andFilterWhere(['like', 'description', $this->description]);
 
         return $dataProvider;
     }

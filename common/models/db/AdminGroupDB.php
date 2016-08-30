@@ -31,11 +31,11 @@ class AdminGroupDB extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['description'], 'string'],
+            [['description', 'permissions'], 'string'],
             [['permissions'], 'required'],
             [['created_time', 'updated_time'], 'safe'],
             [['status'], 'integer'],
-            [['name', 'permissions'], 'string', 'max' => 255]
+            [['name'], 'string', 'max' => 255]
         ];
     }
 

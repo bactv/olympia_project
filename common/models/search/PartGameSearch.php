@@ -5,12 +5,12 @@ namespace common\models\search;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\AdminGroup;
+use backend\models\PartGame;
 
 /**
- * AdminGroupSearch represents the model behind the search form about `backend\models\AdminGroup`.
+ * PartGameSearch represents the model behind the search form about `backend\models\PartGame`.
  */
-class AdminGroupSearch extends AdminGroup
+class PartGameSearch extends PartGame
 {
     /**
      * @inheritdoc
@@ -18,8 +18,8 @@ class AdminGroupSearch extends AdminGroup
     public function rules()
     {
         return [
-            [['id', 'status'], 'integer'],
-            [['name', 'description', 'permissions', 'created_time', 'updated_time'], 'safe'],
+            [['id'], 'integer'],
+            [['name', 'description', 'created_time', 'updated_time'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class AdminGroupSearch extends AdminGroup
      */
     public function search($params)
     {
-        $query = AdminGroup::find();
+        $query = PartGame::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -55,12 +55,10 @@ class AdminGroupSearch extends AdminGroup
             'id' => $this->id,
             'created_time' => $this->created_time,
             'updated_time' => $this->updated_time,
-            'status' => $this->status,
         ]);
 
         $query->andFilterWhere(['like', 'name', $this->name])
-            ->andFilterWhere(['like', 'description', $this->description])
-            ->andFilterWhere(['like', 'permissions', $this->permissions]);
+            ->andFilterWhere(['like', 'description', $this->description]);
 
         return $dataProvider;
     }

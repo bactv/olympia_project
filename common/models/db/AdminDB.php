@@ -43,7 +43,7 @@ class AdminDB extends \yii\db\ActiveRecord
             [['username', 'password', 'email', 'fullname'], 'required'],
             [['birthday', 'created_time', 'updated_time', 'last_active_time'], 'safe'],
             [['status', 'deleted', 'thumb_version', 'created_by', 'updated_by'], 'integer'],
-            [['username', 'password', 'email', 'fullname', 'profession', 'admin_group_ids'], 'string', 'max' => 255]
+            [['username', 'password', 'email', 'fullname', 'profession'], 'string', 'max' => 255]
         ];
     }
 

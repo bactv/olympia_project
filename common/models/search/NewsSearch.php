@@ -5,12 +5,12 @@ namespace common\models\search;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\AdminGroup;
+use backend\models\News;
 
 /**
- * AdminGroupSearch represents the model behind the search form about `backend\models\AdminGroup`.
+ * NewsSearch represents the model behind the search form about `backend\models\News`.
  */
-class AdminGroupSearch extends AdminGroup
+class NewsSearch extends News
 {
     /**
      * @inheritdoc
@@ -18,8 +18,8 @@ class AdminGroupSearch extends AdminGroup
     public function rules()
     {
         return [
-            [['id', 'status'], 'integer'],
-            [['name', 'description', 'permissions', 'created_time', 'updated_time'], 'safe'],
+            [['id', 'created_by', 'updated_by', 'thumb_version', 'status', 'deleted'], 'integer'],
+            [['title', 'content', 'created_time', 'updated_time', 'post_time'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class AdminGroupSearch extends AdminGroup
      */
     public function search($params)
     {
-        $query = AdminGroup::find();
+        $query = News::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -53,14 +53,18 @@ class AdminGroupSearch extends AdminGroup
 
         $query->andFilterWhere([
             'id' => $this->id,
+            'created_by' => $this->created_by,
+            'updated_by' => $this->updated_by,
             'created_time' => $this->created_time,
             'updated_time' => $this->updated_time,
+            'post_time' => $this->post_time,
+            'thumb_version' => $this->thumb_version,
             'status' => $this->status,
+            'deleted' => $this->deleted,
         ]);
 
-        $query->andFilterWhere(['like', 'name', $this->name])
-            ->andFilterWhere(['like', 'description', $this->description])
-            ->andFilterWhere(['like', 'permissions', $this->permissions]);
+        $query->andFilterWhere(['like', 'title', $this->title])
+            ->andFilterWhere(['like', 'content', $this->content]);
 
         return $dataProvider;
     }

@@ -5,22 +5,23 @@ namespace common\models\db;
 use Yii;
 
 /**
- * This is the model class for table "admin_action".
+ * This is the model class for table "question_format".
  *
  * @property integer $id
- * @property integer $controller_id
- * @property string $action
+ * @property string $name
+ * @property string $description
+ * @property integer $status
  * @property string $created_time
  * @property string $updated_time
  */
-class AdminActionDB extends \yii\db\ActiveRecord
+class QuestionFormatDB extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'admin_action';
+        return 'question_format';
     }
 
     /**
@@ -29,10 +30,10 @@ class AdminActionDB extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['controller_id', 'action'], 'required'],
-            [['controller_id'], 'integer'],
+            [['name', 'description'], 'required'],
+            [['status'], 'integer'],
             [['created_time', 'updated_time'], 'safe'],
-            [['action'], 'string', 'max' => 255]
+            [['name', 'description'], 'string', 'max' => 255]
         ];
     }
 
@@ -43,8 +44,9 @@ class AdminActionDB extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'controller_id' => 'Controller ID',
-            'action' => 'Action',
+            'name' => 'Name',
+            'description' => 'Description',
+            'status' => 'Status',
             'created_time' => 'Created Time',
             'updated_time' => 'Updated Time',
         ];

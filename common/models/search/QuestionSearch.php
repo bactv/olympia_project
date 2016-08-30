@@ -5,12 +5,12 @@ namespace common\models\search;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\AdminGroup;
+use backend\models\Question;
 
 /**
- * AdminGroupSearch represents the model behind the search form about `backend\models\AdminGroup`.
+ * QuestionSearch represents the model behind the search form about `backend\models\Question`.
  */
-class AdminGroupSearch extends AdminGroup
+class QuestionSearch extends Question
 {
     /**
      * @inheritdoc
@@ -18,8 +18,8 @@ class AdminGroupSearch extends AdminGroup
     public function rules()
     {
         return [
-            [['id', 'status'], 'integer'],
-            [['name', 'description', 'permissions', 'created_time', 'updated_time'], 'safe'],
+            [['id', 'question_topic', 'question_level', 'question_format', 'type_question', 'created_by', 'updated_by', 'status', 'deleted', 'number_appear', 'admin'], 'integer'],
+            [['content', 'created_time', 'updated_time'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class AdminGroupSearch extends AdminGroup
      */
     public function search($params)
     {
-        $query = AdminGroup::find();
+        $query = Question::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -53,14 +53,21 @@ class AdminGroupSearch extends AdminGroup
 
         $query->andFilterWhere([
             'id' => $this->id,
+            'question_topic' => $this->question_topic,
+            'question_level' => $this->question_level,
+            'question_format' => $this->question_format,
+            'type_question' => $this->type_question,
             'created_time' => $this->created_time,
             'updated_time' => $this->updated_time,
+            'created_by' => $this->created_by,
+            'updated_by' => $this->updated_by,
             'status' => $this->status,
+            'deleted' => $this->deleted,
+            'number_appear' => $this->number_appear,
+            'admin' => $this->admin,
         ]);
 
-        $query->andFilterWhere(['like', 'name', $this->name])
-            ->andFilterWhere(['like', 'description', $this->description])
-            ->andFilterWhere(['like', 'permissions', $this->permissions]);
+        $query->andFilterWhere(['like', 'content', $this->content]);
 
         return $dataProvider;
     }

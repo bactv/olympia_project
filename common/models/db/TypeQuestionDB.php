@@ -5,27 +5,23 @@ namespace common\models\db;
 use Yii;
 
 /**
- * This is the model class for table "menu".
+ * This is the model class for table "type_question".
  *
  * @property integer $id
  * @property string $name
- * @property integer $parent_id
- * @property integer $module_id
- * @property string $router
+ * @property string $description
  * @property string $created_time
  * @property string $updated_time
  * @property integer $status
- * @property integer $deleted
- * @property string $icon
  */
-class MenuDB extends \yii\db\ActiveRecord
+class TypeQuestionDB extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'menu';
+        return 'type_question';
     }
 
     /**
@@ -34,10 +30,10 @@ class MenuDB extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['parent_id', 'module_id', 'status', 'deleted'], 'integer'],
-            [['module_id', 'router'], 'required'],
+            [['name'], 'required'],
             [['created_time', 'updated_time'], 'safe'],
-            [['name', 'router', 'icon'], 'string', 'max' => 255]
+            [['status'], 'integer'],
+            [['name', 'description'], 'string', 'max' => 255]
         ];
     }
 
@@ -49,14 +45,10 @@ class MenuDB extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'name' => 'Name',
-            'parent_id' => 'Parent ID',
-            'module_id' => 'Module ID',
-            'router' => 'Router',
+            'description' => 'Description',
             'created_time' => 'Created Time',
             'updated_time' => 'Updated Time',
             'status' => 'Status',
-            'deleted' => 'Deleted',
-            'icon' => 'Icon',
         ];
     }
 }

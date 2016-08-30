@@ -5,10 +5,10 @@ namespace common\models\search;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\models\Student;
+use backend\models\Student;
 
 /**
- * StudentSearch represents the model behind the search form about `frontend\models\Student`.
+ * StudentSearch represents the model behind the search form about `backend\models\Student`.
  */
 class StudentSearch extends Student
 {
@@ -18,7 +18,7 @@ class StudentSearch extends Student
     public function rules()
     {
         return [
-            [['id', 'status', 'deleted', 'thumb_version'], 'integer'],
+            [['id', 'status', 'deleted', 'thumb_version', 'number_play_game'], 'integer'],
             [['username', 'password', 'email', 'phone', 'fullname', 'birthday', 'school', 'address', 'created_time', 'updated_time', 'last_active_time'], 'safe'],
         ];
     }
@@ -43,21 +43,14 @@ class StudentSearch extends Student
     {
         $query = Student::find();
 
-        // add conditions that should always apply here
-
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
 
-        $this->load($params);
-
-        if (!$this->validate()) {
-            // uncomment the following line if you do not want to return any records when validation fails
-            // $query->where('0=1');
+        if ($this->load($params) && !$this->validate()) {
             return $dataProvider;
         }
 
-        // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
             'birthday' => $this->birthday,
@@ -67,6 +60,7 @@ class StudentSearch extends Student
             'status' => $this->status,
             'deleted' => $this->deleted,
             'thumb_version' => $this->thumb_version,
+            'number_play_game' => $this->number_play_game,
         ]);
 
         $query->andFilterWhere(['like', 'username', $this->username])

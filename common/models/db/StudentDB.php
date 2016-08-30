@@ -22,6 +22,7 @@ use Yii;
  * @property integer $status
  * @property integer $deleted
  * @property integer $thumb_version
+ * @property integer $number_play_game
  */
 class StudentDB extends \yii\db\ActiveRecord
 {
@@ -41,8 +42,8 @@ class StudentDB extends \yii\db\ActiveRecord
         return [
             [['username', 'password', 'email', 'phone', 'fullname', 'school'], 'required'],
             [['birthday', 'created_time', 'updated_time', 'last_active_time'], 'safe'],
-            [['status', 'deleted', 'thumb_version'], 'integer'],
-            [['username', 'password', 'email', 'phone', 'fullname', 'school', 'address'], 'string', 'max' => 255],
+            [['status', 'deleted', 'thumb_version', 'number_play_game'], 'integer'],
+            [['username', 'password', 'email', 'phone', 'fullname', 'school', 'address'], 'string', 'max' => 255]
         ];
     }
 
@@ -67,6 +68,7 @@ class StudentDB extends \yii\db\ActiveRecord
             'status' => 'Status',
             'deleted' => 'Deleted',
             'thumb_version' => 'Thumb Version',
+            'number_play_game' => 'Number Play Game',
         ];
     }
 }
