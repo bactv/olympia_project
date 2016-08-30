@@ -2,6 +2,7 @@
 
 namespace backend\models;
 
+use backend\components\CheckPermission;
 use Yii;
 use common\behaviors\TimestampBehavior;
 use yii\helpers\Url;
@@ -29,8 +30,15 @@ class Menu extends \common\models\MenuBase
      */
     public static function getAllMenus()
     {
-        return static::find()->where(['status' => MENU_ACTIVE, 'deleted' => MENU_NOT_DELETED,
+        $allMenus =  static::find()->where(['status' => MENU_ACTIVE, 'deleted' => MENU_NOT_DELETED,
             'module_id' => MENU_BACKEND])->all();
+//        $menus = [];
+//        foreach ($allMenus as $menu) {
+//            if (self::checkMenuPermission($menu)) {
+//                $menus[] = $menu;
+//            }
+//        }
+        return $allMenus;
     }
 
     /**
@@ -62,8 +70,15 @@ class Menu extends \common\models\MenuBase
      */
     public static function getChildMenu($parent_id)
     {
-        return static::find()->where(['status' => MENU_ACTIVE, 'deleted' => MENU_NOT_DELETED, 'module_id' => MENU_BACKEND,
+        $allMenus = static::find()->where(['status' => MENU_ACTIVE, 'deleted' => MENU_NOT_DELETED, 'module_id' => MENU_BACKEND,
             'parent_id' => $parent_id])->all();
+        $menus = [];
+        foreach ($allMenus as $menu) {
+            if (self::checkMenuPermission($menu)) {
+                $menus[] = $menu;
+            }
+        }
+        return $menus;
     }
 
     /**
@@ -75,7 +90,7 @@ class Menu extends \common\models\MenuBase
     {
         static $view;
 
-        foreach ($categoryMenu  as  $menu) {
+        foreach ($categoryMenu as $menu) {
             $view .= static::setHtmlMenu($menu);
             if (static::getChildMenu($menu->id) == null) {
                 $view .= "</li>";
@@ -120,9 +135,47 @@ class Menu extends \common\models\MenuBase
                 $opt = str_repeat("-- ", $level-1) . $array['name'] ;
                 $options[$array['id']] =  $opt;
                 $newParent = $array['id'];
-                $options = static::getCategoryMenuTree($categoryArray, $newParent, $level , $options);
+                $options = static::getCategoryMenuTree($categoryArray, $newParent, $level);
             }
         }
         return $options;
+    }
+
+    private static function checkMenuPermission($menu)
+    {
+        $user_id = Yii::$app->user->id;
+        $controller_name = explode('/', $menu['router'])[0];
+        $action_name = explode('/', $menu['router'])[1];
+
+        $controller = AdminController::find()->where(['controller' => self::parseController($controller_name)])->one();
+        $controller_id = (!empty($controller)) ? $controller->id : "";
+        $action = AdminAction::find()->where(['controller_id' => $controller_id, 'action' => self::parseController($action_name)])->one();
+        $action_id = (!empty($action)) ? $action->id : "";
+
+
+        if (CheckPermission::checkPermission($user_id, $controller_id, $action_id)) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * @param $string
+     * @return string
+     */
+    private static function parseController($string)
+    {
+        $arr_characters = [];
+        for ($i = 0; $i < strlen($string); $i++) {
+            $arr_characters[] = $string[$i];
+        }
+        for ($i = 0; $i < count($arr_characters); $i++) {
+            if ($arr_characters[$i] == '-') {
+                $arr_characters[$i+1] = strtoupper($arr_characters[$i+1]);
+                $arr_characters[$i] = '';
+            }
+        }
+        $str = ucfirst(implode('', $arr_characters));
+        return $str;
     }
 }

@@ -5,8 +5,9 @@ namespace backend\models;
 use Yii;
 use common\behaviors\TimestampBehavior;
 
-class AdminAction extends \common\models\AdminActionBase{
 
+class Student extends \common\models\StudentBase
+{
     public function behaviors()
     {
         return [
@@ -18,5 +19,10 @@ class AdminAction extends \common\models\AdminActionBase{
                 ]
             ]
         ];
+    }
+
+    public static function getStudentById($id)
+    {
+        return self::find()->where(['id' => $id])->one();
     }
 }

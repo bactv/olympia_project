@@ -3,16 +3,39 @@
 namespace backend\models;
 
 use Yii;
+use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
+use yii\behaviors\BlameableBehavior;
+use common\behaviors\TimestampBehavior;
 
 
-class Admin extends \common\models\AdminBase implements IdentityInterface{
+class Admin extends \common\models\AdminBase implements IdentityInterface
+{
 
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => TimestampBehavior::className(),
+                'attributes' => [
+                    self::EVENT_BEFORE_INSERT => ['created_time', 'updated_time'],
+                    self::EVENT_BEFORE_UPDATE => ['updated_time'],
+                ]
+            ],
+            [
+                'class' => BlameableBehavior::className(),
+                'attributes' => [
+                    'createdByAttribute' => 'created_by',
+                    'updatedByAttribute' => 'updated_by',
+                ]
+            ]
+        ];
+    }
 
     /**
      * Finds an identity by the given ID.
      * @param string|integer $id the ID to be looked for
-     * @return IdentityInterface the identity object that matches the given ID.
+     * @return ActiveRecord
      * Null should be returned if such an identity cannot be found
      * or the identity is not in an active state (disabled, deleted, etc.)
      */

@@ -6,7 +6,7 @@ use Yii;
 use common\behaviors\TimestampBehavior;
 
 
-class AdminGroup extends \common\models\AdminGroupBase{
+class News extends \common\models\NewsBase{
 
     public function behaviors()
     {
@@ -15,19 +15,19 @@ class AdminGroup extends \common\models\AdminGroupBase{
                 'class' => TimestampBehavior::className(),
                 'attributes' => [
                     self::EVENT_BEFORE_INSERT => ['created_time', 'updated_time'],
-                    self::EVENT_BEFORE_UPDATE => ['updated_time']
+                    self::EVENT_BEFORE_UPDATE => ['updated_time'],
                 ]
             ]
         ];
     }
 
-    public static function getAllGroups()
+    public function getAllNews()
     {
-        return self::find()->where(['status' => ADMIN_GROUP_ACTIVE])->all();
+        return self::find()->where(['status' => NEWS_ACTIVE, 'deleted' => NEWS_NOT_DELETED])->all();
     }
 
-    public static function getGroupById($id)
+    public function getNewsById($id)
     {
-        return self::find()->where(['id' => $id, 'status' => ADMIN_GROUP_ACTIVE])->one();
+        return self::find()->where(['id' => $id, 'status' => NEWS_ACTIVE, 'deleted' => NEWS_NOT_DELETED])->all();
     }
 }
