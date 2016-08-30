@@ -26,4 +26,5 @@ return [
     ],
     'language' => 'vi',
     'sourceLanguage' => 'en',
+    'timeZone' => 'Asia/Ho_Chi_Minh',
 ];
