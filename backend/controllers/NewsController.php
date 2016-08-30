@@ -3,8 +3,8 @@
 namespace backend\controllers;
 
 use Yii;
-use backend\models\Module;
-use common\models\search\ModuleSearch;
+use backend\models\News;
+use common\models\search\NewsSearch;
 use backend\components\BackendController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -12,9 +12,9 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
 
 /**
- * ModuleController implements the CRUD actions for Module model.
+ * NewsController implements the CRUD actions for News model.
  */
-class ModuleController extends BackendController
+class NewsController extends BackendController
 {
     public function behaviors()
     {
@@ -29,12 +29,12 @@ class ModuleController extends BackendController
     }
 
     /**
-     * Lists all Module models.
+     * Lists all News models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new ModuleSearch();
+        $searchModel = new NewsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -44,7 +44,7 @@ class ModuleController extends BackendController
     }
 
     /**
-     * Displays a single Module model.
+     * Displays a single News model.
      * @param integer $id
      * @return mixed
      */
@@ -56,13 +56,13 @@ class ModuleController extends BackendController
     }
 
     /**
-     * Creates a new Module model.
+     * Creates a new News model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Module();
+        $model = new News();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -74,7 +74,7 @@ class ModuleController extends BackendController
     }
 
     /**
-     * Updates an existing Module model.
+     * Updates an existing News model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -93,7 +93,7 @@ class ModuleController extends BackendController
     }
 
     /**
-     * Deletes an existing Module model.
+     * Deletes an existing News model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -122,7 +122,7 @@ class ModuleController extends BackendController
         $statusChange = ($status == 1) ? 0 : 1;
 
         $model = $this->findModel($id);
-        if ($model instanceof Module) {
+        if ($model instanceof News) {
             $updateStatus = $model->updateAttributes(['id' => $id, 'status' => $statusChange]);
             if ($updateStatus) {
                 echo Json::encode(['status' => true]);
@@ -138,15 +138,15 @@ class ModuleController extends BackendController
     }
 
     /**
-     * Finds the Module model based on its primary key value.
+     * Finds the News model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Module the loaded model
+     * @return News the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Module::findOne($id)) !== null) {
+        if (($model = News::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

@@ -3,18 +3,16 @@
 namespace backend\controllers;
 
 use Yii;
-use backend\models\Module;
-use common\models\search\ModuleSearch;
+use backend\models\PartGame;
+use common\models\search\PartGameSearch;
 use backend\components\BackendController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\helpers\ArrayHelper;
-use yii\helpers\Json;
 
 /**
- * ModuleController implements the CRUD actions for Module model.
+ * PartGameController implements the CRUD actions for PartGame model.
  */
-class ModuleController extends BackendController
+class PartGameController extends BackendController
 {
     public function behaviors()
     {
@@ -29,12 +27,12 @@ class ModuleController extends BackendController
     }
 
     /**
-     * Lists all Module models.
+     * Lists all PartGame models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new ModuleSearch();
+        $searchModel = new PartGameSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -44,7 +42,7 @@ class ModuleController extends BackendController
     }
 
     /**
-     * Displays a single Module model.
+     * Displays a single PartGame model.
      * @param integer $id
      * @return mixed
      */
@@ -56,13 +54,13 @@ class ModuleController extends BackendController
     }
 
     /**
-     * Creates a new Module model.
+     * Creates a new PartGame model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Module();
+        $model = new PartGame();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -74,7 +72,7 @@ class ModuleController extends BackendController
     }
 
     /**
-     * Updates an existing Module model.
+     * Updates an existing PartGame model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -93,7 +91,7 @@ class ModuleController extends BackendController
     }
 
     /**
-     * Deletes an existing Module model.
+     * Deletes an existing PartGame model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -108,45 +106,15 @@ class ModuleController extends BackendController
     }
 
     /**
-     * Change status
-     * @throws NotFoundHttpException
-     * @throws \yii\base\ExitException
-     */
-    public function actionChangeStatus()
-    {
-        if (!Yii::$app->getRequest()->isAjax)
-            Yii::$app->end();
-
-        $id = (int)ArrayHelper::getValue($_REQUEST, 'id', 0);
-        $status = (int)ArrayHelper::getValue($_REQUEST, 'status', 0);
-        $statusChange = ($status == 1) ? 0 : 1;
-
-        $model = $this->findModel($id);
-        if ($model instanceof Module) {
-            $updateStatus = $model->updateAttributes(['id' => $id, 'status' => $statusChange]);
-            if ($updateStatus) {
-                echo Json::encode(['status' => true]);
-                Yii::$app->end();
-            } else {
-                echo Json::encode(['status' => false]);
-                Yii::$app->end();
-            }
-        } else {
-            echo Json::encode(['status' => false]);
-            Yii::$app->end();
-        }
-    }
-
-    /**
-     * Finds the Module model based on its primary key value.
+     * Finds the PartGame model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Module the loaded model
+     * @return PartGame the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Module::findOne($id)) !== null) {
+        if (($model = PartGame::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

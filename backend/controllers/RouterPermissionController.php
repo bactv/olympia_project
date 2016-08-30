@@ -10,6 +10,7 @@ use backend\components\BackendController;
 use backend\models\AdminAction;
 use backend\models\AdminController;
 use Yii;
+use yii\helpers\Json;
 
 class RouterPermissionController extends BackendController
 {

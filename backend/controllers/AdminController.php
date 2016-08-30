@@ -8,6 +8,8 @@ use common\models\search\AdminSearch;
 use backend\components\BackendController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\helpers\ArrayHelper;
+use yii\helpers\Json;
 
 /**
  * AdminController implements the CRUD actions for Admin model.
@@ -62,8 +64,12 @@ class AdminController extends BackendController
     {
         $model = new Admin();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+            $model->admin_group_ids = json_encode($model->admin_group_ids);
+
+            if ($model->save()) {
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -80,9 +86,15 @@ class AdminController extends BackendController
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $model->admin_group_ids = json_decode($model->admin_group_ids);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        $request = Yii::$app->request->post();
+        if ($model->load($request)) {
+            $model->admin_group_ids = json_encode($request['Admin']['admin_group_ids']);
+
+            if ($model->save()) {
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -103,6 +115,36 @@ class AdminController extends BackendController
         $model->deleted = 1;
         $model->save();
         return $this->redirect(['index']);
+    }
+
+    /**
+     * Change status
+     * @throws NotFoundHttpException
+     * @throws \yii\base\ExitException
+     */
+    public function actionChangeStatus()
+    {
+        if (!Yii::$app->getRequest()->isAjax)
+            Yii::$app->end();
+
+        $id = (int)ArrayHelper::getValue($_REQUEST, 'id', 0);
+        $status = (int)ArrayHelper::getValue($_REQUEST, 'status', 0);
+        $statusChange = ($status == 1) ? 0 : 1;
+
+        $model = $this->findModel($id);
+        if ($model instanceof Admin) {
+            $updateStatus = $model->updateAttributes(['id' => $id, 'status' => $statusChange]);
+            if ($updateStatus) {
+                echo Json::encode(['status' => true]);
+                Yii::$app->end();
+            } else {
+                echo Json::encode(['status' => false]);
+                Yii::$app->end();
+            }
+        } else {
+            echo Json::encode(['status' => false]);
+            Yii::$app->end();
+        }
     }
 
     /**

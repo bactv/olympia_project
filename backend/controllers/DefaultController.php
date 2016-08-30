@@ -6,11 +6,11 @@
  * Time: 12:31 SA
  */
 namespace backend\controllers;
-use backend\components\BackendController;
 use backend\models\LoginForm;
 use Yii;
+use yii\web\Controller;
 
-class DefaultController extends BackendController
+class DefaultController extends Controller
 {
     /**
      * @return array
