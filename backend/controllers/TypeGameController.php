@@ -3,18 +3,16 @@
 namespace backend\controllers;
 
 use Yii;
-use backend\models\Student;
-use common\models\search\StudentSearch;
+use backend\models\TypeGame;
+use common\models\search\TypeGameSearch;
 use backend\components\BackendController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\helpers\ArrayHelper;
-use yii\helpers\Json;
 
 /**
- * StudentController implements the CRUD actions for Student model.
+ * TypeGameController implements the CRUD actions for TypeGame model.
  */
-class StudentController extends BackendController
+class TypeGameController extends BackendController
 {
     public function behaviors()
     {
@@ -29,12 +27,12 @@ class StudentController extends BackendController
     }
 
     /**
-     * Lists all Student models.
+     * Lists all TypeGame models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new StudentSearch();
+        $searchModel = new TypeGameSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -44,7 +42,7 @@ class StudentController extends BackendController
     }
 
     /**
-     * Displays a single Student model.
+     * Displays a single TypeGame model.
      * @param integer $id
      * @return mixed
      */
@@ -56,13 +54,13 @@ class StudentController extends BackendController
     }
 
     /**
-     * Creates a new Student model.
+     * Creates a new TypeGame model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Student();
+        $model = new TypeGame();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -74,7 +72,7 @@ class StudentController extends BackendController
     }
 
     /**
-     * Updates an existing Student model.
+     * Updates an existing TypeGame model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -93,7 +91,7 @@ class StudentController extends BackendController
     }
 
     /**
-     * Deletes an existing Student model.
+     * Deletes an existing TypeGame model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -108,45 +106,15 @@ class StudentController extends BackendController
     }
 
     /**
-     * Change status
-     * @throws NotFoundHttpException
-     * @throws \yii\base\ExitException
-     */
-    public function actionChangeStatus()
-    {
-        if (!Yii::$app->getRequest()->isAjax)
-            Yii::$app->end();
-
-        $id = (int)ArrayHelper::getValue($_REQUEST, 'id', 0);
-        $status = (int)ArrayHelper::getValue($_REQUEST, 'status', 0);
-        $statusChange = ($status == 1) ? 0 : 1;
-
-        $model = $this->findModel($id);
-        if ($model instanceof Student) {
-            $updateStatus = $model->updateAttributes(['id' => $id, 'status' => $statusChange]);
-            if ($updateStatus) {
-                echo Json::encode(['status' => true]);
-                Yii::$app->end();
-            } else {
-                echo Json::encode(['status' => false]);
-                Yii::$app->end();
-            }
-        } else {
-            echo Json::encode(['status' => false]);
-            Yii::$app->end();
-        }
-    }
-
-    /**
-     * Finds the Student model based on its primary key value.
+     * Finds the TypeGame model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Student the loaded model
+     * @return TypeGame the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Student::findOne($id)) !== null) {
+        if (($model = TypeGame::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

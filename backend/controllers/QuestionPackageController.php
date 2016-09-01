@@ -3,8 +3,8 @@
 namespace backend\controllers;
 
 use Yii;
-use backend\models\Student;
-use common\models\search\StudentSearch;
+use backend\models\QuestionPackage;
+use common\models\search\QuestionPackageSearch;
 use backend\components\BackendController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -12,9 +12,9 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
 
 /**
- * StudentController implements the CRUD actions for Student model.
+ * QuestionPackageController implements the CRUD actions for QuestionPackage model.
  */
-class StudentController extends BackendController
+class QuestionPackageController extends BackendController
 {
     public function behaviors()
     {
@@ -29,12 +29,12 @@ class StudentController extends BackendController
     }
 
     /**
-     * Lists all Student models.
+     * Lists all QuestionPackage models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new StudentSearch();
+        $searchModel = new QuestionPackageSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -44,7 +44,7 @@ class StudentController extends BackendController
     }
 
     /**
-     * Displays a single Student model.
+     * Displays a single QuestionPackage model.
      * @param integer $id
      * @return mixed
      */
@@ -56,13 +56,13 @@ class StudentController extends BackendController
     }
 
     /**
-     * Creates a new Student model.
+     * Creates a new QuestionPackage model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Student();
+        $model = new QuestionPackage();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -74,7 +74,7 @@ class StudentController extends BackendController
     }
 
     /**
-     * Updates an existing Student model.
+     * Updates an existing QuestionPackage model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -93,7 +93,7 @@ class StudentController extends BackendController
     }
 
     /**
-     * Deletes an existing Student model.
+     * Deletes an existing QuestionPackage model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -122,7 +122,7 @@ class StudentController extends BackendController
         $statusChange = ($status == 1) ? 0 : 1;
 
         $model = $this->findModel($id);
-        if ($model instanceof Student) {
+        if ($model instanceof QuestionPackage) {
             $updateStatus = $model->updateAttributes(['id' => $id, 'status' => $statusChange]);
             if ($updateStatus) {
                 echo Json::encode(['status' => true]);
@@ -138,15 +138,15 @@ class StudentController extends BackendController
     }
 
     /**
-     * Finds the Student model based on its primary key value.
+     * Finds the QuestionPackage model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Student the loaded model
+     * @return QuestionPackage the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Student::findOne($id)) !== null) {
+        if (($model = QuestionPackage::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

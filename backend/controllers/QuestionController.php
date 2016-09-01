@@ -2,6 +2,7 @@
 
 namespace backend\controllers;
 
+use backend\models\Answer;
 use Yii;
 use backend\models\Question;
 use common\models\search\QuestionSearch;
@@ -63,8 +64,24 @@ class QuestionController extends BackendController
     public function actionCreate()
     {
         $model = new Question();
+        $request = Yii::$app->request->post();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load($request)) {
+            $answers = $request['Question']['answer'];
+            $true = isset($request['ans']) ? $request['ans'] : "";
+            $model->admin = 1;
+            $model->save();
+
+            foreach ($answers as $answer) {
+                $ans = new Answer();
+                $ans->question_id = $model->id;
+                $ans->content = $answer;
+                if ($answer === $true) {
+                    $ans->true = 1;
+                }
+                $ans->save();
+            }
+
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
@@ -82,12 +99,31 @@ class QuestionController extends BackendController
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $answers = Answer::getAnswersByQuestionId($id);
+        $request = Yii::$app->request->post();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load($request)) {
+            $list_answers = $request['Question']['answer'];
+            $true = isset($request['ans']) ? $request['ans'] : "";
+            $model->save();
+
+            foreach ($answers as $ans) {
+                $ans->delete();
+            }
+            foreach ($list_answers as $answer) {
+                $ans = new Answer();
+                $ans->question_id = $model->id;
+                $ans->content = $answer;
+                if ($answer === $true) {
+                    $ans->true = 1;
+                }
+                $ans->save();
+            }
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
+                'answers' => $answers
             ]);
         }
     }

@@ -2,19 +2,18 @@
 
 namespace backend\controllers;
 
-use Yii;
 use backend\models\Student;
-use common\models\search\StudentSearch;
+use Yii;
+use backend\models\Game;
+use common\models\search\GameCategorySearch;
 use backend\components\BackendController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\helpers\ArrayHelper;
-use yii\helpers\Json;
 
 /**
- * StudentController implements the CRUD actions for Student model.
+ * GameController implements the CRUD actions for Game model.
  */
-class StudentController extends BackendController
+class GameController extends BackendController
 {
     public function behaviors()
     {
@@ -29,12 +28,12 @@ class StudentController extends BackendController
     }
 
     /**
-     * Lists all Student models.
+     * Lists all Game models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new StudentSearch();
+        $searchModel = new GameCategorySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -44,7 +43,7 @@ class StudentController extends BackendController
     }
 
     /**
-     * Displays a single Student model.
+     * Displays a single Game model.
      * @param integer $id
      * @return mixed
      */
@@ -56,16 +55,36 @@ class StudentController extends BackendController
     }
 
     /**
-     * Creates a new Student model.
+     * Creates a new Game model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Student();
+        $model = new Game();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+            $players = Game::choosePlayer($model->type_game);
+            $num_game = Game::find()->select('num_game')->max('num_game');
+            $num_game = $num_game != null ? $num_game : 1;
+            $data = [];
+            if ((!empty($players)) && (count($players) === 4)) {
+                foreach ($players as $player) {
+                    $temp['user_id'] = $player->id;
+                    $temp['score'] = 0;
+                    $data[] = $temp;
+                }
+                $model->data_game = json_encode($data);
+                $model->num_game = $num_game;
+                if ($model->save()) {
+                    return $this->redirect(['view', 'id' => $model->id]);
+                }
+            } else {
+                Yii::$app->session->setFlash('error', 'Number players not enough!');
+                return $this->render('create', [
+                    'model' => $model,
+                ]);
+            }
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -74,7 +93,7 @@ class StudentController extends BackendController
     }
 
     /**
-     * Updates an existing Student model.
+     * Updates an existing Game model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -93,7 +112,7 @@ class StudentController extends BackendController
     }
 
     /**
-     * Deletes an existing Student model.
+     * Deletes an existing Game model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -107,46 +126,23 @@ class StudentController extends BackendController
         return $this->redirect(['index']);
     }
 
-    /**
-     * Change status
-     * @throws NotFoundHttpException
-     * @throws \yii\base\ExitException
-     */
-    public function actionChangeStatus()
+    public function actionChoosePlayer()
     {
-        if (!Yii::$app->getRequest()->isAjax)
-            Yii::$app->end();
-
-        $id = (int)ArrayHelper::getValue($_REQUEST, 'id', 0);
-        $status = (int)ArrayHelper::getValue($_REQUEST, 'status', 0);
-        $statusChange = ($status == 1) ? 0 : 1;
-
-        $model = $this->findModel($id);
-        if ($model instanceof Student) {
-            $updateStatus = $model->updateAttributes(['id' => $id, 'status' => $statusChange]);
-            if ($updateStatus) {
-                echo Json::encode(['status' => true]);
-                Yii::$app->end();
-            } else {
-                echo Json::encode(['status' => false]);
-                Yii::$app->end();
-            }
-        } else {
-            echo Json::encode(['status' => false]);
-            Yii::$app->end();
-        }
+        $type_game = Yii::$app->request->post('type_game');
+        $players = Game::choosePlayer($type_game);
+        return $this->renderAjax('choose_player', compact('players'));
     }
 
     /**
-     * Finds the Student model based on its primary key value.
+     * Finds the Game model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Student the loaded model
+     * @return Game the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Student::findOne($id)) !== null) {
+        if (($model = Game::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
