@@ -40,7 +40,7 @@ class StudentDB extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['username', 'password', 'email', 'phone', 'fullname', 'school'], 'required'],
+            [['username', 'password', 'email', 'phone', 'fullname', 'school', 'address'], 'required'],
             [['birthday', 'created_time', 'updated_time', 'last_active_time'], 'safe'],
             [['status', 'deleted', 'thumb_version', 'number_play_game'], 'integer'],
             [['username', 'password', 'email', 'phone', 'fullname', 'school', 'address'], 'string', 'max' => 255]
