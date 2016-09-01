@@ -5,8 +5,8 @@ namespace backend\models;
 use Yii;
 use common\behaviors\TimestampBehavior;
 
-
-class PartGame extends \common\models\PartGameBase{
+class TypeGame extends \common\models\TypeGameBase
+{
 
     public function behaviors()
     {
@@ -21,8 +21,8 @@ class PartGame extends \common\models\PartGameBase{
         ];
     }
 
-    public static function getPartGameById($id)
+    public static function getAllTypesGame()
     {
-        return self::find()->where(['id' => $id])->one();
+        return self::find()->all();
     }
 }

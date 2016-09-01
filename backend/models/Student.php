@@ -21,8 +21,22 @@ class Student extends \common\models\StudentBase
         ];
     }
 
+    /**
+     * Get student by id
+     * @param $id
+     * @return array|null|\yii\db\ActiveRecord
+     */
     public static function getStudentById($id)
     {
         return self::find()->where(['id' => $id])->one();
+    }
+
+    /**
+     * Get all student
+     * @return array|\yii\db\ActiveRecord[]
+     */
+    public static function getAllStudent()
+    {
+        return self::find()->where(['status' => STUDENT_ACTIVE, 'deleted' => STUDENT_NOT_DELETED])->all();
     }
 }
