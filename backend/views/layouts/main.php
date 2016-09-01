@@ -374,9 +374,9 @@ AppAsset::register($this);
 
     <footer class="main-footer">
         <div class="pull-right hidden-xs">
-            <b>Version</b> 2.3.5
+            <b>BKHN</b>
         </div>
-        <strong>Copyright &copy; 2014-2016 <a href="#">Almsaeed Studio</a>.</strong> All rights
+        <strong>Copyright &copy 2014-2016 <a href="#">bactv</a>.</strong> All rights
         reserved.
     </footer>
 

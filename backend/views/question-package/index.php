@@ -3,12 +3,14 @@
 use yii\helpers\Html;
 use yii\widgets\Pjax;
 use yii\grid\GridView;
+use backend\models\PartGame;
+use backend\models\Question;
 use yii\helpers\Url;
 
 /* @var $this yii\web\View */
-/* @var $searchModel common\models\search\StudentSearch */
+/* @var $searchModel common\models\search\QuestionPackageSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-$this->title = $this->params['title'] = 'Students';
+$this->title = $this->params['title'] = 'Question Packages';
 $this->params['breadcrumbs'][] = $this->title;
 $this->params['menu'] = [
     ['label'=>'Create', 'url' => ['create'], 'options' => ['class' => 'btn btn-primary']],
@@ -25,7 +27,11 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
-            ['class' => 'yii\grid\CheckboxColumn'],
+            [
+                'class' => 'yii\grid\CheckboxColumn',
+                'headerOptions' => $headerOptions,
+                'contentOptions' => $contentOptions,
+            ],
             [
                 'attribute' => 'id',
                 'label' => Yii::t('cms', 'ID'),
@@ -33,26 +39,35 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
                 'contentOptions' => $contentOptions,
             ],
             [
-                'attribute' => 'username',
-                'label' => Yii::t('cms', 'Username'),
+                'attribute' => 'name',
+                'label' => Yii::t('cms', 'Name'),
                 'headerOptions' => $headerOptions,
                 'contentOptions' => $contentOptions,
             ],
             [
-                'attribute' => 'email',
-                'label' => Yii::t('cms', 'Email'),
+                'attribute' => 'part_game',
+                'label' => Yii::t('cms', 'Part Game'),
+                'format' => 'raw',
+                'value' => function ($data) {
+                    $game = PartGame::getPartGameById($data->part_game);
+                    return (!empty($game)) ? $game->desscription : "";
+                },
                 'headerOptions' => $headerOptions,
                 'contentOptions' => $contentOptions,
             ],
             [
-                'attribute' => 'school',
-                'label' => Yii::t('cms', 'School'),
-                'headerOptions' => $headerOptions,
-                'contentOptions' => $contentOptions,
-            ],
-            [
-                'attribute' => 'address',
-                'label' => Yii::t('cms', 'Address'),
+                'attribute' => 'question_ids',
+                'label' => Yii::t('cms', 'Question IDS'),
+                'format' => 'raw',
+                'value' => function ($data) {
+                    $question_ids = json_decode($data->question_ids);
+                    if (!empty($question_ids)) {
+                        foreach ($question_ids as $id) {
+                            return Html::a($id, Url::toRoute(['/question/' . $id]), ['target' => '_blank']);
+                        }
+                    }
+                    return "";
+                },
                 'headerOptions' => $headerOptions,
                 'contentOptions' => $contentOptions,
             ],
@@ -63,26 +78,16 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
                 'options' => ['width' => '90px'],
                 'value' => function ($data) {
                     if ($data['status'] == 1) {
-                        return '<div id="item-status-'.$data['id'].'"><a href="javascript:void(0);" class="f-s-18" onclick = "changeStatusItems('.$data['id'].', 1, \''.Url::toRoute(['student/change-status']).'\')"><i class="fa fa-check" style="color: green;"></i></a></div>';
+                        return '<div id="item-status-'.$data['id'].'"><a href="javascript:void(0);" class="f-s-18" onclick = "changeStatusItems('.$data['id'].', 1, \''.Url::toRoute(['question-package/change-status']).'\')"><i class="fa fa-check" style="color: green;"></i></a></div>';
                     } else {
-                        return '<div id="item-status-'.$data['id'].'"><a href="javascript:void(0);" class="f-s-18" onclick = "changeStatusItems('.$data['id'].', 0, \''.Url::toRoute(['student/change-status']).'\')"><i class="fa fa-dot-circle-o" style="color: red"></i></a></div>';
+                        return '<div id="item-status-'.$data['id'].'"><a href="javascript:void(0);" class="f-s-18" onclick = "changeStatusItems('.$data['id'].', 0, \''.Url::toRoute(['question-package/change-status']).'\')"><i class="fa fa-dot-circle-o" style="color: red"></i></a></div>';
                     }
                 },
                 'headerOptions' => $headerOptions,
                 'contentOptions'=> $contentOptions,
             ],
             [
-                'attribute' => 'deleted',
-                'label' => Yii::t('cms', 'Deleted'),
-                'format' => 'raw',
-                'options' => ['width' => '90px'],
-                'value' => function ($data) {
-                    if ($data['deleted'] == 1) {
-                        return '<div id="item-status-'.$data['id'].'"><a href="javascript:void(0);" class="f-s-18" onclick = ""><i class="fa fa-check" style="color: red;"></i></a></div>';
-                    } else {
-                        return '<div id="item-status-'.$data['id'].'"><a href="javascript:void(0);" class="f-s-18" onclick = ""><i class="fa fa-dot-circle-o" style="color: green;"></i></a></div>';
-                    }
-                },
+                'class' => 'backend\components\CActionColumn',
                 'headerOptions' => $headerOptions,
                 'contentOptions'=> $contentOptions,
             ],

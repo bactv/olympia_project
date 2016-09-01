@@ -32,7 +32,11 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
-            ['class' => 'yii\grid\CheckboxColumn'],
+            [
+                'class' => 'yii\grid\CheckboxColumn',
+                'headerOptions' => $headerOptions,
+                'contentOptions' => $contentOptions,
+            ],
             [
                 'attribute' => 'id',
                 'label' => Yii::t('cms', 'ID'),
@@ -57,12 +61,12 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
                     $str = '';
                     $answers = Answer::getAnswersByQuestionId($data->id);
                     if (count($answers) > 1) {
-                        $str .= '<ol>';
+                        $str .= '<ol type="A">';
                     }
                     foreach ($answers as $answer) {
-                        $style = ($answer->true === 1) ? 'color: green' : '';
-                        $str .= '<li>';
-                        $str .= '<p style="' . $style . '">' . $answer->content . '</p>';
+                        $style = ($answer->true === 1) ? 'color: red' : '';
+                        $str .= '<li style="' . $style . '">';
+                        $str .= '<p>' . $answer->content . '</p>';
                         $str .= '</li>';
                     }
                     if (count($answers) > 1) {

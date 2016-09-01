@@ -3,20 +3,19 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Question */
+/* @var $model backend\models\TypeGame */
 
-$this->title = 'Update Question: ' . ' ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Questions', 'url' => ['index']];
+$this->title = 'Update Type Game: ' . ' ' . $model->name;
+$this->params['breadcrumbs'][] = ['label' => 'Type Games', 'url' => ['index']];
 $this->params['breadcrumbs'][] = 'Update';
 $this->params['title'] = 'Update';
 $this->params['menu'] = [
     ['label'=>'Back', 'url' => ['index'], 'options' => ['class' => 'btn btn-primary']],
 ];
 ?>
-<div class="question-update">
+<div class="type-game-update">
     <?= $this->render('_form', [
         'model' => $model,
-        'answers' => $answers
     ]) ?>
 
 </div>

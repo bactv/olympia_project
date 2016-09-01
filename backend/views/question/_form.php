@@ -17,7 +17,9 @@ use yii\helpers\ArrayHelper;
 
 <div class="question-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin([
+        'id' => 'question'
+    ]); ?>
 
     <?= $form->field($model, 'content')->label(Yii::t('cms', 'Content'))->widget(CKEditor::className(), [
         'options' => ['rows' => 6],
@@ -48,13 +50,55 @@ use yii\helpers\ArrayHelper;
     ]) ?>
 
     <?php echo '<b>' . Yii::t('cms', 'Answer') . '</b>' ?>
+    <br/>
+    <br />
     <div id="answer">
-        <p><input type="checkbox" name="ans"></p><?= $form->field($model, 'answer')->label(false)->textInput() ?>
+        <div class="row" id="row">
+            <div class="col-md-8">
+                <?= $form->field($model, 'answer[]')->label(false)->textInput(['value' => !empty($answers) ? $answers[0]->content : '']) ?>
+            </div>
+            <div class="col-md-3">
+                <?php
+                $checked = false;
+                if ((!empty($answers)) && $answers[0]->true === 1) {
+                    $checked = true;
+                }
+                ?>
+                <input type="checkbox" name="ans" <?php echo $checked===true ? 'checked' : '' ?>> <?php echo Yii::t('cms', 'True Answer ') . '?' ?>
+            </div>
+            <div class="col-md-1">
+                <a href="javascript:void(0);" id="del-answer" onclick="deleteAnswer(this.id)"><i class="fa fa-times" aria-hidden="true"></i></a>
+            </div>
+        </div>
     </div>
-    <div id="list_answers">
-
+    <div id="list_answers" class="<?php echo (!empty($answers) ? count($answers) : 0) ?>">
+        <?php if (!empty($answers)) {
+            for ($i = 1; $i < count($answers); $i++) { ?>
+                <div class="row" id="row-<?php echo ($i + 1) ?>">
+                    <div class="col-md-8">
+                        <?= $form->field($model, 'answer[]')->label(false)->textInput(['value' => $answers[$i]->content, 'required' => true]) ?>
+                    </div>
+                    <div class="col-md-3">
+                        <?php
+                        $checked = false;
+                        if ($answers[$i]->true === 1) {
+                            $checked = true;
+                        }
+                        ?>
+                        <input type="checkbox" name="ans" <?php echo $checked===true ? 'checked' : '' ?>> <?php echo Yii::t('cms', 'True Answer ') . '?' ?>
+                    </div>
+                    <div class="col-md-1">
+                        <a href="javascript:void(0);" id="del-answer<?php echo ($i + 1) ?>" onclick="deleteAnswer(this.id)"><i class="fa fa-times" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            <?php } ?>
+        <?php } ?>
     </div>
 
+    <?php echo Html::a(Yii::t('cms', 'Add Answer'), 'javascript:void(0);', ['id' => 'add-answer']) ?>
+
+    <br/>
+    <br/>
     <?= $form->field($model, 'status')->label(Yii::t('cms', 'Status'))->checkbox() ?>
 
     <?php
@@ -72,13 +116,71 @@ use yii\helpers\ArrayHelper;
 
 </div>
 <script>
+    function foo() {
+        if( typeof foo.counter == 'undefined' ) {
+            foo.counter = 0;
+        }
+        foo.counter++;
+        return foo.counter;
+    }
+
+    function deleteAnswer (id) {
+        var parent = $("div#list_answers a#" + id).parent().parent();
+        parent.remove();
+    }
+
     $(document).ready(function () {
-        $("select#type-question").on('click', function () {
-            var value = $(this).val();
+        var curr_id = $("div#list_answers").attr('class');
+        if (curr_id != 0) {
+            for (var j = 0; j < (curr_id - 1); j++) {
+                foo();
+            }
+        }
+        //add form input answer
+        $("a#add-answer").on('click', function () {
+            var html = $("div#answer").html();  
+            $("div#list_answers").append(html);
+            var id = foo() + 1;
+            console.log(id);
+            $("div#list_answers a#del-answer").attr('id', 'del-answer-' + id);
+            $("div#list_answers div#row").attr('id', "row-" + id);
+            $("div#row-" + (id) + " input[type='text']").attr('value', '');
+            $("div#row-" + (id) + " input[type='checkbox']").attr('checked', false);
+        });
 
-            if (value == 2) {
+        // truoc khi submit form
+        $("form#question").submit(function () {
+            // gan gia tri trong input text vao value checkbox
+            var id = foo();
+            $("div#answer input[type='checkbox']").attr('value', $("div#answer input[type='text']").val());
+            for (var i = 1; i < id; i++) {
+                var value = $("div#row-" + i + " input[type='text']").val();
+                $("div#row-" + i + " input[type='checkbox']").attr('value', value);
+            }
 
+            // kiem tra chua chon dap an dung
+            var selected = [];
+            $("div#answer input[type='checkbox']").each(function() {
+                if ($(this).is(":checked")) {
+                    selected.push($(this).attr('name'));
+                }
+            });
+            $("div#list_answers input[type='checkbox']").each(function() {
+                if ($(this).is(":checked")) {
+                    selected.push($(this).attr('name'));
+                }
+            });
+            if (selected.length < 1) {
+                alert("Let\'s choose true answer.");
+                return false;
             }
         });
     });
+
 </script>
+
+<style>
+    div#answer a#del-answer {
+        display: none;
+    }
+</style>
