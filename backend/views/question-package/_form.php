@@ -2,6 +2,9 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use backend\models\PartGame;
+use yii\helpers\ArrayHelper;
+use kartik\select2\Select2;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\QuestionPackage */
@@ -14,15 +17,19 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => 255]) ?>
 
-    <?= $form->field($model, 'part_game')->textInput() ?>
+    <?= $form->field($model, 'part_game')->dropDownList(ArrayHelper::map(PartGame::getAllPartsGame(), 'id', 'vi_name'), [
+        'prompt' => 'Select part game ...'
+    ]) ?>
 
-    <?= $form->field($model, 'question_ids')->textInput(['maxlength' => 255]) ?>
+    <div id="list_package_question_end_part" style="display: none;">
 
-    <?= $form->field($model, 'created_time')->textInput() ?>
+    </div>
 
-    <?= $form->field($model, 'updated_time')->textInput() ?>
+    <?= $form->field($model, 'question_ids')->widget(Select2::className(), [
 
-    <?= $form->field($model, 'status')->textInput() ?>
+    ]) ?>
+
+    <?= $form->field($model, 'status')->checkbox() ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => 'btn btn-primary']) ?>
@@ -32,3 +39,14 @@ use yii\widgets\ActiveForm;
     <?php ActiveForm::end(); ?>
 
 </div>
+
+<script>
+    $(document).ready(function () {
+        $("select#questionpackage-part_game").on('change', function () {
+            var id = $(this).val();
+            if (id == 4) {
+                $("div#list_package_question_end_part").show();
+            }
+        });
+    });
+</script>

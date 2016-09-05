@@ -36,15 +36,15 @@ use yii\helpers\ArrayHelper;
         ],
     ]); ?>
 
-    <?= $form->field($model, 'question_level')->label(Yii::t('cms', 'Question Level'))->dropDownList(ArrayHelper::map(QuestionLevel::getAllQuestionLevel(), 'id', 'name'), [
-        'prompt' => 'Select a level ...'
+    <?= $form->field($model, 'question_level')->label(Yii::t('cms', 'Question Level'))->dropDownList(ArrayHelper::map(QuestionLevel::getAllQuestionLevel(), 'id', 'description'), [
+        'prompt' => 'Select a question level ...'
     ]) ?>
 
-    <?= $form->field($model, 'question_format')->label(Yii::t('cms', 'Format'))->dropDownList(ArrayHelper::map(QuestionFormat::getAllQuestionFormat(), 'id', 'name'), [
-        'prompt' => 'Select a format ...'
+    <?= $form->field($model, 'question_format')->label(Yii::t('cms', 'Format'))->dropDownList(ArrayHelper::map(QuestionFormat::getAllQuestionFormat(), 'id', 'description'), [
+        'prompt' => 'Select a question format ...'
     ]) ?>
 
-    <?= $form->field($model, 'type_question')->label(Yii::t('cms', 'Type'))->dropDownList(ArrayHelper::map(TypeQuestion::getAllTypeQuestion(), 'id', 'name'), [
+    <?= $form->field($model, 'type_question')->label(Yii::t('cms', 'Type'))->dropDownList(ArrayHelper::map(TypeQuestion::getAllTypeQuestion(), 'id', 'description'), [
         'prompt' => 'Select a type question ...',
         'id' => 'type-question'
     ]) ?>

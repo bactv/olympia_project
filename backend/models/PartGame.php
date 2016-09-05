@@ -25,4 +25,9 @@ class PartGame extends \common\models\PartGameBase{
     {
         return self::find()->where(['id' => $id])->one();
     }
+
+    public static function getAllPartsGame()
+    {
+        return self::find()->all();
+    }
 }
