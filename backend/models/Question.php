@@ -30,4 +30,9 @@ class Question extends \common\models\QuestionBase
             ]
         ];
     }
+
+    public function getAllQuestions()
+    {
+        
+    }
 }

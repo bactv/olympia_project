@@ -15,6 +15,7 @@ use Yii;
  * @property string $updated_time
  * @property integer $status
  * @property integer $number_appear
+ * @property integer $package_finish
  */
 class QuestionPackageDB extends \yii\db\ActiveRecord
 {
@@ -33,7 +34,7 @@ class QuestionPackageDB extends \yii\db\ActiveRecord
     {
         return [
             [['name', 'part_game', 'question_ids'], 'required'],
-            [['part_game', 'status', 'number_appear'], 'integer'],
+            [['part_game', 'status', 'number_appear', 'package_finish'], 'integer'],
             [['created_time', 'updated_time'], 'safe'],
             [['name', 'question_ids'], 'string', 'max' => 255]
         ];
@@ -53,6 +54,7 @@ class QuestionPackageDB extends \yii\db\ActiveRecord
             'updated_time' => 'Updated Time',
             'status' => 'Status',
             'number_appear' => 'Number Appear',
+            'package_finish' => 'Package Finish',
         ];
     }
 }

@@ -7,6 +7,11 @@ body {
 a {
     /*color: #ffffff;*/
 }
+
+a:hover {
+    color: #000000;
+}
+
 section.content-header {
     /*border-bottom: 3px solid black;*/
     /*padding: 20px;*/
@@ -17,16 +22,22 @@ section.content-header {
     padding: 15px;
 }
 
-.main-content {
-    padding: 30px;
-}
 .content-wrapper {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
+    padding: 10px 30px;
 }
-.grid-view table {
-
+table, th, td {
+    border: 1px solid #ddd !important;
 }
 
 .grid-view table > thead > th {
 
+}
+
+.btn > a {
+    color: #ffffff;
+}
+
+ul.ibox-title-ul {
+    padding: 0;
 }

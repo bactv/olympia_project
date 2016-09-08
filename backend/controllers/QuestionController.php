@@ -69,6 +69,8 @@ class QuestionController extends BackendController
         if ($model->load($request)) {
             $answers = $request['Question']['answer'];
             $true = isset($request['ans']) ? $request['ans'] : "";
+            $model->created_by = Yii::$app->user->id;
+            $model->updated_by = Yii::$app->user->id;
             $model->admin = 1;
             $model->save();
 
@@ -105,6 +107,7 @@ class QuestionController extends BackendController
         if ($model->load($request)) {
             $list_answers = $request['Question']['answer'];
             $true = isset($request['ans']) ? $request['ans'] : "";
+            $model->updated_by = Yii::$app->user->id;
             $model->save();
 
             foreach ($answers as $ans) {

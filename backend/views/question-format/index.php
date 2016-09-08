@@ -25,7 +25,11 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
-            ['class' => 'yii\grid\CheckboxColumn'],
+            [
+                'class' => 'yii\grid\CheckboxColumn',
+                'headerOptions' => $headerOptions,
+                'contentOptions' => $contentOptions,
+            ],
             [
                 'attribute' => 'id',
                 'label' => Yii::t('cms', 'ID'),
@@ -35,6 +39,12 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
             [
                 'attribute' => 'name',
                 'label' => Yii::t('cms', 'Name'),
+                'headerOptions' => $headerOptions,
+                'contentOptions' => $contentOptions,
+            ],
+            [
+                'attribute' => 'code',
+                'label' => Yii::t('cms', 'Code'),
                 'headerOptions' => $headerOptions,
                 'contentOptions' => $contentOptions,
             ],

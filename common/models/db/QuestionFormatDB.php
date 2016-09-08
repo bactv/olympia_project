@@ -9,6 +9,7 @@ use Yii;
  *
  * @property integer $id
  * @property string $name
+ * @property string $code
  * @property string $description
  * @property integer $status
  * @property string $created_time
@@ -30,10 +31,10 @@ class QuestionFormatDB extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'description'], 'required'],
+            [['name', 'code', 'description'], 'required'],
             [['status'], 'integer'],
             [['created_time', 'updated_time'], 'safe'],
-            [['name', 'description'], 'string', 'max' => 255]
+            [['name', 'code', 'description'], 'string', 'max' => 255]
         ];
     }
 
@@ -45,6 +46,7 @@ class QuestionFormatDB extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'name' => 'Name',
+            'code' => 'Code',
             'description' => 'Description',
             'status' => 'Status',
             'created_time' => 'Created Time',

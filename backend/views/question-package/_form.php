@@ -5,6 +5,7 @@ use yii\widgets\ActiveForm;
 use backend\models\PartGame;
 use yii\helpers\ArrayHelper;
 use kartik\select2\Select2;
+use backend\models\Question;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\QuestionPackage */
@@ -17,7 +18,7 @@ use kartik\select2\Select2;
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => 255]) ?>
 
-    <?= $form->field($model, 'part_game')->dropDownList(ArrayHelper::map(PartGame::getAllPartsGame(), 'id', 'vi_name'), [
+    <?= $form->field($model, 'part_game')->dropDownList(ArrayHelper::map(PartGame::getAllPartsGame(), 'id', 'name'), [
         'prompt' => 'Select part game ...'
     ]) ?>
 
@@ -26,7 +27,6 @@ use kartik\select2\Select2;
     </div>
 
     <?= $form->field($model, 'question_ids')->widget(Select2::className(), [
-
     ]) ?>
 
     <?= $form->field($model, 'status')->checkbox() ?>
@@ -43,10 +43,7 @@ use kartik\select2\Select2;
 <script>
     $(document).ready(function () {
         $("select#questionpackage-part_game").on('change', function () {
-            var id = $(this).val();
-            if (id == 4) {
-                $("div#list_package_question_end_part").show();
-            }
+           
         });
     });
 </script>

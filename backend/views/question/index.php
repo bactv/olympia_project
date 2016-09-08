@@ -50,8 +50,8 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
                 'value' => function ($data) {
                     return substr(strip_tags($data->content), 0, 300) . ' ...';
                 },
-                'headerOptions' => $headerOptions,
-                'contentOptions' => $contentOptions,
+                'headerOptions' => ['style'=>'vertical-align: middle;'],
+                'contentOptions' => ['style'=>'vertical-align: middle;']
             ],
             [
                 'attribute' => 'answer',
@@ -60,29 +60,24 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
                 'value' => function ($data) {
                     $str = '';
                     $answers = Answer::getAnswersByQuestionId($data->id);
-                    if (count($answers) > 1) {
-                        $str .= '<ol type="A">';
-                    }
                     foreach ($answers as $answer) {
-                        $style = ($answer->true === 1) ? 'color: red' : '';
-                        $str .= '<li style="' . $style . '">';
-                        $str .= '<p>' . $answer->content . '</p>';
-                        $str .= '</li>';
-                    }
-                    if (count($answers) > 1) {
-                        $str .= '</ol>';
+                        if ($answer->true === 1) {
+                            $str .= '<li style="color: #00a157">';
+                            $str .= '<p>' . $answer->content . '</p>';
+                            $str .= '</li>';
+                        }
                     }
                     return $str;
                 },
-                'headerOptions' => $headerOptions,
-                'contentOptions' => $contentOptions,
+                'headerOptions' => ['style'=>'vertical-align: middle;'],
+                'contentOptions' => ['style'=>'vertical-align: middle;']
             ],
             [
                 'attribute' => 'created_by',
                 'label' => Yii::t('cms', 'Created by'),
                 'format' => 'raw',
                 'value' => function ($data) {
-                    $user = ($data->admin === 1) ? Admin::findIdentity($data->id) : Student::getStudentById($data->id);
+                    $user = ($data->admin === 1) ? Admin::findIdentity($data->created_by) : Student::getStudentById($data->created_by);
                     return (!empty($user->username)) ? $user->username : "";
                 },
                 'headerOptions' => $headerOptions,
@@ -119,10 +114,10 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
                 'contentOptions'=> $contentOptions,
             ],
             [
-                'class' => 'backend\components\CActionColumn',
+                'class' => 'yii\grid\ActionColumn',
                 'headerOptions' => $headerOptions,
                 'contentOptions'=> $contentOptions,
             ],
         ],
     ]); ?>
-<?php Pjax::end();?> 
+<?php Pjax::end();?>

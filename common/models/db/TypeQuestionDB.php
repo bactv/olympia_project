@@ -9,6 +9,7 @@ use Yii;
  *
  * @property integer $id
  * @property string $name
+ * @property string $code
  * @property string $description
  * @property string $created_time
  * @property string $updated_time
@@ -30,10 +31,10 @@ class TypeQuestionDB extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name'], 'required'],
+            [['name', 'code'], 'required'],
             [['created_time', 'updated_time'], 'safe'],
             [['status'], 'integer'],
-            [['name', 'description'], 'string', 'max' => 255]
+            [['name', 'code', 'description'], 'string', 'max' => 255]
         ];
     }
 
@@ -45,6 +46,7 @@ class TypeQuestionDB extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'name' => 'Name',
+            'code' => 'Code',
             'description' => 'Description',
             'created_time' => 'Created Time',
             'updated_time' => 'Updated Time',
