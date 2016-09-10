@@ -31,8 +31,19 @@ class Question extends \common\models\QuestionBase
         ];
     }
 
-    public function getAllQuestions()
+    public static function getAllQuestions($params = null)
     {
+        $number_appear = isset($params['number_appear']) ? $params['number_appear'] : 0;
         
+        $query = self::find()->where(['status' => QUESTION_ACTIVE, 'deleted' => QUESTION_NOT_DELETED]);
+
+        if ($number_appear != 0) {
+            $query->andWhere(['<>', 'number_appear', 0]);
+        } else {
+            $query->andWhere(['number_appear' => 0]);
+        }
+
+        return $query->all();
     }
+    
 }

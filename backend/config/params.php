@@ -10,5 +10,14 @@ return [
             'height' => ''
         ]
     ],
-    'controller_except' => ['Default']
+    'controller_except' => ['Default'],
+    'question_level' => [
+        'easy' => 0.5,
+        'medium' => 0.3,
+        'hard' => 0.2
+    ],
+    'question_type' => [
+        'reply' => 1,
+        'multiple_choice' => 2
+    ]
 ];

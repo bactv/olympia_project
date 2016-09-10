@@ -8,6 +8,18 @@ use common\behaviors\TimestampBehavior;
 
 class QuestionPackage extends \common\models\QuestionPackageBase
 {
+    public $package_finish;
+    public $obstacle_race_answer;
+
+    public function rules()
+    {
+        $rules = parent::rules();
+        $new_rule = [
+            [['obstacle_race_answer'], 'required'],
+        ];
+        return array_merge($rules, $new_rule);
+    }
+
     public function behaviors()
     {
         return [
@@ -21,16 +33,77 @@ class QuestionPackage extends \common\models\QuestionPackageBase
         ];
     }
 
-    public static function chooseQuestionPackage($part_game)
+    public static function chooseQuestion($params)
     {
-        $question_level_ids = [];
-        foreach (QuestionLevel::getAllQuestionLevel() as $level) {
-            $question_level_ids[] = $level->id;
+        $p_easy = (int)round ($params['number_question'] * Yii::$app->params['question_level']['easy']);
+        $p_medium = (int)round ($params['number_question'] * Yii::$app->params['question_level']['medium']);
+        $p_hard = (int)round ($params['number_question'] * Yii::$app->params['question_level']['hard']);
+
+        // Get all question_topic ids
+        $question_topics = QuestionTopic::getAllQuestionTopic();
+        $question_topics_ids = [];
+        foreach ($question_topics as $topic) {
+            $question_topics_ids[] = $topic->id;
         }
 
-    }
+        // Get question hard
+        $question_hard = Question::find()->where(['status' => QUESTION_ACTIVE, 'deleted' => QUESTION_NOT_DELETED])
+            ->andWhere(['question_level' => 3])
+            ->andWhere(['question_topic' => $question_topics_ids])
+            ->groupBy('question_topic')
+            ->limit($p_hard)
+            ->all();
+        $temp_count = (count($question_hard) < $p_hard) ? ($p_hard - count($question_hard)) : 0;
+        $temp_arr_topic = [];
+        $temp_arr_ids = [];
+        foreach ($question_hard as $qus) {
+            $temp_arr_topic[] = $qus->question_topic;
+            $temp_arr_ids[] = $qus->id;
+        }
+        $p_medium += $temp_count;
 
-    private function randomQuestionWithProbability($level, $arr_question_ids)
-    {
+        // Get question medium
+        $question_medium = Question::find()->where(['status' => QUESTION_ACTIVE, 'deleted' => QUESTION_NOT_DELETED])
+            ->andWhere(['question_level' => 2])
+            ->andWhere(['question_topic' => array_diff($question_topics_ids, $temp_arr_topic)])
+            ->andWhere(['not in', 'id', $temp_arr_ids])
+            ->groupBy('question_topic')
+            ->limit($p_medium)
+            ->all();
+
+
+        $temp_count = (count($question_medium) < $p_medium) ? ($p_medium - count($question_medium)) : 0;
+        $p_easy += $temp_count;
+        foreach ($question_medium as $qus) {
+            $temp_arr_topic[] = $qus->question_topic;
+            $temp_arr_ids[] = $qus->id;
+        }
+
+        // Get question easy
+        $question_easy = Question::find()->where(['status' => QUESTION_ACTIVE, 'deleted' => QUESTION_NOT_DELETED])
+            ->andWhere(['question_level' => 1])
+            ->andWhere(['question_topic' => array_diff($question_topics_ids, $temp_arr_topic)])
+            ->andWhere(['not in', 'id', $temp_arr_ids])
+            ->groupBy('question_topic')
+            ->limit($p_easy)
+            ->all();
+
+        foreach ($question_easy as $qus) {
+            $temp_arr_ids[] = $qus->id;
+        }
+
+        // check if question not enough
+        $temp_count = (count($question_easy) < $p_easy) ? ($p_easy - count($question_easy)) : 0;
+        $question_easy2 = [];
+        if ($temp_count != 0) {
+            $question_easy2 = Question::find()->where(['status' => QUESTION_ACTIVE, 'deleted' => QUESTION_NOT_DELETED])
+                ->andWhere(['not in', 'id', $temp_arr_ids])
+                ->limit($temp_count)
+                ->all();
+        }
+
+        $questions = array_merge($question_easy2, $question_easy, $question_medium, $question_hard);
+
+        return $questions;
     }
 }

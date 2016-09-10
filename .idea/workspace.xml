@@ -1,926 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce41a1ed-6260-4a91-a8ed-d013017177ae" name="Default" comment="Update">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1a8df30a/img/loading-plugin.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/about/dialogs/hidpi/logo_ckeditor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/about/dialogs/logo_ckeditor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/flash/images/placeholder.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/forms/images/hiddenfield.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/icons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/icons_hidpi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/iframe/images/placeholder.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/image/images/noimage.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/link/images/anchor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/link/images/hidpi/anchor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/magicline/images/hidpi/icon-rtl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/magicline/images/hidpi/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/magicline/images/icon-rtl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/magicline/images/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/pagebreak/images/pagebreak.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/showblocks/images/block_address.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/showblocks/images/block_blockquote.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/showblocks/images/block_div.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/showblocks/images/block_h1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/showblocks/images/block_h2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/showblocks/images/block_h3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/showblocks/images/block_h4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/showblocks/images/block_h5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/showblocks/images/block_h6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/showblocks/images/block_p.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/showblocks/images/block_pre.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/angel_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/angel_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/angry_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/angry_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/broken_heart.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/broken_heart.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/confused_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/confused_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/cry_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/cry_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/devil_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/devil_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/embaressed_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/embarrassed_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/embarrassed_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/envelope.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/envelope.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/heart.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/heart.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/kiss.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/kiss.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/lightbulb.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/lightbulb.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/omg_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/omg_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/regular_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/regular_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/sad_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/sad_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/shades_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/shades_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/teeth_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/teeth_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/thumbs_down.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/thumbs_down.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/thumbs_up.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/thumbs_up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/tongue_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/tongue_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/tounge_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/whatchutalkingabout_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/whatchutalkingabout_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/wink_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/images/wink_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/templates/templates/images/template1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/templates/templates/images/template2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/templates/templates/images/template3.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/assets/inlineall/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/assets/sample.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/plugins/htmlwriter/assets/outputforflash/outputforflash.fla" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/plugins/htmlwriter/assets/outputforflash/outputforflash.swf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/skins/moono/icons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/skins/moono/icons_hidpi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/skins/moono/images/arrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/skins/moono/images/close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/skins/moono/images/hidpi/close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/skins/moono/images/hidpi/lock-open.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/skins/moono/images/hidpi/lock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/skins/moono/images/hidpi/refresh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/skins/moono/images/lock-open.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/skins/moono/images/lock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/skins/moono/images/refresh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/css/loading.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/css/search.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/83a67af7/img/collapse.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/83a67af7/img/expand.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/83a67af7/img/file.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/83a67af7/img/folder.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/8fc093b1/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/b14c8ba5/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/b14c8ba5/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/b14c8ba5/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/b14c8ba5/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/c36691a2/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/c36691a2/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/c36691a2/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/c36691a2/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/c36691a2/fonts/fontawesome-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/about/dialogs/hidpi/logo_ckeditor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/about/dialogs/logo_ckeditor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/flash/images/placeholder.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/forms/images/hiddenfield.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/icons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/icons_hidpi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/iframe/images/placeholder.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/image/images/noimage.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/link/images/anchor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/link/images/hidpi/anchor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/magicline/images/hidpi/icon-rtl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/magicline/images/hidpi/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/magicline/images/icon-rtl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/magicline/images/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/pagebreak/images/pagebreak.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/showblocks/images/block_address.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/showblocks/images/block_blockquote.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/showblocks/images/block_div.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/showblocks/images/block_h1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/showblocks/images/block_h2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/showblocks/images/block_h3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/showblocks/images/block_h4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/showblocks/images/block_h5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/showblocks/images/block_h6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/showblocks/images/block_p.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/showblocks/images/block_pre.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/angel_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/angel_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/angry_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/angry_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/broken_heart.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/broken_heart.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/confused_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/confused_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/cry_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/cry_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/devil_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/devil_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/embaressed_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/embarrassed_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/embarrassed_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/envelope.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/envelope.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/heart.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/heart.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/kiss.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/kiss.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/lightbulb.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/lightbulb.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/omg_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/omg_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/regular_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/regular_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/sad_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/sad_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/shades_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/shades_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/teeth_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/teeth_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/thumbs_down.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/thumbs_down.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/thumbs_up.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/thumbs_up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/tongue_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/tongue_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/tounge_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/whatchutalkingabout_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/whatchutalkingabout_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/wink_smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/images/wink_smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/templates/templates/images/template1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/templates/templates/images/template2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/templates/templates/images/template3.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/assets/inlineall/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/assets/sample.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/plugins/htmlwriter/assets/outputforflash/outputforflash.fla" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/plugins/htmlwriter/assets/outputforflash/outputforflash.swf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/skins/moono/icons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/skins/moono/icons_hidpi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/skins/moono/images/arrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/skins/moono/images/close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/skins/moono/images/hidpi/close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/skins/moono/images/hidpi/lock-open.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/skins/moono/images/hidpi/lock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/skins/moono/images/hidpi/refresh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/skins/moono/images/lock-open.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/skins/moono/images/lock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/skins/moono/images/refresh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/controllers/PackageFinishController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/views/package-finish/_form.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/views/package-finish/_search.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/views/package-finish/create.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/views/package-finish/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/views/package-finish/update.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/views/package-finish/view.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1a8df30a/css/animate.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1a8df30a/css/animate.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1a8df30a/css/html5input.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1a8df30a/css/html5input.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1a8df30a/css/kv-widgets.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1a8df30a/css/kv-widgets.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1a8df30a/js/kv-widgets.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1a8df30a/js/kv-widgets.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/CHANGES.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/adapters/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/build-config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/ckeditor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/contents.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/af.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/ar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/bg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/bn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/bs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/cs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/cy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/da.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/de.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/el.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/en-au.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/en-ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/en-gb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/en.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/eo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/es.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/et.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/eu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/fa.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/fi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/fo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/fr-ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/fr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/gl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/gu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/he.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/hi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/hr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/hu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/id.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/is.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/it.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/ja.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/ka.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/km.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/ko.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/ku.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/lt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/lv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/mk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/mn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/ms.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/nb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/nl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/no.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/pl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/pt-br.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/pt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/ro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/ru.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/si.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/sk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/sl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/sq.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/sr-latn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/sr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/sv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/th.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/tr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/tt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/ug.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/uk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/vi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/zh-cn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/lang/zh.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/a11yhelp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/af.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/ar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/bg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/cs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/cy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/da.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/de.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/el.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/en-gb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/en.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/eo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/es.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/et.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/fa.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/fi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/fr-ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/fr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/gl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/gu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/he.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/hi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/hr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/hu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/id.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/it.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/ja.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/km.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/ko.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/ku.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/lt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/lv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/mk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/mn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/nb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/nl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/no.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/pl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/pt-br.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/pt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/ro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/ru.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/si.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/sk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/sl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/sq.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/sr-latn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/sr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/sv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/th.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/tr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/tt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/ug.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/uk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/vi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/zh-cn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/a11yhelp/dialogs/lang/zh.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/about/dialogs/about.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/clipboard/dialogs/paste.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/colordialog/dialogs/colordialog.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/dialog/dialogDefinition.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/div/dialogs/div.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/find/dialogs/find.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/flash/dialogs/flash.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/forms/dialogs/button.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/forms/dialogs/checkbox.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/forms/dialogs/form.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/forms/dialogs/hiddenfield.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/forms/dialogs/radio.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/forms/dialogs/select.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/forms/dialogs/textarea.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/forms/dialogs/textfield.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/iframe/dialogs/iframe.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/image/dialogs/image.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/link/dialogs/anchor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/link/dialogs/link.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/liststyle/dialogs/liststyle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/pastefromword/filter/default.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/preview/preview.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/scayt/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/scayt/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/scayt/dialogs/options.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/scayt/dialogs/toolbar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/smiley/dialogs/smiley.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/_translationstatus.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/af.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/ar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/bg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/cs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/cy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/da.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/de.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/el.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/en-gb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/en.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/eo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/es.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/et.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/fa.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/fi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/fr-ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/fr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/gl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/he.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/hr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/hu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/id.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/it.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/ja.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/km.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/ku.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/lt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/lv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/nb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/nl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/no.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/pl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/pt-br.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/pt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/ru.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/si.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/sk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/sl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/sq.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/sv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/th.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/tr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/tt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/ug.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/uk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/vi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/zh-cn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/lang/zh.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/specialchar/dialogs/specialchar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/table/dialogs/table.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/tabletools/dialogs/tableCell.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/templates/dialogs/templates.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/templates/dialogs/templates.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/templates/templates/default.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/wsc/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/wsc/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/wsc/dialogs/ciframe.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/wsc/dialogs/tmpFrameset.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/wsc/dialogs/wsc.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/wsc/dialogs/wsc.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/plugins/wsc/dialogs/wsc_ie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/ajax.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/api.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/appendto.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/assets/outputxhtml/outputxhtml.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/assets/posteddata.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/assets/uilanguages/languages.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/datafiltering.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/divreplace.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/inlineall.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/inlinebycode.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/inlinetextarea.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/jquery.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/plugins/dialog/assets/my_dialog.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/plugins/dialog/dialog.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/plugins/enterkey/enterkey.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/plugins/htmlwriter/assets/outputforflash/swfobject.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/plugins/htmlwriter/outputforflash.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/plugins/htmlwriter/outputhtml.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/plugins/magicline/magicline.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/plugins/toolbar/toolbar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/plugins/wysiwygarea/fullpage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/readonly.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/replacebyclass.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/replacebycode.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/sample.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/sample.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/sample_posteddata.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/tabindex.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/uicolor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/uilanguages.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/samples/xhtmlstyle.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/skins/moono/dialog.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/skins/moono/dialog_ie.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/skins/moono/dialog_ie7.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/skins/moono/dialog_ie8.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/skins/moono/dialog_iequirks.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/skins/moono/editor.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/skins/moono/editor_gecko.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/skins/moono/editor_ie.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/skins/moono/editor_ie7.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/skins/moono/editor_ie8.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/skins/moono/editor_iequirks.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/skins/moono/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/1d6f1224/styles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/2de38c47/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/2de38c47/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/2de38c47/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/2de38c47/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/2de38c47/jquery.pjax.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/2de38c47/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/css/select2-addl.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/css/select2-addl.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/css/select2-bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/css/select2-bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/css/select2-classic.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/css/select2-classic.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/css/select2-default.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/css/select2-default.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/css/select2-krajee.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/css/select2-krajee.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/css/select2.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/css/select2.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/ar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/az.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/bg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/cs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/da.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/de.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/el.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/en.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/es.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/et.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/eu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/fa.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/fi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/fr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/gl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/he.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/hi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/hr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/hu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/id.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/is.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/it.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/ja.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/km.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/ko.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/lt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/lv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/mk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/ms.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/nb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/nl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/pl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/pt-BR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/pt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/ro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/ru.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/sk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/sr-Cyrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/sr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/sv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/th.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/tr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/uk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/vi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/zh-CN.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/i18n/zh-TW.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/select2-krajee.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/select2-krajee.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/select2.full.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/6e271843/js/select2.full.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/83a67af7/CHANGELOG.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/83a67af7/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/83a67af7/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/83a67af7/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/83a67af7/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/83a67af7/css/jquery.treegrid.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/83a67af7/js/jquery.cookie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/83a67af7/js/jquery.treegrid.bootstrap2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/83a67af7/js/jquery.treegrid.bootstrap3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/83a67af7/js/jquery.treegrid.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/83a67af7/js/jquery.treegrid.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/83a67af7/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/83a67af7/styles.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/8fc093b1/gii.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/8fc093b1/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/b14c8ba5/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/b14c8ba5/css/bootstrap-theme.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/b14c8ba5/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/b14c8ba5/css/bootstrap-theme.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/b14c8ba5/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/b14c8ba5/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/b14c8ba5/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/b14c8ba5/css/bootstrap.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/b14c8ba5/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/b14c8ba5/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/b14c8ba5/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/b14c8ba5/js/npm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/c2a9907b/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/c2a9907b/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/c2a9907b/jquery.min.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/c36691a2/css/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/c36691a2/css/font-awesome.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/c36691a2/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/c36691a2/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/cb3177b4/css/activeform.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/cb3177b4/css/activeform.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/cb3177b4/js/activeform.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/cb3177b4/js/activeform.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/d7aa6929/yii.activeForm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/d7aa6929/yii.captcha.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/d7aa6929/yii.gridView.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/d7aa6929/yii.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/d7aa6929/yii.validation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/da6ceb5c/bloodhound.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/da6ceb5c/bloodhound.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/da6ceb5c/typeahead.bundle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/da6ceb5c/typeahead.bundle.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/da6ceb5c/typeahead.jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/da6ceb5c/typeahead.jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/CHANGES.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/adapters/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/build-config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/ckeditor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/contents.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/af.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/ar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/bg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/bn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/bs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/cs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/cy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/da.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/de.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/el.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/en-au.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/en-ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/en-gb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/en.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/eo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/es.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/et.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/eu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/fa.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/fi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/fo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/fr-ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/fr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/gl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/gu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/he.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/hi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/hr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/hu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/id.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/is.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/it.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/ja.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/ka.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/km.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/ko.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/ku.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/lt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/lv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/mk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/mn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/ms.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/nb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/nl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/no.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/pl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/pt-br.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/pt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/ro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/ru.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/si.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/sk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/sl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/sq.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/sr-latn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/sr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/sv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/th.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/tr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/tt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/ug.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/uk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/vi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/zh-cn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/lang/zh.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/af.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/ar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/bg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/cs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/cy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/da.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/de.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/el.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/en-gb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/en.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/eo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/es.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/et.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/fa.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/fi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/fr-ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/fr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/gl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/gu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/he.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/hi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/hr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/hu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/id.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/it.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/ja.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/km.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/ko.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/ku.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/lt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/lv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/mk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/mn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/nb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/nl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/no.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/pl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/pt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/ro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/ru.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/si.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/sk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/sl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/sq.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/sr-latn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/sr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/sv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/th.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/tr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/tt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/ug.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/uk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/vi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/a11yhelp/dialogs/lang/zh.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/about/dialogs/about.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/clipboard/dialogs/paste.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/colordialog/dialogs/colordialog.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/dialog/dialogDefinition.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/div/dialogs/div.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/find/dialogs/find.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/flash/dialogs/flash.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/forms/dialogs/button.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/forms/dialogs/checkbox.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/forms/dialogs/form.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/forms/dialogs/hiddenfield.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/forms/dialogs/radio.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/forms/dialogs/select.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/forms/dialogs/textarea.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/forms/dialogs/textfield.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/iframe/dialogs/iframe.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/image/dialogs/image.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/link/dialogs/anchor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/link/dialogs/link.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/liststyle/dialogs/liststyle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/pastefromword/filter/default.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/preview/preview.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/scayt/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/scayt/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/scayt/dialogs/options.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/scayt/dialogs/toolbar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/smiley/dialogs/smiley.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/_translationstatus.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/af.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/ar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/bg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/cs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/cy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/da.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/de.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/el.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/en-gb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/en.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/eo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/es.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/et.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/fa.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/fi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/fr-ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/fr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/gl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/he.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/hr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/hu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/id.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/it.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/ja.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/km.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/ku.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/lt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/lv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/nb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/nl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/no.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/pl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/pt-br.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/pt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/ru.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/si.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/sk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/sl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/sq.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/sv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/th.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/tr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/tt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/ug.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/uk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/vi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/lang/zh.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/specialchar/dialogs/specialchar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/table/dialogs/table.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/tabletools/dialogs/tableCell.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/templates/dialogs/templates.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/templates/dialogs/templates.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/templates/templates/default.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/wsc/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/wsc/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/wsc/dialogs/ciframe.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/wsc/dialogs/tmpFrameset.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/wsc/dialogs/wsc.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/wsc/dialogs/wsc.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/plugins/wsc/dialogs/wsc_ie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/ajax.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/api.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/appendto.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/assets/outputxhtml/outputxhtml.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/assets/posteddata.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/assets/uilanguages/languages.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/datafiltering.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/divreplace.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/inlineall.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/inlinebycode.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/inlinetextarea.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/jquery.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/plugins/dialog/assets/my_dialog.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/plugins/dialog/dialog.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/plugins/enterkey/enterkey.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/plugins/htmlwriter/assets/outputforflash/swfobject.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/plugins/htmlwriter/outputforflash.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/plugins/htmlwriter/outputhtml.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/plugins/magicline/magicline.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/plugins/toolbar/toolbar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/plugins/wysiwygarea/fullpage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/readonly.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/replacebyclass.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/replacebycode.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/sample.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/sample.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/sample_posteddata.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/tabindex.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/uicolor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/uilanguages.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/samples/xhtmlstyle.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/skins/moono/dialog.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/skins/moono/dialog_ie.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/skins/moono/dialog_ie7.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/skins/moono/dialog_ie8.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/skins/moono/dialog_iequirks.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/skins/moono/editor.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/skins/moono/editor_gecko.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/skins/moono/editor_ie.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/skins/moono/editor_ie7.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/skins/moono/editor_ie8.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/skins/moono/editor_iequirks.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/skins/moono/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/ckeditor/styles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/e63ece9c/dosamigos-ckeditor.widget.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/models/PackageFinishBase.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/models/db/PackageFinishDB.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/models/search/PackageFinishSearch.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/models/PackageFinish.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/kartik-v/yii2-widget-activeform" afterPath="$PROJECT_DIR$/vendor/kartik-v/yii2-widget-activeform" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/kartik-v/yii2-widget-datepicker" afterPath="$PROJECT_DIR$/vendor/kartik-v/yii2-widget-datepicker" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/kartik-v/yii2-widget-select2" afterPath="$PROJECT_DIR$/vendor/kartik-v/yii2-widget-select2" />
+    <list default="true" id="ce41a1ed-6260-4a91-a8ed-d013017177ae" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/views/question-package/change_question.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/views/question-package/choose-question.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/views/question-package/list-questions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/views/question-package/obstacle-race.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/controllers/QuestionController.php" afterPath="$PROJECT_DIR$/backend/controllers/QuestionController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/config/params.php" afterPath="$PROJECT_DIR$/backend/config/params.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/controllers/QuestionPackageController.php" afterPath="$PROJECT_DIR$/backend/controllers/QuestionPackageController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/models/PackageFinish.php" afterPath="$PROJECT_DIR$/backend/models/PackageFinish.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/models/Question.php" afterPath="$PROJECT_DIR$/backend/models/Question.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/question-format/_form.php" afterPath="$PROJECT_DIR$/backend/views/question-format/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/question-format/index.php" afterPath="$PROJECT_DIR$/backend/views/question-format/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/question-level/_form.php" afterPath="$PROJECT_DIR$/backend/views/question-level/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/question-level/index.php" afterPath="$PROJECT_DIR$/backend/views/question-level/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/models/QuestionPackage.php" afterPath="$PROJECT_DIR$/backend/models/QuestionPackage.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/question-package/_form.php" afterPath="$PROJECT_DIR$/backend/views/question-package/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/question-topic/index.php" afterPath="$PROJECT_DIR$/backend/views/question-topic/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/question/index.php" afterPath="$PROJECT_DIR$/backend/views/question/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/type-question/_form.php" afterPath="$PROJECT_DIR$/backend/views/type-question/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/type-question/index.php" afterPath="$PROJECT_DIR$/backend/views/type-question/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/themes/default/css/style.css" afterPath="$PROJECT_DIR$/backend/web/themes/default/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/config/db.php" afterPath="$PROJECT_DIR$/common/config/db.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/models/db/QuestionFormatDB.php" afterPath="$PROJECT_DIR$/common/models/db/QuestionFormatDB.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/models/db/QuestionLevelDB.php" afterPath="$PROJECT_DIR$/common/models/db/QuestionLevelDB.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/models/db/QuestionPackageDB.php" afterPath="$PROJECT_DIR$/common/models/db/QuestionPackageDB.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/models/db/TypeQuestionDB.php" afterPath="$PROJECT_DIR$/common/models/db/TypeQuestionDB.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/AnimateAsset.php" afterPath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/AnimateAsset.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/AssetBundle.php" afterPath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/AssetBundle.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/CHANGE.md" afterPath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/CHANGE.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/Config.php" afterPath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/Config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/Html5Input.php" afterPath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/Html5Input.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/Html5InputAsset.php" afterPath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/Html5InputAsset.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/InputWidget.php" afterPath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/InputWidget.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/Module.php" afterPath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/Module.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/PluginAssetBundle.php" afterPath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/PluginAssetBundle.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/README.md" afterPath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/TranslationTrait.php" afterPath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/TranslationTrait.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/Widget.php" afterPath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/Widget.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/WidgetAsset.php" afterPath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/WidgetAsset.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/WidgetTrait.php" afterPath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/WidgetTrait.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/assets/css/animate.css" afterPath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/assets/css/animate.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/assets/css/animate.min.css" afterPath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/assets/css/animate.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/assets/css/html5input.css" afterPath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/assets/css/html5input.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/assets/css/html5input.min.css" afterPath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/assets/css/html5input.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/assets/css/kv-widgets.css" afterPath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/assets/css/kv-widgets.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/assets/css/kv-widgets.min.css" afterPath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/assets/css/kv-widgets.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/assets/js/kv-widgets.js" afterPath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/assets/js/kv-widgets.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/assets/js/kv-widgets.min.js" afterPath="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base/assets/js/kv-widgets.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/extensions.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/extensions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2-authclient/BaseClient.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2-authclient/BaseClient.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2-authclient/BaseOAuth.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2-authclient/BaseOAuth.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2-authclient/CHANGELOG.md" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2-authclient/CHANGELOG.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2-authclient/OAuth1.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2-authclient/OAuth1.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2-authclient/UPGRADE.md" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2-authclient/UPGRADE.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2-authclient/clients/VKontakte.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2-authclient/clients/VKontakte.php" />
     </list>
     <ignored path="olympia_project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -941,20 +33,7 @@
     <favorites_list name="olympia_project" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_form.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/backend/views/question-package/_form.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="44" column="42" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
-              <folding>
-                <element signature="e#7#28#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -962,13 +41,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/backend/models/QuestionFormat.php" />
-        <option value="$PROJECT_DIR$/backend/models/QuestionLevel.php" />
-        <option value="$PROJECT_DIR$/backend/models/QuestionTopic.php" />
-        <option value="$PROJECT_DIR$/backend/controllers/QuestionFormatController.php" />
-        <option value="$PROJECT_DIR$/backend/controllers/QuestionTopicController.php" />
-        <option value="$PROJECT_DIR$/backend/controllers/QuestionLevelController.php" />
-        <option value="$PROJECT_DIR$/backend/views/question-topic/_form.php" />
         <option value="$PROJECT_DIR$/backend/models/TypeQuestion.php" />
         <option value="$PROJECT_DIR$/backend/controllers/TypeQuestionController.php" />
         <option value="$PROJECT_DIR$/backend/models/Answer.php" />
@@ -986,10 +58,8 @@
         <option value="$PROJECT_DIR$/backend/models/Game.php" />
         <option value="$PROJECT_DIR$/backend/views/game/_form.php" />
         <option value="$PROJECT_DIR$/backend/controllers/GameController.php" />
-        <option value="$PROJECT_DIR$/backend/controllers/QuestionPackageController.php" />
         <option value="$PROJECT_DIR$/backend/views/question-package/index.php" />
         <option value="$PROJECT_DIR$/backend/views/layouts/main.php" />
-        <option value="$PROJECT_DIR$/backend/models/QuestionPackage.php" />
         <option value="$PROJECT_DIR$/common/config/bootstrap.php" />
         <option value="$PROJECT_DIR$/common/config/main.php" />
         <option value="$PROJECT_DIR$/backend/web/index.php" />
@@ -1011,8 +81,17 @@
         <option value="$PROJECT_DIR$/backend/views/question/index.php" />
         <option value="$PROJECT_DIR$/common/models/QuestionPackageBase.php" />
         <option value="$PROJECT_DIR$/backend/views/package-finish/index.php" />
+        <option value="$PROJECT_DIR$/backend/models/PackageFinish.php" />
+        <option value="$PROJECT_DIR$/backend/config/params.php" />
+        <option value="$PROJECT_DIR$/backend/views/question-package/list-question.php" />
         <option value="$PROJECT_DIR$/backend/models/Question.php" />
+        <option value="$PROJECT_DIR$/backend/views/question-package/change_question.php" />
+        <option value="$PROJECT_DIR$/backend/views/question-package/choose-question.php" />
+        <option value="$PROJECT_DIR$/backend/views/question-package/list-questions.php" />
+        <option value="$PROJECT_DIR$/backend/models/QuestionPackage.php" />
         <option value="$PROJECT_DIR$/backend/views/question-package/_form.php" />
+        <option value="$PROJECT_DIR$/backend/views/question-package/obstacle-race.php" />
+        <option value="$PROJECT_DIR$/backend/controllers/QuestionPackageController.php" />
       </list>
     </option>
   </component>
@@ -1057,6 +136,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1075,14 +156,174 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation_thesis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation_thesis" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation_thesis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation_thesis" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation_thesis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation_thesis" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation_thesis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation_thesis" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation_thesis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation_thesis" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="question-package" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation_thesis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation_thesis" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="question" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation_thesis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation_thesis" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation_thesis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation_thesis" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation_thesis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation_thesis" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
@@ -1090,11 +331,11 @@
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/frontend/web/themes/default/css" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/web/themes/default/js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/web/themes/default/css" />
     </key>
   </component>
   <component name="RunManager">
@@ -1160,7 +401,10 @@
       <workItem from="1473037516613" duration="4263000" />
       <workItem from="1473261481200" duration="5996000" />
       <workItem from="1473297243613" duration="20000" />
-      <workItem from="1473304107073" duration="225000" />
+      <workItem from="1473304107073" duration="601000" />
+      <workItem from="1473347890112" duration="1634000" />
+      <workItem from="1473390858753" duration="661000" />
+      <workItem from="1473475237317" duration="25109000" />
     </task>
     <task id="LOCAL-00001" summary="update config">
       <created>1472402996335</created>
@@ -1309,11 +553,18 @@
       <option name="project" value="LOCAL" />
       <updated>1473304239093</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Update">
+      <created>1473304654497</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1473304654497</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93970000" />
+    <option name="totallyTimeSpent" value="121750000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1328,7 +579,7 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23863636" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28863636" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1380,83 +631,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backend/views/game/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/models/Game.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views/game/_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views/layouts/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="375" column="42" selection-start-line="375" selection-start-column="42" selection-end-line="375" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/controllers/GameController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-954">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/config/bootstrap.php" />
-    <entry file="file://$PROJECT_DIR$/backend/config/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-847">
-          <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/config/bootstrap.php" />
-    <entry file="file://$PROJECT_DIR$/common/config/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/config/predefine.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/web/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/web/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/console/config/main.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1493,27 +672,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/config/params.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/models/PartGame.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views/question/_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-203">
-          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1636,46 +794,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/controllers/QuestionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="79" column="40" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views/question/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="68" column="21" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/controllers/QuestionPackageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1360">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/models/QuestionPackage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/models/QuestionPackageBase.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/db/QuestionPackageDB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1686,27 +808,222 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/backend/controllers/QuestionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="79" column="40" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/models/PackageFinish.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/config/predefine.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/models/PartGame.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/config/params.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/backend/views/question-package/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-174">
+        <state relative-caret-position="118">
           <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/views/question/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="50" column="79" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="79" />
+          <folding>
+            <marker date="1473266499198" expanded="true" signature="2414:2428" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/models/QuestionTopic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="23" column="47" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/models/QuestionLevel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/views/admin-group/_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+          <folding>
+            <element signature="e#7#28#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/views/game/_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+          <folding>
+            <element signature="e#7#28#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/models/Question.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" column="76" selection-start-line="19" selection-start-column="76" selection-end-line="19" selection-end-column="76" />
+        <state relative-caret-position="591">
+          <caret line="47" column="4" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="4" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/views/menu/list_icon.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/views/question-package/choose-question.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+          <folding>
+            <element signature="e#6#39#0#PHP" expanded="true" />
+            <marker date="1473494413195" expanded="true" signature="872:958" placeholder="..." />
+            <marker date="1473494413195" expanded="true" signature="888:929" placeholder="{...}" />
+            <marker date="1473494413195" expanded="true" signature="943:950" placeholder="{...}" />
+            <marker date="1473494413195" expanded="true" signature="1004:1016" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/views/question-package/change_question.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/models/db/QuestionPackageDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/views/question/_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/views/menu/_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="25" />
+          <folding>
+            <element signature="e#7#28#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/views/question-package/list-questions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+          <folding>
+            <element signature="e#7#40#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1473494579926" expanded="true" signature="1028:1377" placeholder="..." />
+            <marker date="1473494579926" expanded="true" signature="1844:2064" placeholder="..." />
+            <marker date="1473494579926" expanded="true" signature="1860:1901" placeholder="{...}" />
+            <marker date="1473494579926" expanded="true" signature="2110:2136" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/views/question-package/obstacle-race.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding>
+            <element signature="e#6#89#0#PHP" expanded="true" />
+            <element signature="e#91#119#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/controllers/QuestionPackageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="69" column="37" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
+          <folding>
+            <element signature="e#39#67#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/models/QuestionPackage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="32" />
+          <folding>
+            <element signature="e#34#42#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/views/question-package/_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="44" column="42" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
+        <state relative-caret-position="185">
+          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
           <folding>
             <element signature="e#7#28#0#PHP" expanded="true" />
+            <marker date="1473499985448" expanded="true" signature="1343:1397" placeholder="..." />
+            <marker date="1473499985448" expanded="true" signature="1637:1705" placeholder="{...}" />
+            <marker date="1473499985448" expanded="true" signature="1663:1705" placeholder="{...}" />
+            <marker date="1473499985448" expanded="true" signature="1948:2050" placeholder="{...}" />
           </folding>
         </state>
       </provider>

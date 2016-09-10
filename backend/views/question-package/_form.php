@@ -4,6 +4,8 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use backend\models\PartGame;
 use yii\helpers\ArrayHelper;
+use backend\models\PackageFinish;
+use yii\helpers\Url;
 use kartik\select2\Select2;
 use backend\models\Question;
 
@@ -14,7 +16,7 @@ use backend\models\Question;
 
 <div class="question-package-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['id' => 'form-package-question']); ?>
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => 255]) ?>
 
@@ -23,11 +25,18 @@ use backend\models\Question;
     ]) ?>
 
     <div id="list_package_question_end_part" style="display: none;">
-
+        <?= $form->field($model, 'package_finish')->dropDownList(ArrayHelper::map(PackageFinish::getAllPackageFinish(), 'id', 'name'), [
+            'prompt' => 'Select package finish ...'
+        ]) ?>
     </div>
 
-    <?= $form->field($model, 'question_ids')->widget(Select2::className(), [
-    ]) ?>
+    <?php
+    echo Html::a(Yii::t('cms', 'Choose question'), 'javascript:void(0);', ['class' => 'btn btn-warning', 'id' => 'choose-question', 'style' => 'display: none;']);
+    ?>
+
+    <div id="list-questions"></div><br/>
+
+    <div id="obstacle_race-answer"></div>
 
     <?= $form->field($model, 'status')->checkbox() ?>
 
@@ -41,9 +50,77 @@ use backend\models\Question;
 </div>
 
 <script>
+    function checkButtonChooseQuestion(value) {
+        if (value == 0) {
+            $("a#choose-question").attr('style', 'display: none;');
+            $("div#list-questions").html('');
+        } else {
+            $("a#choose-question").removeAttr('style');
+            $("div#list-questions").html('');
+        }
+    }
     $(document).ready(function () {
+        var part_game = 0;
+        var pk_end = 0;
         $("select#questionpackage-part_game").on('change', function () {
-           
+            part_game = $(this).val();
+
+            if (part_game == 4) {
+                $("a#choose-question").attr('style', 'display: none');
+
+                $("div#list_package_question_end_part").show();
+
+                $("select#questionpackage-package_finish").on("change", function () {
+                    pk_end = $(this).val();
+                    checkButtonChooseQuestion(pk_end);
+                });
+            } else {
+                $("div#list_package_question_end_part").hide();
+                checkButtonChooseQuestion(part_game);
+            }
+
+            if (part_game == 2) {
+                $("a#choose-question").attr('style', 'display: none;');
+                $.ajax({
+                    method: 'POST',
+                    url: '<?php echo Url::toRoute(['/question-package/obstacle-race'])?>',
+                    success: function (data) {
+                        $("div#obstacle_race-answer").html(data);
+                    }
+                });
+            } else {
+                $("div#obstacle_race-answer").html('');
+            }
+
+        });
+
+        $("a#choose-question").on('click', function () {
+            $.ajax({
+                method: 'POST',
+                data: {'part_game': part_game, 'pk_end': pk_end},
+                url: '<?php echo Url::toRoute(['/question-package/choose-questions-package']) ?>',
+                success: function (data) {
+                    $("div#list-questions").html(data);
+                }
+            });
+        });
+
+        $("form#form-package-question").submit(function () {
+            var rowCount = $('table#table-questions tr').length;
+            var part_game = $("select#questionpackage-part_game").val();
+
+            if (rowCount == 0 && (part_game != 2)) {
+                alert("Vui lòng chọn câu hỏi cho gói câu hỏi này.");
+                return false;
+            }
+
+            if ($("input#questionpackage-obstacle_race_answer").val() == '') {
+                $("div.field-questionpackage-obstacle_race_answer").addClass('has-error');
+                $("div.field-questionpackage-obstacle_race_answer > div.help-block").text('Obstacle Race Answer is required.');
+                alert("Error");
+                return false;
+            }
+
         });
     });
 </script>

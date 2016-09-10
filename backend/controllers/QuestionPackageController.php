@@ -2,6 +2,8 @@
 
 namespace backend\controllers;
 
+use backend\models\PartGame;
+use backend\models\Question;
 use Yii;
 use backend\models\QuestionPackage;
 use common\models\search\QuestionPackageSearch;
@@ -63,9 +65,10 @@ class QuestionPackageController extends BackendController
     public function actionCreate()
     {
         $model = new QuestionPackage();
+        $request = Yii::$app->request->post();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load($request)) {
+//            return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -135,6 +138,32 @@ class QuestionPackageController extends BackendController
             echo Json::encode(['status' => false]);
             Yii::$app->end();
         }
+    }
+
+    public function actionChooseQuestionsPackage()
+    {
+        $part_game_id = intval(Yii::$app->request->post('part_game'));
+
+        $part_game = PartGame::getPartGameById($part_game_id);
+        $params['number_question'] = $part_game->number_question;
+        $questions = QuestionPackage::chooseQuestion($params);
+
+        if (count($questions) < $part_game->number_question) {
+            return "Không đủ số câu hỏi";
+        }
+        return $this->renderAjax('list-questions', compact('questions', 'part_game'));
+    }
+
+    public function actionChangeQuestion()
+    {
+        $question_id = intval(Yii::$app->request->post('question_id'));
+        $question = Question::find()->where(['id' => $question_id])->one();
+        return $this->renderAjax('choose-question', compact('question'));
+    }
+
+    public function actionObstacleRace()
+    {
+        return $this->renderAjax('obstacle-race');
     }
 
     /**
