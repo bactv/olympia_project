@@ -20,8 +20,15 @@ use backend\models\Question;
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => 255]) ?>
 
+    <?php
+    $disabled = false;
+    if (!$model->isNewRecord) {
+        $disabled = true;
+    }
+    ?>
     <?= $form->field($model, 'part_game')->dropDownList(ArrayHelper::map(PartGame::getAllPartsGame(), 'id', 'name'), [
-        'prompt' => 'Select part game ...'
+        'prompt' => 'Select part game ...',
+        'disabled' => $disabled
     ]) ?>
 
     <div id="list_package_question_end_part" style="display: none;">
@@ -31,12 +38,23 @@ use backend\models\Question;
     </div>
 
     <?php
-    echo Html::a(Yii::t('cms', 'Choose question'), 'javascript:void(0);', ['class' => 'btn btn-warning', 'id' => 'choose-question', 'style' => 'display: none;']);
-    ?>
+    if ($model->isNewRecord) { ?>
+        <?php echo Html::a(Yii::t('cms', 'Choose question'), 'javascript:void(0);', ['class' => 'btn btn-warning', 'id' => 'choose-question', 'style' => 'display: none;']); ?>
 
-    <div id="list-questions"></div><br/>
+        <div id="list-questions"></div><br/>
 
-    <div id="obstacle_race-answer"></div>
+        <div id="obstacle_race-answer"></div>
+    <?php } else if ($model->part_game !== 2) {
+        $part_game = PartGame::getPartGameById($model->part_game);
+        $questions = [];
+        foreach ($question_ids as $id) {
+            $qus = Question::getQuestionById($id);
+            $questions[] = $qus;
+        }
+        echo $this->render('list-questions', compact('part_game', 'questions'));
+    } else if ($model->part_game === 2) {
+        echo $this->render('obstacle-race', ['old_model' => $model]);
+    } ?>
 
     <?= $form->field($model, 'status')->checkbox() ?>
 

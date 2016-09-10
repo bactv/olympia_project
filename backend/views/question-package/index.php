@@ -50,7 +50,7 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
                 'format' => 'raw',
                 'value' => function ($data) {
                     $game = PartGame::getPartGameById($data->part_game);
-                    return (!empty($game)) ? $game->desscription : "";
+                    return (!empty($game)) ? $game->name : "";
                 },
                 'headerOptions' => $headerOptions,
                 'contentOptions' => $contentOptions,
@@ -61,12 +61,13 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
                 'format' => 'raw',
                 'value' => function ($data) {
                     $question_ids = json_decode($data->question_ids);
+                    $str = '';
                     if (!empty($question_ids)) {
                         foreach ($question_ids as $id) {
-                            return Html::a($id, Url::toRoute(['/question/' . $id]), ['target' => '_blank']);
+                            $str .= Html::a($id, Url::toRoute(['/question/' . $id]), ['target' => '_blank']) . ' , ';
                         }
                     }
-                    return "";
+                    return $str;
                 },
                 'headerOptions' => $headerOptions,
                 'contentOptions' => $contentOptions,

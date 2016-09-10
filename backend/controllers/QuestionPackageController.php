@@ -2,6 +2,7 @@
 
 namespace backend\controllers;
 
+use backend\models\Answer;
 use backend\models\PartGame;
 use backend\models\Question;
 use Yii;
@@ -68,7 +69,27 @@ class QuestionPackageController extends BackendController
         $request = Yii::$app->request->post();
 
         if ($model->load($request)) {
-//            return $this->redirect(['view', 'id' => $model->id]);
+            $question_ids = $request['question_ids'];
+            foreach ($question_ids as $id) {
+                $qus = Question::getQuestionById($id);
+                $qus->number_appear = 1;
+                $qus->save();
+            }
+            $model->question_ids = json_encode($request['question_ids']);
+
+            $ans = isset($model->obstacle_race_answer) ? $model->obstacle_race_answer : "";
+
+            $model->obstacle_race_answer = 'xxx';
+            if ($model->save()) {
+                if ($ans != "") {
+                    $answer = new Answer();
+                    $answer->content = $ans;
+                    $answer->obstacle_race_package = $model->id;
+                    $answer->true = 1;
+                    $answer->save();
+                }
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -85,12 +106,41 @@ class QuestionPackageController extends BackendController
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $request = Yii::$app->request->post();
+        $question_ids = json_decode($model->question_ids);
+        $package_finish = $model->package_finish;
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load($request)) {
+            foreach ($question_ids as $id) {
+                $qus = Question::getQuestionById($id);
+                $qus->number_appear = 0;
+                $qus->save();
+            }
+
+            $question_ids_2 = $request['question_ids'];
+            foreach ($question_ids_2 as $id) {
+                $qus = Question::getQuestionById($id);
+                $qus->number_appear = 1;
+                $qus->save();
+            }
+
+            $model->question_ids = json_encode($request['question_ids']);
+            $ans = isset($model->obstacle_race_answer) ? $model->obstacle_race_answer : "";
+            $model->obstacle_race_answer = 'xxx';
+
+            if ($model->save()) {
+                if ($ans != "") {
+                    $answer = Answer::find()->where(['obstacle_race_package' => $model->id])->one();
+                    $answer->content = $ans;
+                    $answer->save();
+                }
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
         } else {
             return $this->render('update', [
                 'model' => $model,
+                'question_ids' => $question_ids,
+                'package_finish' => $package_finish
             ]);
         }
     }

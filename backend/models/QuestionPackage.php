@@ -47,7 +47,8 @@ class QuestionPackage extends \common\models\QuestionPackageBase
         }
 
         // Get question hard
-        $question_hard = Question::find()->where(['status' => QUESTION_ACTIVE, 'deleted' => QUESTION_NOT_DELETED])
+        $question_hard = Question::find()->where(['status' => QUESTION_ACTIVE, 'deleted' => QUESTION_NOT_DELETED,])
+            ->andWhere(['number_appear' => 0])
             ->andWhere(['question_level' => 3])
             ->andWhere(['question_topic' => $question_topics_ids])
             ->groupBy('question_topic')
@@ -64,6 +65,7 @@ class QuestionPackage extends \common\models\QuestionPackageBase
 
         // Get question medium
         $question_medium = Question::find()->where(['status' => QUESTION_ACTIVE, 'deleted' => QUESTION_NOT_DELETED])
+            ->andWhere(['number_appear' => 0])
             ->andWhere(['question_level' => 2])
             ->andWhere(['question_topic' => array_diff($question_topics_ids, $temp_arr_topic)])
             ->andWhere(['not in', 'id', $temp_arr_ids])
@@ -81,6 +83,7 @@ class QuestionPackage extends \common\models\QuestionPackageBase
 
         // Get question easy
         $question_easy = Question::find()->where(['status' => QUESTION_ACTIVE, 'deleted' => QUESTION_NOT_DELETED])
+            ->andWhere(['number_appear' => 0])
             ->andWhere(['question_level' => 1])
             ->andWhere(['question_topic' => array_diff($question_topics_ids, $temp_arr_topic)])
             ->andWhere(['not in', 'id', $temp_arr_ids])
@@ -98,6 +101,7 @@ class QuestionPackage extends \common\models\QuestionPackageBase
         if ($temp_count != 0) {
             $question_easy2 = Question::find()->where(['status' => QUESTION_ACTIVE, 'deleted' => QUESTION_NOT_DELETED])
                 ->andWhere(['not in', 'id', $temp_arr_ids])
+                ->andWhere(['number_appear' => 0])
                 ->limit($temp_count)
                 ->all();
         }

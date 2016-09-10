@@ -21,6 +21,7 @@ use Yii;
  * @property integer $deleted
  * @property integer $number_appear
  * @property integer $admin
+ * @property integer $obstacle_race
  */
 class QuestionDB extends \yii\db\ActiveRecord
 {
@@ -40,7 +41,7 @@ class QuestionDB extends \yii\db\ActiveRecord
         return [
             [['content', 'question_topic', 'question_level', 'question_format', 'type_question', 'admin'], 'required'],
             [['content'], 'string'],
-            [['question_topic', 'question_level', 'question_format', 'type_question', 'created_by', 'updated_by', 'status', 'deleted', 'number_appear', 'admin'], 'integer'],
+            [['question_topic', 'question_level', 'question_format', 'type_question', 'created_by', 'updated_by', 'status', 'deleted', 'number_appear', 'admin', 'obstacle_race'], 'integer'],
             [['created_time', 'updated_time'], 'safe']
         ];
     }
@@ -65,6 +66,7 @@ class QuestionDB extends \yii\db\ActiveRecord
             'deleted' => 'Deleted',
             'number_appear' => 'Number Appear',
             'admin' => 'Admin',
+            'obstacle_race' => 'Obstacle Race',
         ];
     }
 }

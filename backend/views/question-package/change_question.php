@@ -3,11 +3,16 @@
 use yii\helpers\Url;
 ?>
 <p class="old" style="display: none;" id="<?php echo $question_id ?>"></p>
-<h3>Change Question</h3>
-
+<h4>Change Question</h4>
+<?php
+$old_question = \backend\models\Question::getQuestionById($question_id);
+?>
 <select id="change" class="form-control">
     <option value="">Select question ...</option>
-    <?php foreach (\backend\models\Question::find()->all() as $q) { ?>
+    <?php foreach (\backend\models\Question::find()->where(['status' => QUESTION_ACTIVE, 'deleted' => QUESTION_NOT_DELETED])
+                       ->andWhere(['<>', 'id', $question_id])
+                       ->andWhere(['question_level' => $old_question->question_level])
+                       ->all() as $q) { ?>
         <option value="<?php echo $q->id ?>"><?php echo $q->id . ': ' . $q->content ?></option>
     <?php } ?>
 </select>

@@ -45,5 +45,10 @@ class Question extends \common\models\QuestionBase
 
         return $query->all();
     }
+
+    public static function getQuestionById($id)
+    {
+        return self::find()->where(['id' => $id, 'status' => QUESTION_ACTIVE, 'deleted' => QUESTION_NOT_DELETED])->one();
+    }
     
 }

@@ -11,6 +11,7 @@ use Yii;
  * @property integer $question_id
  * @property string $content
  * @property integer $true
+ * @property integer $obstacle_race_package
  */
 class AnswerDB extends \yii\db\ActiveRecord
 {
@@ -28,8 +29,8 @@ class AnswerDB extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['question_id', 'content'], 'required'],
-            [['question_id', 'true'], 'integer'],
+            [['question_id', 'true', 'obstacle_race_package'], 'integer'],
+            [['content'], 'required'],
             [['content'], 'string', 'max' => 255]
         ];
     }
@@ -44,6 +45,7 @@ class AnswerDB extends \yii\db\ActiveRecord
             'question_id' => 'Question ID',
             'content' => 'Content',
             'true' => 'True',
+            'obstacle_race_package' => 'Obstacle Race Package',
         ];
     }
 }

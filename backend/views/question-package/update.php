@@ -16,6 +16,8 @@ $this->params['menu'] = [
 <div class="question-package-update">
     <?= $this->render('_form', [
         'model' => $model,
+        'question_ids' => $question_ids,
+        'package_finish' => $package_finish
     ]) ?>
 
 </div>

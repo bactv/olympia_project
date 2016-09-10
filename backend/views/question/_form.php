@@ -101,6 +101,8 @@ use yii\helpers\ArrayHelper;
     <br/>
     <?= $form->field($model, 'status')->label(Yii::t('cms', 'Status'))->checkbox() ?>
 
+    <?= $form->field($model, 'obstacle_race')->label(Yii::t('cms', 'Phần thi vượt chướng ngại vật?'))->checkbox() ?>
+
     <?php
     if (!$model->isNewRecord) {
         echo $form->field($model, 'deleted')->label(Yii::t('cms', 'Deleted'))->checkbox();
