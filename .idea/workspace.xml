@@ -3,17 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ce41a1ed-6260-4a91-a8ed-d013017177ae" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/controllers/GameController.php" afterPath="$PROJECT_DIR$/backend/controllers/GameController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/admin-group/_form.php" afterPath="$PROJECT_DIR$/backend/views/admin-group/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/admin-group/create.php" afterPath="$PROJECT_DIR$/backend/views/admin-group/create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/admin-group/index.php" afterPath="$PROJECT_DIR$/backend/views/admin-group/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/admin-group/update.php" afterPath="$PROJECT_DIR$/backend/views/admin-group/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/game/_form.php" afterPath="$PROJECT_DIR$/backend/views/game/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/game/create.php" afterPath="$PROJECT_DIR$/backend/views/game/create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/game/index.php" afterPath="$PROJECT_DIR$/backend/views/game/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/game/update.php" afterPath="$PROJECT_DIR$/backend/views/game/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/helpers/DateTimeHelper.php" afterPath="$PROJECT_DIR$/common/helpers/DateTimeHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/messages/vi/cms.php" afterPath="$PROJECT_DIR$/common/messages/vi/cms.php" />
     </list>
     <ignored path="olympia_project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -511,7 +500,7 @@
       <workItem from="1473523985449" duration="7816000" />
       <workItem from="1473559542152" duration="7169000" />
       <workItem from="1473585923387" duration="7394000" />
-      <workItem from="1473605282544" duration="9521000" />
+      <workItem from="1473605282544" duration="9561000" />
     </task>
     <task id="LOCAL-00001" summary="update config">
       <created>1472402996335</created>
@@ -695,11 +684,18 @@
       <option name="project" value="LOCAL" />
       <updated>1473611402263</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Update backend">
+      <created>1473614835946</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1473614835946</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153703000" />
+    <option name="totallyTimeSpent" value="153743000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
