@@ -12,6 +12,20 @@ use common\behaviors\TimestampBehavior;
 class Admin extends \common\models\AdminBase implements IdentityInterface
 {
 
+    public $thumb_upload;
+
+    /**
+     * @return array
+     */
+    public function rules()
+    {
+        $rules =  parent::rules();
+        $new_rules = [
+            [['thumb_upload'], 'file', 'extensions' => 'jpg, png, jpeg, gif'],
+        ];
+        return array_merge($rules, $new_rules);
+    }
+
     public function behaviors()
     {
         return [

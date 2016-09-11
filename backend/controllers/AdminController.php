@@ -10,6 +10,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
+use common\helpers\DateTimeHelper;
 
 /**
  * AdminController implements the CRUD actions for Admin model.
@@ -66,6 +67,8 @@ class AdminController extends BackendController
 
         if ($model->load(Yii::$app->request->post())) {
             $model->admin_group_ids = json_encode($model->admin_group_ids);
+            $model->setPassword($model->password);
+            $model->birthday = isset($model->birthday) ? DateTimeHelper::format_date($model->birthday, '/', '-') : "";
 
             if ($model->save()) {
                 return $this->redirect(['view', 'id' => $model->id]);
@@ -87,10 +90,12 @@ class AdminController extends BackendController
     {
         $model = $this->findModel($id);
         $model->admin_group_ids = json_decode($model->admin_group_ids);
+        $model->birthday = (!empty($model->birthday)) ?  DateTimeHelper::format_date($model->birthday, '-', '/') : "";
 
         $request = Yii::$app->request->post();
         if ($model->load($request)) {
             $model->admin_group_ids = json_encode($request['Admin']['admin_group_ids']);
+            $model->birthday = isset($model->birthday) ? DateTimeHelper::format_date($model->birthday, '/', '-') : "";
 
             if ($model->save()) {
                 return $this->redirect(['view', 'id' => $model->id]);
@@ -110,7 +115,6 @@ class AdminController extends BackendController
      */
     public function actionDelete($id)
     {
-        //$this->findModel($id)->delete();
         $model = $this->findModel($id);
         $model->deleted = 1;
         $model->save();

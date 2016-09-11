@@ -53,19 +53,11 @@ class AdminSearch extends Admin
 
         $query->andFilterWhere([
             'id' => $this->id,
-            'birthday' => $this->birthday,
             'status' => $this->status,
             'deleted' => $this->deleted,
-            'thumb_version' => $this->thumb_version,
-            'created_time' => $this->created_time,
-            'updated_time' => $this->updated_time,
-            'created_by' => $this->created_by,
-            'updated_by' => $this->updated_by,
-            'last_active_time' => $this->last_active_time,
         ]);
 
         $query->andFilterWhere(['like', 'username', $this->username])
-            ->andFilterWhere(['like', 'password', $this->password])
             ->andFilterWhere(['like', 'email', $this->email])
             ->andFilterWhere(['like', 'fullname', $this->fullname])
             ->andFilterWhere(['like', 'profession', $this->profession])

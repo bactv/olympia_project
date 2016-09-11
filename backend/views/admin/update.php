@@ -5,13 +5,14 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Admin */
 
-$this->title = 'Update Admin: ' . ' ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Admins', 'url' => ['index']];
-$this->params['breadcrumbs'][] = 'Update';
-$this->params['title'] = 'Update';
+$this->title = Yii::t('cms', 'Update Admin') . ': ' . $model->username;
+$this->params['breadcrumbs'][] = ['label' => Yii::t('cms', 'Admin'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = Yii::t('cms', 'update');
+$this->params['title'] = Yii::t('cms', 'update');
 $this->params['menu'] = [
-    ['label'=>'Back', 'url' => ['index'], 'options' => ['class' => 'btn btn-primary']],
+    ['label' => Yii::t('cms', 'back'), 'url' => ['index'], 'options' => ['class' => 'btn btn-primary']],
 ];
+
 ?>
 <div class="admin-update">
     <?= $this->render('_form', [

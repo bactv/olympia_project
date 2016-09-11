@@ -40,7 +40,7 @@ class AdminDB extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['username', 'password', 'email', 'fullname'], 'required'],
+            [['username', 'password', 'email', 'fullname', 'admin_group_ids'], 'required'],
             [['birthday', 'created_time', 'updated_time', 'last_active_time'], 'safe'],
             [['status', 'deleted', 'thumb_version', 'created_by', 'updated_by'], 'integer'],
             [['username', 'password', 'email', 'fullname', 'profession'], 'string', 'max' => 255]
