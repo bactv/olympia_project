@@ -3,15 +3,16 @@
 use yii\helpers\Html;
 use yii\widgets\Pjax;
 use yii\grid\GridView;
+use common\helpers\DateTimeHelper;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\search\GameCategorySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-$this->title = $this->params['title'] = 'Games';
+$this->title = $this->params['title'] = Yii::t('cms', 'Games');
 $this->params['breadcrumbs'][] = $this->title;
 $this->params['menu'] = [
-    ['label'=>'Create', 'url' => ['create'], 'options' => ['class' => 'btn btn-primary']],
-    ['label'=>'Delete', 'url' => 'javascript:void(0)', 'options' => ['class' => 'btn btn-danger', 'onclick' => 'deleteAllItems()']]
+    ['label'=>Yii::t('cms', 'Create'), 'url' => ['create'], 'options' => ['class' => 'btn btn-primary']],
+    ['label'=>Yii::t('cms', 'Delete'), 'url' => ['delete'], 'options' => ['class' => 'btn btn-danger', 'onclick' => 'deleteAllItems()']]
 ];
 ?>
 
@@ -37,7 +38,7 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
             ],
             [
                 'attribute' => 'name',
-                'label' => Yii::t('cms', 'Name'),
+                'label' => Yii::t('cms', 'Game Name'),
                 'headerOptions' => $headerOptions,
                 'contentOptions' => $contentOptions,
             ],
@@ -53,12 +54,14 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
             ],
             [
                 'attribute' => 'date',
-                'label' => Yii::t('cms', 'Time'),
+                'label' => Yii::t('cms', 'Start Time'),
                 'format' => 'raw',
                 'value' => function ($data) {
                     $time = date_create_from_format('Y-m-d H:i:s', $data->date);
                     $now = date_create_from_format('Y-m-d H:i:s', date('Y-m-d H:i:s'));
-                    return ($time < $now) ? 'Đã diễn ra' : 'Chưa diễn ra';
+                    $str = DateTimeHelper::format_date_time($time->format('Y-m-d H:i:s'), '-', '/');
+                    $append_str = ($time < $now) ? 'Đã diễn ra' : 'Chưa diễn ra';
+                    return '<p>' . $str . '</p>' . '<p>' . $append_str . '</p>';
                 },
                 'headerOptions' => $headerOptions,
                 'contentOptions' => $contentOptions,
@@ -83,6 +86,7 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
             ],
             [
                 'class' => 'backend\components\CActionColumn',
+                'header' => Yii::t('cms', 'Action'),
                 'headerOptions' => $headerOptions,
                 'contentOptions'=> $contentOptions,
             ],

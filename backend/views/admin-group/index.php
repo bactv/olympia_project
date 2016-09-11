@@ -8,11 +8,11 @@ use yii\helpers\Url;
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\search\AdminGroupSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-$this->title = $this->params['title'] = 'Admin Groups';
+$this->title = $this->params['title'] = Yii::t('cms', 'Admin Groups');
 $this->params['breadcrumbs'][] = $this->title;
 $this->params['menu'] = [
-    ['label'=>'Create', 'url' => ['create'], 'options' => ['class' => 'btn btn-primary']],
-    ['label'=>'Delete', 'url' => 'javascript:void(0)', 'options' => ['class' => 'btn btn-danger', 'onclick' => 'deleteAllItems()']]
+    ['label'=> Yii::t('cms', 'Create'), 'url' => ['create'], 'options' => ['class' => 'btn btn-primary']],
+    ['label'=> Yii::t('cms', 'Delete'), 'url' => ['delete'], 'options' => ['class' => 'btn btn-danger', 'onclick' => 'deleteAllItems()']]
 ];
 ?>
 
@@ -24,9 +24,12 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
 <?php Pjax::begin(['id' => 'admin-grid-view']);?> 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-//        'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\CheckboxColumn'],
+            [
+                'class' => 'yii\grid\CheckboxColumn',
+                'headerOptions' => $headerOptions,
+                'contentOptions' => $contentOptions,
+            ],
             [
                 'attribute' => 'id',
                 'headerOptions' => $headerOptions,
@@ -34,15 +37,11 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
             ],
             [
                 'attribute' => 'name',
-                'label' => Yii::t('cms', 'Name'),
-                'headerOptions' => $headerOptions,
-                'contentOptions' => $contentOptions,
+                'label' => Yii::t('cms', 'Name Group'),
             ],
             [
                 'attribute' => 'description',
                 'label' => Yii::t('cms', 'Description'),
-                'headerOptions' => $headerOptions,
-                'contentOptions' => $contentOptions,
             ],
             [
                 'attribute' => 'status',
@@ -73,6 +72,7 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
             ],
             [
                 'class' => 'backend\components\CActionColumn',
+                'header' => Yii::t('cms', 'Action'),
                 'headerOptions' => $headerOptions,
                 'contentOptions'=> $contentOptions,
             ],

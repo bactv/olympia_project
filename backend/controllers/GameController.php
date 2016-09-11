@@ -2,13 +2,13 @@
 
 namespace backend\controllers;
 
-use backend\models\Student;
 use Yii;
 use backend\models\Game;
 use common\models\search\GameCategorySearch;
 use backend\components\BackendController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use common\helpers\DateTimeHelper;
 
 /**
  * GameController implements the CRUD actions for Game model.
@@ -76,6 +76,8 @@ class GameController extends BackendController
                 }
                 $model->data_game = json_encode($data);
                 $model->num_game = $num_game;
+                $model->date = DateTimeHelper::format_date_time($model->date, '/', '-');
+
                 if ($model->save()) {
                     return $this->redirect(['view', 'id' => $model->id]);
                 }
@@ -101,6 +103,7 @@ class GameController extends BackendController
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $model->date = DateTimeHelper::format_date_time($model->date, '-', '/');
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -129,7 +132,13 @@ class GameController extends BackendController
     public function actionChoosePlayer()
     {
         $type_game = Yii::$app->request->post('type_game');
+        if ($type_game == '') {
+            return 'Vui lòng chọn loại cuộc thi';
+        }
         $players = Game::choosePlayer($type_game);
+        if (count($players) < 4) {
+            return 'Số người chơi không đủ';
+        }
         return $this->renderAjax('choose_player', compact('players'));
     }
 

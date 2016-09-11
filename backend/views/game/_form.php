@@ -27,19 +27,26 @@ use yii\bootstrap\Alert;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'name')->textInput(['maxlength' => 255]) ?>
+    <?= $form->field($model, 'name')->label(Yii::t('cms', 'Game Name'))->textInput([
+        'maxlength' => 255,
+        'placeholder' => Yii::t('cms', 'Enter game name') . ' ...',
+    ]) ?>
 
     <?= $form->field($model, 'description')->label(Yii::t('cms', 'Description'))->widget(CKEditor::className(), [
-        'options' => ['rows' => 6],
+        'options' => [
+            'rows' => 4,
+        ],
         'preset' => 'basic'
     ]) ?>
 
-    <?= $form->field($model, 'type_game')->label(Yii::t('cms', 'Type'))->dropDownList(ArrayHelper::map(TypeGame::getAllTypesGame(), 'id', 'description'), [
-        'prompt' => 'Select a type game ...',
+    <?= $form->field($model, 'type_game')->label(Yii::t('cms', 'Type Game'))->dropDownList(ArrayHelper::map(TypeGame::getAllTypesGame(), 'id', 'description'), [
+        'prompt' => Yii::t('cms', 'Select a type game') . ' ...',
     ]) ?>
 
-    <?= $form->field($model, 'date')->widget(DateTimePicker::classname(), [
-        'options' => ['placeholder' => 'Enter event time ...'],
+    <?= $form->field($model, 'date')->label(Yii::t('cms', 'Event Time'))->widget(DateTimePicker::classname(), [
+        'options' => [
+            'placeholder' => Yii::t('cms', 'Enter event time') . ' ...',
+        ],
         'pluginOptions' => [
             'autoclose' => true,
             'format' => 'dd/mm/yyyy hh:ii'
@@ -57,8 +64,8 @@ use yii\bootstrap\Alert;
     <br/>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton('Reset', ['class' => 'btn btn-default']); ?>
+        <?= Html::submitButton($model->isNewRecord ? Yii::t('cms', 'Create') : Yii::t('cms', 'Update'), ['class' => 'btn btn-primary']) ?>
+        <?= Html::resetButton(Yii::t('cms', 'Reset'), ['class' => 'btn btn-default']); ?>
     </div>
 
     <?php ActiveForm::end(); ?>
@@ -76,9 +83,6 @@ use yii\bootstrap\Alert;
                 success: function (data) {
                     $("div#info-players").html(data);
                 },
-                error: function () {
-                    alert("Error!");
-                }
             });
         });
     });

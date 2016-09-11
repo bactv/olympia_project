@@ -15,20 +15,20 @@ use yii\helpers\Url;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'name')->label(Yii::t('cms', 'Name'))->textInput(['maxlength' => 255]) ?>
+    <?= $form->field($model, 'name')->label(Yii::t('cms', 'Name Group'))->textInput(['maxlength' => 255]) ?>
 
     <?= $form->field($model, 'description')->label(Yii::t('cms', 'Description'))->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'status')->label(Yii::t('cms', 'Status'))->checkbox() ?>
 
     <h3><b><?php echo Yii::t('cms', 'Permission') ?></b></h3>
-    <p><?php echo Html::a('Update Router', 'javascript:void(0);', ['class' => 'btn btn-warning', 'id' => 'update-router']) ?></p>
+    <p><?php echo Html::a(Yii::t('cms', 'Update Router'), 'javascript:void(0);', ['class' => 'btn btn-warning', 'id' => 'update-router']) ?></p>
     <div id="w2" class="grid-view table-responsive package">
         <table style="width: 100%;" class="table table-striped table-bordered" cellpadding="0" cellspacing="0"
                border="0">
             <thead>
-                <th><?php echo Yii::t('cms', 'Controller') ?></th>
-                <th><?php echo Yii::t('cms', 'Action') ?></th>
+                <th>Controller</th>
+                <th>Action</th>
                 <th><?php echo Yii::t('cms', 'All') ?></th>
             </thead>
             <tbody>
@@ -71,8 +71,8 @@ use yii\helpers\Url;
     </div>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton('Reset', ['class' => 'btn btn-default']); ?>
+        <?= Html::submitButton($model->isNewRecord ? Yii::t('cms', 'Create') : Yii::t('cms', 'Update'), ['class' => 'btn btn-primary']) ?>
+        <?= Html::resetButton(Yii::t('cms', 'Reset'), ['class' => 'btn btn-default']); ?>
     </div>
 
     <?php ActiveForm::end(); ?>
