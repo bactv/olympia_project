@@ -16,7 +16,7 @@ $model = isset($old_model) ? $old_model : (new QuestionPackage());
 $answer = isset($old_model) ? Answer::find()->where(['obstacle_race_package' => $old_model->id])->one() : "";
 $values = isset($old_model) ? json_decode($old_model->question_ids) : "";
 
-$questions = Question::find()->where(['obstacle_race' => 1, 'status' => QUESTION_ACTIVE, 'deleted' => QUESTION_NOT_DELETED])->all();
+$questions = Question::find()->where(['obstacle_race' => 1, 'status' => QUESTION_ACTIVE, 'deleted' => QUESTION_NOT_DELETED, 'number_appear' => 0])->all();
 $new_questions = [];
 foreach ($questions as $q) {
     $qus = new Question();

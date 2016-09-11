@@ -8,6 +8,7 @@ use backend\models\PackageFinish;
 use yii\helpers\Url;
 use kartik\select2\Select2;
 use backend\models\Question;
+use backend\models\TypeGame;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\QuestionPackage */
@@ -19,6 +20,10 @@ use backend\models\Question;
     <?php $form = ActiveForm::begin(['id' => 'form-package-question']); ?>
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => 255]) ?>
+
+    <?= $form->field($model, 'type_game')->dropDownList(ArrayHelper::map(TypeGame::getAllTypesGame(), 'id', 'name'), [
+        'prompt' => 'Select type game ...',
+    ]) ?>
 
     <?php
     $disabled = false;
@@ -33,7 +38,6 @@ use backend\models\Question;
 
     <div id="list_package_question_end_part" style="display: none;">
         <?= $form->field($model, 'package_finish')->dropDownList(ArrayHelper::map(PackageFinish::getAllPackageFinish(), 'id', 'name'), [
-            'prompt' => 'Select package finish ...'
         ]) ?>
     </div>
 
@@ -80,6 +84,12 @@ use backend\models\Question;
     $(document).ready(function () {
         var part_game = 0;
         var pk_end = 0;
+        var type_game = 0;
+
+        $("select#questionpackage-type_game").on('change', function () {
+            type_game = $(this).val();
+        });
+
         $("select#questionpackage-part_game").on('change', function () {
             part_game = $(this).val();
 
@@ -115,7 +125,7 @@ use backend\models\Question;
         $("a#choose-question").on('click', function () {
             $.ajax({
                 method: 'POST',
-                data: {'part_game': part_game, 'pk_end': pk_end},
+                data: {'part_game': part_game, 'package_finish': pk_end, 'type_game': type_game},
                 url: '<?php echo Url::toRoute(['/question-package/choose-questions-package']) ?>',
                 success: function (data) {
                     $("div#list-questions").html(data);

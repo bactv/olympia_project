@@ -25,4 +25,9 @@ class TypeGame extends \common\models\TypeGameBase
     {
         return self::find()->all();
     }
+
+    public static function getTypeGameById($id)
+    {
+        return self::find()->where(['id' => $id])->one();
+    }
 }

@@ -8,7 +8,6 @@ use common\behaviors\TimestampBehavior;
 
 class QuestionPackage extends \common\models\QuestionPackageBase
 {
-    public $package_finish;
     public $obstacle_race_answer;
 
     public function rules()
@@ -35,9 +34,17 @@ class QuestionPackage extends \common\models\QuestionPackageBase
 
     public static function chooseQuestion($params)
     {
-        $p_easy = (int)round ($params['number_question'] * Yii::$app->params['question_level']['easy']);
-        $p_medium = (int)round ($params['number_question'] * Yii::$app->params['question_level']['medium']);
-        $p_hard = (int)round ($params['number_question'] * Yii::$app->params['question_level']['hard']);
+        $type_game = (!empty($params['type_game'])) ? Yii::$app->params['type_game'][$params['type_game']] : "";
+        $package_finish = (!empty($params['package_finish'])) ? Yii::$app->params['package_finish'][$params['package_finish']] : "";
+        $type = ($package_finish == "") ? $type_game : $package_finish;
+
+        $p_easy = (int)round ($params['number_question'] * Yii::$app->params['question_probability'][$type]['easy']);
+        $p_medium = (int)round ($params['number_question'] * Yii::$app->params['question_probability'][$type]['medium']);
+        $p_hard = (int)round ($params['number_question'] * Yii::$app->params['question_probability'][$type]['hard']);
+
+//        $p_easy = (int)round ($params['number_question'] * Yii::$app->params['question_level']['easy']);
+//        $p_medium = (int)round ($params['number_question'] * Yii::$app->params['question_level']['medium']);
+//        $p_hard = (int)round ($params['number_question'] * Yii::$app->params['question_level']['hard']);
 
         // Get all question_topic ids
         $question_topics = QuestionTopic::getAllQuestionTopic();
@@ -101,6 +108,7 @@ class QuestionPackage extends \common\models\QuestionPackageBase
         if ($temp_count != 0) {
             $question_easy2 = Question::find()->where(['status' => QUESTION_ACTIVE, 'deleted' => QUESTION_NOT_DELETED])
                 ->andWhere(['not in', 'id', $temp_arr_ids])
+                ->andWhere(['question_level' => 1])
                 ->andWhere(['number_appear' => 0])
                 ->limit($temp_count)
                 ->all();

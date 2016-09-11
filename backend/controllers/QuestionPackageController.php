@@ -193,9 +193,15 @@ class QuestionPackageController extends BackendController
     public function actionChooseQuestionsPackage()
     {
         $part_game_id = intval(Yii::$app->request->post('part_game'));
+        $type_game = intval(Yii::$app->request->post('type_game'));
+        $package_finish = intval(Yii::$app->request->post('package_finish'));
 
         $part_game = PartGame::getPartGameById($part_game_id);
         $params['number_question'] = $part_game->number_question;
+        $params['type_game'] = $type_game;
+        if ($package_finish != 0) {
+            $params['package_finish'] = $package_finish;
+        }
         $questions = QuestionPackage::chooseQuestion($params);
 
         if (count($questions) < $part_game->number_question) {

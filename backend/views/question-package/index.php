@@ -6,6 +6,7 @@ use yii\grid\GridView;
 use backend\models\PartGame;
 use backend\models\Question;
 use yii\helpers\Url;
+use backend\models\TypeGame;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\search\QuestionPackageSearch */
@@ -26,6 +27,7 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
 <?php Pjax::begin(['id' => 'admin-grid-view']);?> 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
+    
         'columns' => [
             [
                 'class' => 'yii\grid\CheckboxColumn',
@@ -41,6 +43,17 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
             [
                 'attribute' => 'name',
                 'label' => Yii::t('cms', 'Name'),
+                'headerOptions' => $headerOptions,
+                'contentOptions' => $contentOptions,
+            ],
+            [
+                'attribute' => 'type_game',
+                'label' => Yii::t('cms', 'Type Game'),
+                'format' => 'raw',
+                'value' => function ($data) {
+                    $game = TypeGame::getTypeGameById($data->type_game);
+                    return (!empty($game)) ? $game->name : "";
+                },
                 'headerOptions' => $headerOptions,
                 'contentOptions' => $contentOptions,
             ],
