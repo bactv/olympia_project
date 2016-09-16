@@ -13,8 +13,8 @@ use yii\helpers\ArrayHelper;
 $this->title = $this->params['title'] = Yii::t('cms', 'Admin');
 $this->params['breadcrumbs'][] = $this->title;
 $this->params['menu'] = [
-    ['label'=> Yii::t('cms', 'Create'), 'url' => ['create'], 'options' => ['class' => 'btn btn-primary']],
-    ['label'=>Yii::t('cms', 'Delete'), 'url' => ['delete'], 'options' => ['class' => 'btn btn-danger', 'onclick' => 'deleteAllItems()']]
+    ['label'=> '<i class="fa fa-plus" aria-hidden="true"></i> ' . Yii::t('cms', 'Create'), 'url' => ['create'], 'options' => ['class' => 'btn btn-primary']],
+    ['label'=> '<i class="fa fa-trash-o" aria-hidden="true"></i> ' . Yii::t('cms', 'Delete'), 'url' => ['delete'], 'options' => ['class' => 'btn btn-danger', 'onclick' => 'deleteAllItems()']]
 ];
 ?>
 
@@ -29,6 +29,11 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
         'filterModel' => $searchModel,
         'columns' => [
             [
+                'class' => 'yii\grid\SerialColumn',
+                'headerOptions' => $headerOptions,
+                'contentOptions' => $contentOptions,
+            ],
+            [
                 'class' => 'yii\grid\CheckboxColumn',
                 'options' => ['width' => '30px'],
                 'headerOptions' => $headerOptions,
@@ -36,7 +41,7 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
             ],
             [
                 'attribute' => 'thumb_version',
-                'label' => Yii::t('cms', 'avatar'),
+                'label' => Yii::t('cms', 'Avatar'),
                 'format' => 'raw',
                 'value' => function ($model) {
                     $url = ($model->thumb_version === 1) ? Yii::$app->params['img_url']['data_path']['admin_avatar']['source'] .
@@ -52,7 +57,7 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
             ],
             [
                 'attribute' => 'username',
-                'label' => Yii::t('cms', 'username'),
+                'label' => Yii::t('cms', 'Username'),
                 'options' => [
                     'width' => '90px',
                 ],
@@ -61,13 +66,13 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
             ],
             [
                 'attribute' => 'email',
-                'label' => Yii::t('cms', 'email'),
+                'label' => Yii::t('cms', 'Email'),
                 'headerOptions' => $headerOptions,
                 'contentOptions' => $contentOptions,
             ],
             [
                 'attribute' => 'fullname',
-                'label' => Yii::t('cms', 'fullname'),
+                'label' => Yii::t('cms', 'Full name'),
                 'options' => [
                     'width' => '120px',
                 ],
@@ -76,7 +81,7 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
             ],
             [
                 'attribute' => 'status',
-                'label' => Yii::t('cms', 'status'),
+                'label' => Yii::t('cms', 'Status'),
                 'filter' => [1 => Yii::t('cms', 'active'), 0 => Yii::t('cms', 'inactive')],
                 'format' => 'raw',
                 'options' => ['width' => '100px'],
@@ -92,7 +97,7 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
             ],
             [
                 'attribute' => 'deleted',
-                'label' => Yii::t('cms', 'deleted'),
+                'label' => Yii::t('cms', 'Deleted'),
                 'filter' => [1 => Yii::t('cms', 'deleted'), 0 => Yii::t('cms', 'not-deleted')],
                 'format' => 'raw',
                 'options' => ['width' => '100px'],
@@ -108,7 +113,7 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
             ],
             [
                 'attribute' => 'admin_group_ids',
-                'label' => Yii::t('cms', 'admin_group_ids'),
+                'label' => Yii::t('cms', 'Admin Groups'),
                 'filter' => ArrayHelper::map(AdminGroup::getAllGroups(), 'id', 'name'),
                 'format' => 'raw',
                 'options' => ['width' => '100px'],
@@ -130,7 +135,7 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
             ],
             [
                 'class' => 'backend\components\CActionColumn',
-                'header' => Yii::t('cms', 'action'),
+                'header' => Yii::t('cms', 'Actions'),
                 'options' => ['width' => '150px'],
                 'headerOptions' => $headerOptions,
                 'contentOptions'=> $contentOptions,

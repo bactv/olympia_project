@@ -11,8 +11,8 @@ use yii\helpers\Url;
 $this->title = $this->params['title'] = Yii::t('cms', 'Admin Groups');
 $this->params['breadcrumbs'][] = $this->title;
 $this->params['menu'] = [
-    ['label'=> Yii::t('cms', 'Create'), 'url' => ['create'], 'options' => ['class' => 'btn btn-primary']],
-    ['label'=> Yii::t('cms', 'Delete'), 'url' => ['delete'], 'options' => ['class' => 'btn btn-danger', 'onclick' => 'deleteAllItems()']]
+    ['label'=> '<i class="fa fa-plus" aria-hidden="true"></i> ' . Yii::t('cms', 'Create'), 'url' => ['create'], 'options' => ['class' => 'btn btn-primary']],
+    ['label'=> '<i class="fa fa-trash-o" aria-hidden="true"></i> ' . Yii::t('cms', 'Delete'), 'url' => ['delete'], 'options' => ['class' => 'btn btn-danger', 'onclick' => 'deleteAllItems()']]
 ];
 ?>
 
@@ -26,12 +26,12 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
         'dataProvider' => $dataProvider,
         'columns' => [
             [
-                'class' => 'yii\grid\CheckboxColumn',
+                'class' => 'yii\grid\SerialColumn',
                 'headerOptions' => $headerOptions,
                 'contentOptions' => $contentOptions,
             ],
             [
-                'attribute' => 'id',
+                'class' => 'yii\grid\CheckboxColumn',
                 'headerOptions' => $headerOptions,
                 'contentOptions' => $contentOptions,
             ],

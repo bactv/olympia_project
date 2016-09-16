@@ -129,6 +129,10 @@ class GameController extends BackendController
         return $this->redirect(['index']);
     }
 
+    /**
+     * Choose player
+     * @return string
+     */
     public function actionChoosePlayer()
     {
         $type_game = Yii::$app->request->post('type_game');

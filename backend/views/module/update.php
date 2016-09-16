@@ -10,7 +10,7 @@ $this->params['breadcrumbs'][] = ['label' => 'Modules', 'url' => ['index']];
 $this->params['breadcrumbs'][] = 'Update';
 $this->params['title'] = 'Update';
 $this->params['menu'] = [
-    ['label'=>'Back', 'url' => ['index'], 'options' => ['class' => 'btn btn-primary']],
+    ['label'=>'<i class="fa fa-reply" aria-hidden="true"></i> ' . Yii::t('cms', 'Back'), 'url' => ['index'], 'options' => ['class' => 'btn btn-primary']],
 ];
 ?>
 <div class="module-update">

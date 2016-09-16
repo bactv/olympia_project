@@ -1,7 +1,7 @@
 <?php
 
 use yii\helpers\Html;
-use yii\widgets\ActiveForm;
+use kartik\form\ActiveForm;
 use dosamigos\ckeditor\CKEditor;
 use yii\helpers\ArrayHelper;
 use backend\models\TypeGame;
@@ -25,7 +25,10 @@ use yii\bootstrap\Alert;
 
 <div class="game-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin([
+        'type' => ActiveForm::TYPE_HORIZONTAL,
+        'formConfig' => ['labelSpan' => 2, 'deviceSize' => ActiveForm::SIZE_SMALL]
+    ]); ?>
 
     <?= $form->field($model, 'name')->label(Yii::t('cms', 'Game Name'))->textInput([
         'maxlength' => 255,
@@ -34,7 +37,7 @@ use yii\bootstrap\Alert;
 
     <?= $form->field($model, 'description')->label(Yii::t('cms', 'Description'))->widget(CKEditor::className(), [
         'options' => [
-            'rows' => 4,
+            'rows' => 3,
         ],
         'preset' => 'basic'
     ]) ?>
@@ -54,7 +57,7 @@ use yii\bootstrap\Alert;
     ]); ?>
 
     <?php
-    echo Html::a(Yii::t('cms', 'Choose player'), 'javascript:void(0);', ['class' => 'btn btn-warning', 'id' => 'choose-player']);
+    echo Html::a('<i class="fa fa-user-plus" aria-hidden="true"></i> ' . Yii::t('cms', 'Choose player'), 'javascript:void(0);', ['class' => 'btn btn-warning', 'id' => 'choose-player']);
     ?>
 
     <br/>
@@ -64,8 +67,8 @@ use yii\bootstrap\Alert;
     <br/>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? Yii::t('cms', 'Create') : Yii::t('cms', 'Update'), ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton(Yii::t('cms', 'Reset'), ['class' => 'btn btn-default']); ?>
+        <?= Html::submitButton($model->isNewRecord ? '<i class="fa fa-floppy-o" aria-hidden="true"></i> ' . Yii::t('cms', 'Save') : '<i class="fa fa-floppy-o" aria-hidden="true"></i> ' . Yii::t('cms', 'Save'), ['class' => 'btn btn-primary']) ?>
+        <?= Html::resetButton('<i class="fa fa-repeat" aria-hidden="true"></i> ' . Yii::t('cms', 'Reset'), ['class' => 'btn btn-default']); ?>
     </div>
 
     <?php ActiveForm::end(); ?>

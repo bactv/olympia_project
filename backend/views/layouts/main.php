@@ -23,6 +23,7 @@ AppAsset::register($this);
     <?php echo AssetApp::regCssFile('_all-skins.min.css') ?>
     <?php echo AssetApp::regCssFile('admin.min.css') ?>
     <?php echo AssetApp::regCssFile('popbox.css') ?>
+    <?php echo AssetApp::regCssFile('nprogress.css') ?>
     <?php echo AssetApp::regCssFile('style.css') ?>
 
     <?php echo AssetApp::regJsFile('fastclick.js') ?>
@@ -33,6 +34,7 @@ AppAsset::register($this);
     <?php echo AssetApp::regJsFile('jquery.slimscroll.min.js') ?>
     <?php echo AssetApp::regJsFile('demo.js') ?>
     <?php echo AssetApp::regJsFile('popbox.js') ?>
+    <?php echo AssetApp::regJsFile('nprogress.js') ?>
     <?php echo AssetApp::regJsFile('common.js') ?>
 
     <?php $this->head() ?>
@@ -40,7 +42,6 @@ AppAsset::register($this);
 <body class="hold-transition skin-blue sidebar-mini">
 <?php $this->beginBody() ?>
 <div class="wrapper">
-
     <header class="main-header">
         <!-- Logo -->
         <a href="<?php echo Url::to(['/default']) ?>" class="logo">
@@ -361,6 +362,7 @@ AppAsset::register($this);
             <?php
             echo MenuWidget::widget([
                 'options' => ['class' => 'ibox-title-ul'],
+                'encodeLabels' => false,
                 'items' => isset($this->params['menu']) ? $this->params['menu'] : []
             ]);
             ?>
@@ -573,6 +575,18 @@ AppAsset::register($this);
     <div class="control-sidebar-bg"></div>
 
 </div>
+
+<script>
+    $('body').show();
+    $('.version').text(NProgress.version);
+    NProgress.start();
+    setTimeout(function() { NProgress.done(); $('.fade').removeClass('out'); }, 1000);
+
+    $("#b-0").click(function() { NProgress.start(); });
+    $("#b-40").click(function() { NProgress.set(0.4); });
+    $("#b-inc").click(function() { NProgress.inc(); });
+    $("#b-100").click(function() { NProgress.done(); });
+</script>
 <!-- ./wrapper -->
 <?php $this->endBody() ?>
 </body>

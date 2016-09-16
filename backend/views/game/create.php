@@ -11,7 +11,7 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('cms', 'Games'), 'url' => ['
 $this->params['breadcrumbs'][] = $this->title;
 $this->params['title'] = Yii::t('cms', 'Create Game');
 $this->params['menu'] = [
-    ['label'=>Yii::t('cms', 'Back'), 'url' => ['index'], 'options' => ['class' => 'btn btn-primary']],
+    ['label'=>'<i class="fa fa-reply" aria-hidden="true"></i> ' . Yii::t('cms', 'Back'), 'url' => ['index'], 'options' => ['class' => 'btn btn-primary']],
 ];
 ?>
 <div class="game-update">
