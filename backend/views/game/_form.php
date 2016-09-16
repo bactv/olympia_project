@@ -61,7 +61,7 @@ use yii\bootstrap\Alert;
     ?>
 
     <br/>
-
+    <br/>
     <div id="info-players"></div>
     <br/>
     <br/>

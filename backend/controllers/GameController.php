@@ -2,6 +2,7 @@
 
 namespace backend\controllers;
 
+use backend\models\Student;
 use Yii;
 use backend\models\Game;
 use common\models\search\GameCategorySearch;
@@ -72,6 +73,7 @@ class GameController extends BackendController
                 foreach ($players as $player) {
                     $temp['user_id'] = $player->id;
                     $temp['score'] = 0;
+                    $temp['game'] = $model->type_game;
                     $data[] = $temp;
                 }
                 $model->data_game = json_encode($data);
@@ -144,6 +146,22 @@ class GameController extends BackendController
             return 'Số người chơi không đủ';
         }
         return $this->renderAjax('choose_player', compact('players'));
+    }
+
+    /**
+     * Change player
+     * @return string
+     */
+    public function actionChangePlayer()
+    {
+        $new_player = (int) Yii::$app->request->post('new_player');
+        $old_player = (int) Yii::$app->request->post('old_player');
+        $serial_number = (int) Yii::$app->request->post('serial_number');
+        $ids = json_decode(Yii::$app->request->post('ids'));
+        array_push($ids, $new_player);
+        $arr_ids = array_diff($ids, [$old_player]);
+        $player = Student::getStudentById($new_player);
+        return $this->renderAjax('change_player', ['player' => $player, 'serial_number' => $serial_number, 'ids' => $arr_ids]);
     }
 
     /**

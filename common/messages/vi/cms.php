@@ -59,5 +59,6 @@ return [
     'Actions' => 'Actions',
     'Save' => 'Lưu',
     'Created by' => 'Người tạo',
-    'Updated by' => 'Người cập nhật'
+    'Updated by' => 'Người cập nhật',
+    'Change Player' => 'Thay đổi người chơi',
 ];
