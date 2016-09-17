@@ -8,11 +8,10 @@ use yii\helpers\Url;
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\search\StudentSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-$this->title = $this->params['title'] = 'Students';
+$this->title = $this->params['title'] = Yii::t('cms', 'Students');
 $this->params['breadcrumbs'][] = $this->title;
 $this->params['menu'] = [
-    ['label'=>'Create', 'url' => ['create'], 'options' => ['class' => 'btn btn-primary']],
-    ['label'=>'Delete', 'url' => 'javascript:void(0)', 'options' => ['class' => 'btn btn-danger', 'onclick' => 'deleteAllItems()']]
+    ['label'=>'<i class="fa fa-trash-o" aria-hidden="true"></i> ' . Yii::t('cms', 'Delete'), 'url' => 'javascript:void(0)', 'options' => ['class' => 'btn btn-danger', 'onclick' => 'deleteAllItems()']]
 ];
 ?>
 
@@ -25,36 +24,39 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
-            ['class' => 'yii\grid\CheckboxColumn'],
             [
-                'attribute' => 'id',
-                'label' => Yii::t('cms', 'ID'),
+                'class' => 'yii\grid\SerialColumn',
+                'headerOptions' => $headerOptions,
+                'contentOptions' => $contentOptions,
+            ],
+            [
+                'class' => 'yii\grid\CheckboxColumn',
                 'headerOptions' => $headerOptions,
                 'contentOptions' => $contentOptions,
             ],
             [
                 'attribute' => 'username',
                 'label' => Yii::t('cms', 'Username'),
-                'headerOptions' => $headerOptions,
-                'contentOptions' => $contentOptions,
+                'headerOptions' => ['style'=>'vertical-align: middle;'],
+                'contentOptions' => ['style'=>'vertical-align: middle;']
             ],
             [
                 'attribute' => 'email',
                 'label' => Yii::t('cms', 'Email'),
-                'headerOptions' => $headerOptions,
-                'contentOptions' => $contentOptions,
+                'headerOptions' => ['style'=>'vertical-align: middle;'],
+                'contentOptions' => ['style'=>'vertical-align: middle;']
             ],
             [
                 'attribute' => 'school',
                 'label' => Yii::t('cms', 'School'),
-                'headerOptions' => $headerOptions,
-                'contentOptions' => $contentOptions,
+                'headerOptions' => ['style'=>'vertical-align: middle;'],
+                'contentOptions' => ['style'=>'vertical-align: middle;']
             ],
             [
                 'attribute' => 'address',
                 'label' => Yii::t('cms', 'Address'),
-                'headerOptions' => $headerOptions,
-                'contentOptions' => $contentOptions,
+                'headerOptions' => ['style'=>'vertical-align: middle;'],
+                'contentOptions' => ['style'=>'vertical-align: middle;']
             ],
             [
                 'attribute' => 'status',
@@ -83,6 +85,13 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
                         return '<div id="item-status-'.$data['id'].'"><a href="javascript:void(0);" class="f-s-18" onclick = ""><i class="fa fa-dot-circle-o" style="color: green;"></i></a></div>';
                     }
                 },
+                'headerOptions' => $headerOptions,
+                'contentOptions'=> $contentOptions,
+            ],
+            [
+                'class' => 'backend\components\CActionColumn',
+                'template' => '{view} {delete}',
+                'header' => Yii::t('cms', 'Action'),
                 'headerOptions' => $headerOptions,
                 'contentOptions'=> $contentOptions,
             ],

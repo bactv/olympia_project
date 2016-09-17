@@ -11,7 +11,7 @@ use yii\helpers\Html;
            border="0" id="table-questions">
         <thead>
         <th>ID</th>
-        <th>Question</th>
+        <th style="text-align: left;">Question</th>
         <th>Level</th>
         <th>Topic</th>
         <th></th>
@@ -20,7 +20,7 @@ use yii\helpers\Html;
         <?php foreach ($questions as $question) { ?>
             <tr id="<?php echo $question->id ?>">
                 <td><?php echo $question->id ?></td>
-                <td><?php echo $question->content ?></td>
+                <td style="text-align: left;"><?php echo strip_tags($question->content) ?></td>
                 <td><?php echo QuestionLevel::getQuestionLevelById($question->question_level)->name ?></td>
                 <td><?php echo QuestionTopic::getQuestionTopicById($question->question_topic)->name ?></td>
                 <td>
@@ -56,6 +56,11 @@ use yii\helpers\Html;
     }
     select#select > option {
         width: 50%;
+    }
+
+    .table > tbody > tr > td , .table > thead > tr > th {
+        text-align: center;
+        vertical-align: middle;
     }
 
 </style>

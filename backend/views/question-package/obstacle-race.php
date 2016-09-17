@@ -27,26 +27,30 @@ foreach ($questions as $q) {
 
 ?>
 
-<?php echo '<label class="control-label">Questions</label>'; ?>
-
-<?php echo Select2::widget([
+<div class="form-group">
+    <?php echo '<label class="control-label col-sm-2">' . Yii::t('cms', 'Questions') . '</label>'; ?>
+    <div class="col-sm-10">
+    <?php echo Select2::widget([
         'data' => ArrayHelper::map($new_questions, 'id' , 'content'),
         'value' => $values,
         'name' => 'question_ids',
         'options' => [
-            'placeholder' => 'Select a question ...',
+            'placeholder' => Yii::t('cms', 'Select questions') .  '...',
             'multiple' => true,
         ],
         'pluginOptions' => [
             'allowClear' => true,
         ],
-    'id' => 'select-question',
-    ]);
-?>
+        'id' => 'select-question',
+    ]); ?>
+    </div>
+</div>
 <br>
 
 <div class="form-group field-questionpackage-obstacle_race_answer required">
-    <label class="control-label" for="questionpackage-obstacle_race_answer">Obstacle Race Answer</label>
-    <input type="text" id="questionpackage-obstacle_race_answer" class="form-control" name="QuestionPackage[obstacle_race_answer]" value="<?php echo isset($answer->content) ? $answer->content : '' ?>">
-    <div class="help-block"></div>
+    <label class="control-label col-sm-2" for="questionpackage-obstacle_race_answer"><?php echo Yii::t('cms', 'Obstacle Race Answer') ?></label>
+    <div class="col-sm-10">
+        <input type="text" id="questionpackage-obstacle_race_answer" class="form-control" name="QuestionPackage[obstacle_race_answer]" value="<?php echo isset($answer->content) ? $answer->content : '' ?>">
+        <div class="help-block"></div>
+    </div>
 </div>

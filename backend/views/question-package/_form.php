@@ -1,12 +1,11 @@
 <?php
 
 use yii\helpers\Html;
-use yii\widgets\ActiveForm;
+use kartik\form\ActiveForm;
 use backend\models\PartGame;
 use yii\helpers\ArrayHelper;
 use backend\models\PackageFinish;
 use yii\helpers\Url;
-use kartik\select2\Select2;
 use backend\models\Question;
 use backend\models\TypeGame;
 
@@ -17,11 +16,15 @@ use backend\models\TypeGame;
 
 <div class="question-package-form">
 
-    <?php $form = ActiveForm::begin(['id' => 'form-package-question']); ?>
+    <?php $form = ActiveForm::begin([
+        'id' => 'form-package-question',
+        'type' => ActiveForm::TYPE_HORIZONTAL,
+        'formConfig' => ['labelSpan' => 2, 'deviceSize' => ActiveForm::SIZE_SMALL]
+    ]); ?>
 
-    <?= $form->field($model, 'name')->textInput(['maxlength' => 255]) ?>
+    <?= $form->field($model, 'name')->label(Yii::t('cms', 'Name'))->textInput(['maxlength' => 255]) ?>
 
-    <?= $form->field($model, 'type_game')->dropDownList(ArrayHelper::map(TypeGame::getAllTypesGame(), 'id', 'name'), [
+    <?= $form->field($model, 'type_game')->label(Yii::t('cms', 'Type Games'))->dropDownList(ArrayHelper::map(TypeGame::getAllTypesGame(), 'id', 'name'), [
         'prompt' => 'Select type game ...',
     ]) ?>
 
@@ -31,13 +34,13 @@ use backend\models\TypeGame;
         $disabled = true;
     }
     ?>
-    <?= $form->field($model, 'part_game')->dropDownList(ArrayHelper::map(PartGame::getAllPartsGame(), 'id', 'name'), [
+    <?= $form->field($model, 'part_game')->label(Yii::t('cms', 'Part Game'))->dropDownList(ArrayHelper::map(PartGame::getAllPartsGame(), 'id', 'name'), [
         'prompt' => 'Select part game ...',
         'disabled' => $disabled
     ]) ?>
 
     <div id="list_package_question_end_part" style="display: none;">
-        <?= $form->field($model, 'package_finish')->dropDownList(ArrayHelper::map(PackageFinish::getAllPackageFinish(), 'id', 'name'), [
+        <?= $form->field($model, 'package_finish')->label(Yii::t('cms', 'Package Finish'))->dropDownList(ArrayHelper::map(PackageFinish::getAllPackageFinish(), 'id', 'name'), [
         ]) ?>
     </div>
 
@@ -60,11 +63,11 @@ use backend\models\TypeGame;
         echo $this->render('obstacle-race', ['old_model' => $model]);
     } ?>
 
-    <?= $form->field($model, 'status')->checkbox() ?>
+    <?= $form->field($model, 'status')->checkbox(['label' => false])->label(Yii::t('cms', 'Status')) ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton('Reset', ['class' => 'btn btn-default']); ?>
+        <?= Html::submitButton($model->isNewRecord ? '<i class="fa fa-floppy-o" aria-hidden="true"></i> ' . Yii::t('cms', 'Save') : '<i class="fa fa-floppy-o" aria-hidden="true"></i> ' . Yii::t('cms', 'Save'), ['class' => 'btn btn-primary']) ?>
+        <?= Html::resetButton('<i class="fa fa-repeat" aria-hidden="true"></i> ' . Yii::t('cms', 'Reset'), ['class' => 'btn btn-default']); ?>
     </div>
 
     <?php ActiveForm::end(); ?>

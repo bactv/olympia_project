@@ -8,11 +8,11 @@ use yii\helpers\Url;
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\search\TypeQuestionSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-$this->title = $this->params['title'] = 'Type Questions';
+$this->title = $this->params['title'] = Yii::t('cms', 'Type Questions');
 $this->params['breadcrumbs'][] = $this->title;
 $this->params['menu'] = [
-    ['label'=>'Create', 'url' => ['create'], 'options' => ['class' => 'btn btn-primary']],
-    ['label'=>'Delete', 'url' => 'javascript:void(0)', 'options' => ['class' => 'btn btn-danger', 'onclick' => 'deleteAllItems()']]
+    ['label'=>'<i class="fa fa-plus" aria-hidden="true"></i> ' . Yii::t('cms', 'Create'), 'url' => ['create'], 'options' => ['class' => 'btn btn-primary']],
+    ['label'=>'<i class="fa fa-trash-o" aria-hidden="true"></i> ' . Yii::t('cms', 'Delete'), 'url' => 'javascript:void(0)', 'options' => ['class' => 'btn btn-danger', 'onclick' => 'deleteAllItems()']]
 ];
 ?>
 
@@ -26,33 +26,32 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
         'dataProvider' => $dataProvider,
         'columns' => [
             [
+                'class' => 'yii\grid\SerialColumn',
+                'headerOptions' => $headerOptions,
+                'contentOptions' => $contentOptions,
+            ],
+            [
                 'class' => 'yii\grid\CheckboxColumn',
                 'headerOptions' => $headerOptions,
                 'contentOptions' => $contentOptions,
             ],
             [
-                'attribute' => 'id',
-                'label' => Yii::t('cms', 'ID'),
-                'headerOptions' => $headerOptions,
-                'contentOptions' => $contentOptions,
-            ],
-            [
                 'attribute' => 'name',
-                'label' => Yii::t('cms', 'Name'),
-                'headerOptions' => $headerOptions,
-                'contentOptions' => $contentOptions,
+                'label' => Yii::t('cms', 'Name Type'),
+                'headerOptions' => ['style'=>'vertical-align: middle;'],
+                'contentOptions' => ['style'=>'vertical-align: middle;'],
             ],
             [
                 'attribute' => 'code',
                 'label' => Yii::t('cms', 'Type Question Code'),
-                'headerOptions' => $headerOptions,
-                'contentOptions' => $contentOptions,
+                'headerOptions' => ['style'=>'vertical-align: middle;'],
+                'contentOptions' => ['style'=>'vertical-align: middle;'],
             ],
             [
                 'attribute' => 'description',
                 'label' => Yii::t('cms', 'Description'),
-                'headerOptions' => $headerOptions,
-                'contentOptions' => $contentOptions,
+                'headerOptions' => ['style'=>'vertical-align: middle;'],
+                'contentOptions' => ['style'=>'vertical-align: middle;'],
             ],
             [
                 'attribute' => 'status',
@@ -71,6 +70,7 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
             ],
             [
                 'class' => 'backend\components\CActionColumn',
+                'header' => Yii::t('cms', 'Action'),
                 'headerOptions' => $headerOptions,
                 'contentOptions'=> $contentOptions,
             ],

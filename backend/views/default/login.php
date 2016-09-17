@@ -39,7 +39,7 @@ $this->title = Yii::$app->name . ' - ' . Yii::t('cms', 'Login');
         <?php echo $form->field($model, 'verifyCode')->widget(Captcha::className(), ['captchaAction' => 'default/captcha', 'imageOptions' => ['width' => '99', 'height' => '32'], 'template' => '<div class="row"><div class="col-lg-6">{input}</div><div class="col-lg-4">{image}</div><a href="javascript:;" id="capcha-refresh-button"><i class="fa fa-refresh f-s-18"></i></a></div>', 'options' => ['placeholder' => Yii::t('cms', 'verifyCode'), 'class' => 'form-control']])->label(false); ?>
     </div>
     <div class="form-group">
-        <?= $form->field($model, 'rememberMe')->checkbox() ?>
+        <?= $form->field($model, 'rememberMe')->checkbox(['label' => Yii::t('cms', 'Remember me')], true) ?>
         <?php echo Html::submitButton(Yii::t('cms', 'Login') . " <i class=\"fa fa-sign-in\" aria-hidden=\"true\"></i>", ['class' => 'btn btn-primary block full-width m-b']) ?>
     </div>
     <?php ActiveForm::end(); ?>

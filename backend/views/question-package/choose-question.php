@@ -4,7 +4,7 @@ use backend\models\QuestionTopic;
 use yii\helpers\Html;
 ?>
 <td><?php echo $question->id ?></td>
-<td><?php echo $question->content ?></td>
+<td style="text-align: left;"><?php echo strip_tags($question->content) ?></td>
 <td><?php echo QuestionLevel::getQuestionLevelById($question->question_level)->name ?></td>
 <td><?php echo QuestionTopic::getQuestionTopicById($question->question_topic)->name ?></td>
 <td>

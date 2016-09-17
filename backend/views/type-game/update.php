@@ -6,9 +6,9 @@ use yii\helpers\Html;
 /* @var $model backend\models\TypeGame */
 
 $this->title = 'Update Type Game: ' . ' ' . $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Type Games', 'url' => ['index']];
-$this->params['breadcrumbs'][] = 'Update';
-$this->params['title'] = 'Update';
+$this->params['breadcrumbs'][] = ['label' => Yii::t('cms', 'Type Games'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = Yii::t('cms', 'Update');
+$this->params['title'] = Yii::t('cms', 'Update');
 $this->params['menu'] = [
     ['label'=>'Back', 'url' => ['index'], 'options' => ['class' => 'btn btn-primary']],
 ];

@@ -11,11 +11,11 @@ use backend\models\TypeGame;
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\search\QuestionPackageSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-$this->title = $this->params['title'] = 'Question Packages';
+$this->title = $this->params['title'] = Yii::t('cms', 'Question Packages');
 $this->params['breadcrumbs'][] = $this->title;
 $this->params['menu'] = [
-    ['label'=>'Create', 'url' => ['create'], 'options' => ['class' => 'btn btn-primary']],
-    ['label'=>'Delete', 'url' => 'javascript:void(0)', 'options' => ['class' => 'btn btn-danger', 'onclick' => 'deleteAllItems()']]
+    ['label'=>'<i class="fa fa-plus" aria-hidden="true"></i> ' . Yii::t('cms', 'Create'), 'url' => ['create'], 'options' => ['class' => 'btn btn-primary']],
+    ['label'=>'<i class="fa fa-trash-o" aria-hidden="true"></i> ' . Yii::t('cms', 'Delete'), 'url' => 'javascript:void(0)', 'options' => ['class' => 'btn btn-danger', 'onclick' => 'deleteAllItems()']]
 ];
 ?>
 
@@ -27,24 +27,22 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
 <?php Pjax::begin(['id' => 'admin-grid-view']);?> 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-    
         'columns' => [
+            [
+                'class' => 'yii\grid\SerialColumn',
+                'headerOptions' => $headerOptions,
+                'contentOptions' => $contentOptions,
+            ],
             [
                 'class' => 'yii\grid\CheckboxColumn',
                 'headerOptions' => $headerOptions,
                 'contentOptions' => $contentOptions,
             ],
             [
-                'attribute' => 'id',
-                'label' => Yii::t('cms', 'ID'),
-                'headerOptions' => $headerOptions,
-                'contentOptions' => $contentOptions,
-            ],
-            [
                 'attribute' => 'name',
                 'label' => Yii::t('cms', 'Name'),
-                'headerOptions' => $headerOptions,
-                'contentOptions' => $contentOptions,
+                'headerOptions' => ['style'=>'vertical-align: middle;'],
+                'contentOptions' => ['style'=>'vertical-align: middle;'],
             ],
             [
                 'attribute' => 'type_game',
@@ -70,7 +68,7 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
             ],
             [
                 'attribute' => 'question_ids',
-                'label' => Yii::t('cms', 'Question IDS'),
+                'label' => Yii::t('cms', 'Question IDs'),
                 'format' => 'raw',
                 'value' => function ($data) {
                     $question_ids = json_decode($data->question_ids);
@@ -102,6 +100,7 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
             ],
             [
                 'class' => 'backend\components\CActionColumn',
+                'header' => Yii::t('cms', 'Action'),
                 'headerOptions' => $headerOptions,
                 'contentOptions'=> $contentOptions,
             ],

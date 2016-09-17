@@ -6,12 +6,12 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model backend\models\QuestionPackage */
 
-$this->title = 'Create Question Package';
-$this->params['breadcrumbs'][] = ['label' => 'Question Packages', 'url' => ['index']];
+$this->title = Yii::t('cms', 'Create');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('cms', 'Question Packages'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
-$this->params['title'] = 'Update';
+$this->params['title'] = Yii::t('cms', 'Create');
 $this->params['menu'] = [
-    ['label'=>'Back', 'url' => ['index'], 'options' => ['class' => 'btn btn-primary']],
+    ['label'=>'<i class="fa fa-reply" aria-hidden="true"></i> ' . Yii::t('cms', 'Back'), 'url' => ['index'], 'options' => ['class' => 'btn btn-primary']],
 ];
 ?>
 <div class="question-package-update">

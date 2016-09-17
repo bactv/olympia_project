@@ -2,12 +2,13 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use common\helpers\DateTimeHelper;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\TypeGame */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Type Games', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('cms', 'Type Games'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="type-game-view">
@@ -15,8 +16,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+        <?= Html::a('<i class="fa fa-pencil-square-o" aria-hidden="true"></i> ' . Yii::t('cms', 'Update'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('<i class="fa fa-trash-o" aria-hidden="true"></i> ' . Yii::t('cms', 'Delete'), ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -28,12 +29,35 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
-            'name',
-            'description:ntext',
-            'created_time',
-            'updated_time',
+            [
+                'attribute' => 'id',
+                'label' => Yii::t('cms', 'ID')
+            ],
+            [
+                'attribute' => 'name',
+                'label' => Yii::t('cms', 'Name')
+            ],
+            [
+                'attribute' => 'description',
+                'label' => Yii::t('cms', 'Description')
+            ],
+            [
+                'attribute' => 'created_time',
+                'label' => Yii::t('cms', 'Created Time'),
+                'value' => DateTimeHelper::format_date_time($model->created_time, '-', '/')
+            ],
+            [
+                'attribute' => 'updated_time',
+                'label' => Yii::t('cms', 'Updated Time'),
+                'value' => DateTimeHelper::format_date_time($model->updated_time, '-', '/')
+            ],
         ],
     ]) ?>
 
 </div>
+
+<style>
+    table > tbody > tr > th {
+        width: 30%;
+    }
+</style>
