@@ -1,7 +1,7 @@
 <?php
 
 use yii\helpers\Html;
-use yii\widgets\ActiveForm;
+use kartik\form\ActiveForm;
 use dosamigos\ckeditor\CKEditor;
 use backend\models\QuestionLevel;
 use backend\models\QuestionTopic;
@@ -18,7 +18,9 @@ use yii\helpers\ArrayHelper;
 <div class="question-form">
 
     <?php $form = ActiveForm::begin([
-        'id' => 'question'
+        'id' => 'question',
+        'type' => ActiveForm::TYPE_HORIZONTAL,
+        'formConfig' => ['labelSpan' => 2, 'deviceSize' => ActiveForm::SIZE_SMALL]
     ]); ?>
 
     <?= $form->field($model, 'content')->label(Yii::t('cms', 'Content'))->widget(CKEditor::className(), [
@@ -26,36 +28,40 @@ use yii\helpers\ArrayHelper;
         'preset' => 'basic'
     ]) ?>
 
-    <?= $form->field($model, 'question_topic')->label(Yii::t('cms', 'Topic'))->widget(Select2::className(), [
+    <?= $form->field($model, 'question_topic')->label(Yii::t('cms', 'Question Topics'))->widget(Select2::className(), [
         'data' => ArrayHelper::map(QuestionTopic::getAllQuestionTopic(), 'id', 'name'),
         'options' => [
-            'placeholder' => 'Select a topic ...',
+            'placeholder' => Yii::t('cms', 'Select a topic') . ' ...',
         ],
         'pluginOptions' => [
             'allowClear' => true
         ],
     ]); ?>
 
-    <?= $form->field($model, 'question_level')->label(Yii::t('cms', 'Question Level'))->dropDownList(ArrayHelper::map(QuestionLevel::getAllQuestionLevel(), 'id', 'description'), [
-        'prompt' => 'Select a question level ...'
+    <?= $form->field($model, 'question_level')->label(Yii::t('cms', 'Question Levels'))->dropDownList(ArrayHelper::map(QuestionLevel::getAllQuestionLevel(), 'id', 'description'), [
+        'prompt' => Yii::t('cms', 'Select a question level') . ' ...',
     ]) ?>
 
-    <?= $form->field($model, 'question_format')->label(Yii::t('cms', 'Format'))->dropDownList(ArrayHelper::map(QuestionFormat::getAllQuestionFormat(), 'id', 'description'), [
-        'prompt' => 'Select a question format ...'
+    <?= $form->field($model, 'question_format')->label(Yii::t('cms', 'Question Formats'))->dropDownList(ArrayHelper::map(QuestionFormat::getAllQuestionFormat(), 'id', 'description'), [
+        'prompt' => Yii::t('cms', 'Select a question format') . ' ...',
     ]) ?>
 
-    <?= $form->field($model, 'type_question')->label(Yii::t('cms', 'Type'))->dropDownList(ArrayHelper::map(TypeQuestion::getAllTypeQuestion(), 'id', 'description'), [
-        'prompt' => 'Select a type question ...',
+    <?= $form->field($model, 'type_question')->label(Yii::t('cms', 'Type Questions'))->dropDownList(ArrayHelper::map(TypeQuestion::getAllTypeQuestion(), 'id', 'description'), [
+        'prompt' => Yii::t('cms', 'Select a type question') . ' ...',
         'id' => 'type-question'
     ]) ?>
 
+    <br>
     <?php echo '<b>' . Yii::t('cms', 'Answer') . '</b>' ?>
     <br/>
     <br />
     <div id="answer">
         <div class="row" id="row">
             <div class="col-md-8">
-                <?= $form->field($model, 'answer[]')->label(false)->textInput(['value' => !empty($answers) ? $answers[0]->content : '']) ?>
+                <?= $form->field($model, 'answer[]')->label(false)->textInput([
+                    'value' => !empty($answers) ? $answers[0]->content : '',
+                    'placeholder' => Yii::t('cms', 'Enter answer') . ' ...',
+                ]) ?>
             </div>
             <div class="col-md-3">
                 <?php
@@ -64,7 +70,7 @@ use yii\helpers\ArrayHelper;
                     $checked = true;
                 }
                 ?>
-                <input type="checkbox" name="ans" <?php echo $checked===true ? 'checked' : '' ?>> <?php echo Yii::t('cms', 'True Answer ') . '?' ?>
+                <input type="checkbox" name="ans" <?php echo $checked===true ? 'checked' : '' ?>> <?php echo Yii::t('cms', 'True Answer') . ' ?' ?>
             </div>
             <div class="col-md-1">
                 <a href="javascript:void(0);" id="del-answer" onclick="deleteAnswer(this.id)"><i class="fa fa-times" aria-hidden="true"></i></a>
@@ -76,7 +82,9 @@ use yii\helpers\ArrayHelper;
             for ($i = 1; $i < count($answers); $i++) { ?>
                 <div class="row" id="row-<?php echo ($i + 1) ?>">
                     <div class="col-md-8">
-                        <?= $form->field($model, 'answer[]')->label(false)->textInput(['value' => $answers[$i]->content, 'required' => true]) ?>
+                        <?= $form->field($model, 'answer[]')->label(false)->textInput([
+                            'value' => $answers[$i]->content, 'required' => true
+                        ]) ?>
                     </div>
                     <div class="col-md-3">
                         <?php
@@ -99,19 +107,20 @@ use yii\helpers\ArrayHelper;
 
     <br/>
     <br/>
-    <?= $form->field($model, 'status')->label(Yii::t('cms', 'Status'))->checkbox() ?>
+    <?= $form->field($model, 'status')->checkbox(['label' => false])->label(Yii::t('cms', 'Status')) ?>
 
-    <?= $form->field($model, 'obstacle_race')->label(Yii::t('cms', 'Phần thi vượt chướng ngại vật?'))->checkbox() ?>
+    <?= $form->field($model, 'obstacle_race')->checkbox(['label' => false])->label(Yii::t('cms', 'Obstacle Race')) ?>
 
     <?php
     if (!$model->isNewRecord) {
-        echo $form->field($model, 'deleted')->label(Yii::t('cms', 'Deleted'))->checkbox();
+        echo $form->field($model, 'deleted')->checkbox(['label' => false])->label(Yii::t('cms', 'Deleted'));
     }
     ?>
 
+    <br />
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton('Reset', ['class' => 'btn btn-default']); ?>
+        <?= Html::submitButton($model->isNewRecord ? '<i class="fa fa-floppy-o" aria-hidden="true"></i> ' . Yii::t('cms', 'Save') : '<i class="fa fa-floppy-o" aria-hidden="true"></i> ' . Yii::t('cms', 'Save'), ['class' => 'btn btn-primary']) ?>
+        <?= Html::resetButton('<i class="fa fa-repeat" aria-hidden="true"></i> ' . Yii::t('cms', 'Reset'), ['class' => 'btn btn-default']); ?>
     </div>
 
     <?php ActiveForm::end(); ?>

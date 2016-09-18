@@ -3,15 +3,16 @@
 use yii\helpers\Html;
 use yii\widgets\Pjax;
 use yii\grid\GridView;
+use common\helpers\DateTimeHelper;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\search\PartGameSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-$this->title = $this->params['title'] = 'Part Games';
+$this->title = $this->params['title'] = Yii::t('cms', 'Part Game');
 $this->params['breadcrumbs'][] = $this->title;
 $this->params['menu'] = [
-    ['label'=>'Create', 'url' => ['create'], 'options' => ['class' => 'btn btn-primary']],
-    ['label'=>'Delete', 'url' => 'javascript:void(0)', 'options' => ['class' => 'btn btn-danger', 'onclick' => 'deleteAllItems()']]
+    ['label'=>'<i class="fa fa-plus" aria-hidden="true"></i> ' . Yii::t('cms', 'Create'), 'url' => ['create'], 'options' => ['class' => 'btn btn-primary']],
+    ['label'=>'<i class="fa fa-trash-o" aria-hidden="true"></i> ' . Yii::t('cms', 'Delete'), 'url' => 'javascript:void(0)', 'options' => ['class' => 'btn btn-danger', 'onclick' => 'deleteAllItems()']]
 ];
 ?>
 
@@ -24,17 +25,21 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
-            ['class' => 'yii\grid\CheckboxColumn'],
             [
-                'attribute' => 'id',
-                'label' => Yii::t('cms', 'ID'),
+                'class' => 'yii\grid\SerialColumn',
+                'headerOptions' => $headerOptions,
+                'contentOptions' => $contentOptions,
+            ],
+            [
+                'class' => 'yii\grid\CheckboxColumn',
                 'headerOptions' => $headerOptions,
                 'contentOptions' => $contentOptions,
             ],
             [
                 'attribute' => 'name',
                 'label' => Yii::t('cms', 'Name'),
-                'headerOptions' => $headerOptions,
+                'headerOptions' => ['style'=>'vertical-align: middle;'],
+                'contentOptions' => ['style'=>'vertical-align: middle;'],
             ],
             [
                 'attribute' => 'description',
@@ -43,18 +48,34 @@ $contentOptions = ['style'=>'text-align: center; vertical-align: middle;'];
                 'value' => function ($data) {
                     return substr(strip_tags($data->description), 0, 300);
                 },
-                'headerOptions' => $headerOptions,
+                'headerOptions' => ['style'=>'vertical-align: middle;'],
+                'contentOptions' => ['style'=>'vertical-align: middle;'],
             ],
             [
                 'attribute' => 'created_time',
                 'label' => Yii::t('cms', 'Created Time'),
+                'format' => 'raw',
+                'value' => function ($model) {
+                    return DateTimeHelper::format_date_time($model->created_time, '-', '/');
+                },
+                'headerOptions' => $headerOptions,
+                'contentOptions' => $contentOptions,
+            ],
+            [
+                'attribute' => 'updated_time',
+                'label' => Yii::t('cms', 'Updated Time'),
+                'format' => 'raw',
+                'value' => function ($model) {
+                    return DateTimeHelper::format_date_time($model->updated_time, '-', '/');
+                },
                 'headerOptions' => $headerOptions,
                 'contentOptions' => $contentOptions,
             ],
             [
                 'class' => 'backend\components\CActionColumn',
+                'header' => Yii::t('cms', 'Action'),
                 'headerOptions' => $headerOptions,
-                'contentOptions' => $contentOptions,
+                'contentOptions'=> $contentOptions,
             ],
         ],
     ]); ?>

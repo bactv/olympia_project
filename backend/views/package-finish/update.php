@@ -6,11 +6,11 @@ use yii\helpers\Html;
 /* @var $model backend\models\PackageFinish */
 
 $this->title = 'Update Package Finish: ' . ' ' . $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Package Finishes', 'url' => ['index']];
-$this->params['breadcrumbs'][] = 'Update';
-$this->params['title'] = 'Update';
+$this->params['breadcrumbs'][] = ['label' => Yii::t('cms', 'Package Finishes'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = Yii::t('cms', 'Update');
+$this->params['title'] = Yii::t('cms', 'Update');
 $this->params['menu'] = [
-    ['label'=>'Back', 'url' => ['index'], 'options' => ['class' => 'btn btn-primary']],
+    ['label'=>'<i class="fa fa-reply" aria-hidden="true"></i> ' . Yii::t('cms', 'Back'), 'url' => ['index'], 'options' => ['class' => 'btn btn-primary']],
 ];
 ?>
 <div class="package-finish-update">

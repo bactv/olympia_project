@@ -6,11 +6,11 @@ use yii\helpers\Html;
 /* @var $model backend\models\PartGame */
 
 $this->title = 'Update Part Game: ' . ' ' . $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Part Games', 'url' => ['index']];
-$this->params['breadcrumbs'][] = 'Update';
-$this->params['title'] = 'Update';
+$this->params['breadcrumbs'][] = ['label' => Yii::t('cms', 'Part Game'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = Yii::t('cms', 'Update');
+$this->params['title'] = Yii::t('cms', 'Update');
 $this->params['menu'] = [
-    ['label'=>'Back', 'url' => ['index'], 'options' => ['class' => 'btn btn-primary']],
+    ['label'=>'<i class="fa fa-reply" aria-hidden="true"></i> ' . Yii::t('cms', 'Back'), 'url' => ['index'], 'options' => ['class' => 'btn btn-primary']],
 ];
 ?>
 <div class="part-game-update">
